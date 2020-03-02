@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
-    <title>PythonAngey</title>
-    <updated>2020-03-02T05:42:12.763Z</updated>
+    <title>PythonAngry</title>
+    <updated>2020-03-02T05:43:39.522Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
-    <subtitle>并不学习Python</subtitle>
     <logo>https://pythonangry.github.io/images/avatar.png</logo>
     <icon>https://pythonangry.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, PythonAngey</rights>
+    <rights>All rights reserved 2020, PythonAngry</rights>
     <entry>
         <title type="html"><![CDATA[购买衣服原则]]></title>
         <id>https://pythonangry.github.io/post/yyLSFgOAi/</id>
