@@ -2,13 +2,59 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-02T12:24:53.648Z</updated>
+    <updated>2020-03-02T12:25:53.182Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
     <logo>https://pythonangry.github.io/images/avatar.png</logo>
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
+    <entry>
+        <title type="html"><![CDATA[课程学习 | 2月总结与《书法审美与基本技法》 王力春]]></title>
+        <id>https://pythonangry.github.io/post/lP4M6ZgQY/</id>
+        <link href="https://pythonangry.github.io/post/lP4M6ZgQY/">
+        </link>
+        <updated>2020-03-02T07:25:34.000Z</updated>
+        <content type="html"><![CDATA[<h5 id="part-one">Part One</h5>
+<p>2020年2-3月，新冠疫情。我司每周公告下周是否复工，终于在2月底给了个痛快：休业到4月。稍稍思索，发现自己糟蹋了2月。我深刻地反省：非要休息一个月才算有时间是吧，你个。</p>
+<p>我深刻反省，去知乎找大道理，花十二块买下Forest，在B站和Mooc找几门感兴趣的课程，重新开始上课。</p>
+<p>重新上课之后，又看了看知乎大道理，天塌了。<br>
+我天塌了， 我炖我自己。</p>
+<hr>
+<p>《书法审美与基本技法》这门课B站和Mooc都有，</p>
+<ul>
+<li>
+<p><a href="https://www.bilibili.com/video/av6152514?from=search&amp;seid=456154668510068725">B站版本</a>，沈阳师范大学出品。最早投稿时间是2016年，看着老师反手画字，看得享受，2倍速都不带加。老师讲课，没完没了，没完没了，清楚明白。</p>
+</li>
+<li>
+<p><a href="https://www.icourse163.org/course/IMUN-1205809812">Mooc版</a>，王老师摇身一变内蒙古民族大学王教授，使上了电子设备，对于字体的演示依旧精熟。每段课讲授时间10分钟左右，少了没完没了的灌输，自然少了些自己在课程内的思考跟踪。</p>
+<p><em>ps: 遇到Mooc正在开课未将全部课程放出，可参考下图点击<em>第一次开课</em>进行学习</em><br>
+<img src="https://pythonangry.github.io/post-images/1583143983276.png" alt="" loading="lazy"></p>
+</li>
+</ul>
+<hr>
+<h3 id="第一课-永字八法">第一课 永字八法</h3>
+<p>利用简化思维方法，从汉字28个笔画 - 20个分解笔画<em>以马字第二笔分解为例，分3份</em> - 8个能用一个字概括的笔画。</p>
+<ul>
+<li>至此，所有笔画组成一个永字，即<strong>永字八法</strong>：点、横、竖、撇、捺、折、提，钩。<br>
+<img src="https://pythonangry.github.io/post-images/1583150703033.png" alt="" loading="lazy"></li>
+</ul>
+<p>再简化，将8个笔画简化为5个笔画，运用分解思维方法，将长笔画切割开，以横为例，共分<strong>三部分</strong>：起笔，行笔和收笔。<br>
+- 起笔1种：<strong>空中落笔</strong>，在纸的上方，留一点缝隙，然后想象飞机逐渐降落，逐渐加力<br>
+- 行笔2种：<strong>直弯</strong>，竖钩直，弯钩弯；短撇直，长撇弯<br>
+- 收笔2种：<strong>圆锋</strong>（顿）<strong>尖锋</strong>（尖），短横轻顿，长横重顿；将横立起来，则有垂露竖和悬针竖，悬针竖笔入空中，越来越轻，无师自通即可写出，一般字的最后一笔竖用悬针竖</p>
+<p>再往下，以点（空中落笔，尖而弯）、横（起笔与行笔间形成夹角，有尖有角）和竖（同横）的起笔为代表进行分组。<br>
+<img src="https://pythonangry.github.io/post-images/1583150732646.jpg" alt="" loading="lazy"></p>
+<p>最后，损之又损，接近于道，大道至简，把所有笔画合并成一个<strong>笔锋问题</strong>，也是用笔的三要领。<br>
+- 1.收笔越来越轻，写出收笔的尖<br>
+- 2.起笔行笔间形成夹角<br>
+- 3.所有笔画的起笔都需要空中落笔，写出尖儿来，有尖有角，笔锋就出来了<br>
+<img src="https://pythonangry.github.io/post-images/1583150743517.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>用笔千古不易，结字因时相宜。 —— 赵孟頫</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0302 | 绘本作者主页列表]]></title>
         <id>https://pythonangry.github.io/post/RnhnWpXXq/</id>
