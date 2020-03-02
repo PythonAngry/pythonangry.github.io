@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-02T06:11:30.186Z</updated>
+    <updated>2020-03-02T06:48:21.388Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
     <logo>https://pythonangry.github.io/images/avatar.png</logo>
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
+    <entry>
+        <title type="html"><![CDATA[0302 | 绘本作者主页列表]]></title>
+        <id>https://pythonangry.github.io/post/RnhnWpXXq/</id>
+        <link href="https://pythonangry.github.io/post/RnhnWpXXq/">
+        </link>
+        <updated>2020-03-02T06:20:28.000Z</updated>
+        <content type="html"><![CDATA[<p>#1 Oliver Jeffers<br>
+http://www.oliverjeffersworld.com/</p>
+<p>#2 Elisha Cooper<br>
+http://www.elishacooper.com/</p>
+<hr>
+<p>#3 Chris Haughton<br>
+https://www.chrishaughton.com/home</p>
+]]></content>
+    </entry>
 </feed>
