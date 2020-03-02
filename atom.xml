@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-02T06:51:05.738Z</updated>
+    <updated>2020-03-02T06:52:34.502Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -16,12 +16,12 @@
         </link>
         <updated>2020-03-02T06:20:28.000Z</updated>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1583131732663.jpg" alt="" loading="lazy"></figure>
-<h1 id="1-oliver-jeffers">1 Oliver Jeffers</h1>
+<h3 id="1-oliver-jeffers">1 Oliver Jeffers</h3>
 <p>http://www.oliverjeffersworld.com/</p>
-<h1 id="2-elisha-cooper">2 Elisha Cooper</h1>
+<h3 id="2-elisha-cooper">2 Elisha Cooper</h3>
 <p>http://www.elishacooper.com/</p>
 <hr>
-<h1 id="3-chris-haughton">3 Chris Haughton</h1>
+<h3 id="3-chris-haughton">3 Chris Haughton</h3>
 <p>https://www.chrishaughton.com/home</p>
 ]]></content>
     </entry>
