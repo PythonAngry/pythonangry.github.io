@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-02T12:36:57.544Z</updated>
+    <updated>2020-03-02T12:38:41.415Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -21,7 +21,7 @@
 <p>重新上课之后，又看了看知乎大道理，天塌了。<br>
 我天塌了， 我炖我自己。</p>
 <hr>
-<p>#####《书法审美与基本技法》 王立春</p>
+<h5 id="书法审美与基本技法-王立春">《书法审美与基本技法》 王立春</h5>
 <ul>
 <li>
 <p><a href="https://www.bilibili.com/video/av6152514?from=search&amp;seid=456154668510068725">B站版本</a>，沈阳师范大学出品。最早投稿时间是2016年，看着老师反手画字，看得享受，2倍速都不带加。老师讲课，没完没了，没完没了，清楚明白。</p>
@@ -47,11 +47,13 @@
 </ul>
 <p>再往下，以点（空中落笔，尖而弯）、横（起笔与行笔间形成夹角，有尖有角）和竖（同横）的起笔为代表进行分组。<br>
 <img src="https://pythonangry.github.io/post-images/1583150732646.jpg" alt="" loading="lazy"></p>
-<p>最后，损之又损，接近于道，大道至简，把所有笔画合并成一个<strong>笔锋问题</strong>，也是用笔的三要领。<br>
-1. 收笔越来越轻，写出收笔的尖<br>
-2. 起笔行笔间形成夹角<br>
-3. 所有笔画的起笔都需要空中落笔，写出尖儿来，有尖有角，笔锋就出来了<br>
-<img src="https://pythonangry.github.io/post-images/1583150743517.png" alt="" loading="lazy"></p>
+<p>最后，损之又损，接近于道，大道至简，把所有笔画合并成一个<strong>笔锋问题</strong>，也是用笔的三要领。</p>
+<ul>
+<li>收笔越来越轻，写出收笔的尖</li>
+<li>起笔行笔间形成夹角</li>
+<li>所有笔画的起笔都需要空中落笔，写出尖儿来，有尖有角，笔锋就出来了<br>
+<img src="https://pythonangry.github.io/post-images/1583150743517.png" alt="" loading="lazy"></li>
+</ul>
 <blockquote>
 <p>用笔千古不易，结字因时相宜。 —— 赵孟頫</p>
 </blockquote>
