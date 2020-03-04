@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-04T01:35:53.784Z</updated>
+    <updated>2020-03-04T01:39:35.252Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -233,7 +233,7 @@ PA：了解顾客想找什么书，了解实际使用者，给出建议，或范
 <li>信息检索能力：专用SE，垂直SE，万不得已不用综合SE</li>
 <li>信息获取能力</li>
 <li>信息评价能力：对信息本身真伪优劣的评价，基于信息评价其他</li>
-<li>信息管理能力：利用程序软件客户端管理信息</li>
+<li>信息管理能力：利用程序软件客户端管理信息，<em>Total commander</em></li>
 <li>应用信息的能力</li>
 </ol>
 </blockquote>
