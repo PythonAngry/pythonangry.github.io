@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>Gridea | PythonAngry</title>
+<title>摄影 | PythonAngry</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,6 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -78,48 +84,45 @@
 
 
       <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">摄影</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-03-06</span>
+            
+          </div>
+          <div class="post-content">
+            <ol>
+<li>主题是什么</li>
+<li>如何突出主题</li>
+<li>画面是否简洁</li>
+</ol>
+<p>镜头速度指镜头传送光线的能力<br>
+f1.4大于f1.8，数字越小，光圈越大</p>
+<p>20mm广角镜头，50mm标准镜头，400mm远摄镜头<br>
+焦距越短，像场越宽，焦距越长，像场越窄</p>
 
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> Gridea
-          </h2> 
+          </div>
         </div>
 
         
-<section class="post-item">
-    <div class="content">
-      <a href="https://pythonangry.github.io/post/about/">
-        <h2 class="post-title"> </h2>
-      </a>
-      <div class="post-abstract">
-        
+          <div class="next-post">
+            <a class="purple-link" href="https://pythonangry.github.io/post/XHsIv896B/">
+              <h3 class="post-title">
+                下一篇：3月画画儿~
+              </h3>
+            </a>
+          </div>
+          
       </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2020-03-01</span>
+
+      
         
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://pythonangry.github.io/tag/ON1faKyo6/">
-                Gridea
-                
-              </a>
-            
-          </span>
+          <div id="gitalk-container"></div>
         
-      </div>
-    </div>
-    
-  </section>
 
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
+        
+      
 
       <div class="site-footer">
   <div class="slogan"></div>
@@ -153,6 +156,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '84b95f2fd7b3111e76ae',
+        clientSecret: '6b90f0767647b7f65290a483c9691b7c78bb9b37',
+        repo: 'pythonangry.github.io',
+        owner: 'pythonangry',
+        admin: ['pythonangry'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
