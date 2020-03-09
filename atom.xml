@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-08T05:28:54.665Z</updated>
+    <updated>2020-03-09T11:47:30.659Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -61,11 +61,21 @@
 <li>如何突出主题</li>
 <li>画面是否简洁</li>
 </ol>
-<p>镜头速度指镜头传送<br>
-光线的能力<br>
+<p>镜头速度指镜头传送光线的能力<br>
+光圈越小（f值越大），景深越大<br>
+光圈越大（f值越小），景深越小<br>
 f1.4大于f1.8，数字越小，光圈越大</p>
 <p>20mm广角镜头，50mm标准镜头，400mm远摄镜头<br>
 焦距越短，像场越宽，焦距越长，像场越窄</p>
+<p>0308</p>
+<ol>
+<li>景深练习 f4（D7最大光圈），快门自动1/60s，25mm镜头<br>
+<img src="https://pythonangry.github.io/post-images/1583663618653.JPG" alt="" loading="lazy"></li>
+<li>快门练习 1/250s（D7最快门），光圈自动f4，25mm镜头<br>
+<img src="https://pythonangry.github.io/post-images/1583663759419.JPG" alt="" loading="lazy"></li>
+<li>快门练习 1s，光圈自动f20，ISO自动，70mm镜头<br>
+<img src="https://pythonangry.github.io/post-images/1583664422812.JPG" alt="" loading="lazy"></li>
+</ol>
 ]]></content>
     </entry>
     <entry>
@@ -129,6 +139,24 @@ f1.4大于f1.8，数字越小，光圈越大</p>
 另外，国家教育政策给予大学以补助，享受了国家优惠的大学宿舍被征用，享受了宿舍优惠的学生却没能认识到这一点，我认为国家稍欠思想教育了，我也不知道为啥学校宿舍能这么便宜，哦，28岁的我终于知道，是有补贴。。。在国家利益面前，学生个人利益被吊打了。</p>
 <p><strong>0305 《书记》周浩 郭永昌</strong><br>
 今儿把上周看剩的书记看完。怎么说呢，从觉得这就是官场缩影，把观看焦点放在酒宴，放在没人看却在唱歌跳舞的演员到下半部将焦点放在郭书记这人本身。特别这两天上了点政治课，好像懂了点政治，懂了点政策，斗胆用稀薄的资讯分析期基层书记。郭书记是真的在维护群众利益啊！当他对着镜头表白时，说自己不懂潜规则，说自己要在每个地方留下政绩痕迹，我信了，信他大鱼大肉喝茶喝酒显得胖胖的脸，特真诚。纪录片最后有一段黑屏，说的是退钱给某某，某某某。我能想到的是，他在退他当时不得已收下的钱（虽然有一个他说不退哈哈哈）。这种完全由镜头前人讲话的纪录片，真客观，就算他在演，也是客观。甚至客观得在白天时有赞颂他的嫌疑。</p>
+<ol>
+<li>
+<p>过去40年中国教育改革特征<br>
+高等教育改革</p>
+</li>
+<li>
+<p>政策过程的阶段性方法为何受批评<br>
+把一个政策的各个阶段分开研究，不同人去研究，运用不同的标准，甚至不同政策各阶段的研究顺序不一致。</p>
+</li>
+</ol>
+<blockquote>
+<p><img src="https://pythonangry.github.io/post-images/1583653586705.png" alt="" loading="lazy"><br>
+《政策过程理论》第二章 [美] 萨巴蒂尔 编</p>
+</blockquote>
+<ol start="3">
+<li>教育政策研究和公共政策研究有独特性吗<br>
+相比什么的独特性？</li>
+</ol>
 ]]></content>
     </entry>
     <entry>
@@ -339,12 +367,9 @@ falling-rising pitch: the pitch goes lower then higher<br>
 用单词作例子练习，两三个音节的单词更好 library</p>
 <p>imitate对小学生有点难，要用他们能理解的单词进行教学<br>
 模仿，可以说copy me, repeat after me, say these sentences after me</p>
-<p>引起学生注意<br>
-pay attention, listen carefully, focus<br>
-让同学紧跟老师<br>
-repeat after me, after me</p>
-<p>可以用手势来模仿语音音调的高低，更形象容易理解，<em>肢体语言很重要！</em><br>
-意群单位要停顿，标点符号要停顿，语核要停顿，句末，意群末单词要拉长，重读</p>
+<p>引起学生注意：pay attention, listen carefully, focus<br>
+让同学紧跟老师：repeat after me, after me<br>
+可以用手势来模仿语音音调的高低，更形象容易理解，<em>肢体语言很重要！</em></p>
 <p>team1234, group1234<br>
 when/after i say 1,2,3, you repeat what i say, repeat what i say</p>
 <p>用coke，少用cola，用drink，包含了各种饮料，would you like some drink? better than would you like some tea.<br>
@@ -352,6 +377,9 @@ when/after i say 1,2,3, you repeat what i say, repeat what i say</p>
 <p>整体来说 要礼貌，句子要说完整<br>
 要留几分钟预告上课，讨论开始前are you ready? 小组讨论结束，课程结束等<br>
 反馈要清楚，哪里有问题，帮助改正。针对的是问题，你的发音 你的XX 而不是你错了</p>
+<p>意群停顿，标点符号要停顿，重读高调拉长语核，上文重复或意思重复不再强调<br>
+句末，意群末单词要拉长，重读<br>
+清辅音前元音短，浊辅音前元音长</p>
 <p>games: people bingo/ hammer</p>
 <p>eyes on me<br>
 bubble your mouth<br>
