@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-09T11:47:30.659Z</updated>
+    <updated>2020-03-11T04:41:16.530Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -406,6 +406,12 @@ voice level 1</p>
 <ol>
 <li>新加坡 <a href="https://www.nlb.gov.sg/">NPL</a></li>
 <li>美国 <a href="https://www.loc.gov/">Library of congress</a></li>
+<li>中国<a href="http://www.nlc.cn/">中国国家图书馆</a></li>
+<li>香港<a href="https://sc.lcsd.gov.hk/TuniS/www.hkpl.gov.hk/tc/index.html">香港公共图书馆</a></li>
+<li>台湾<a href="https://www.ncl.edu.tw/">国家图书馆</a><a href="https://319readingtw.fandom.com/zh/wiki/%E9%A6%96%E9%A1%B5">台湾图书馆列表</a></li>
+<li>英国<a href="https://www.bl.uk/">The British Library</a></li>
+<li>澳大利亚<a href="https://www.nla.gov.au/">National Library of Australia</a></li>
+<li>纽约<a href="https://www.nypl.org/">New York Public Library</a></li>
 </ol>
 <p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息</p>
 ]]></content>
