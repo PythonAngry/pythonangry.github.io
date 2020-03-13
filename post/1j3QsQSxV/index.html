@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>照片儿 | PythonAngry</title>
+<title>我又开始学python了 | PythonAngry</title>
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,6 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -78,48 +84,59 @@
 
 
       <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">我又开始学python了</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-03-13</span>
+            
+          </div>
+          <div class="post-content">
+            <p>evla可以去掉字符串或字符串变量的引号</p>
+<h4 id="温度转换">温度转换</h4>
+<p>TempStr = input()<br>
+if TempStr[-1] in ['F', 'f']:<br>
+C = (eval(TempStr[0:-1]) - 32)/1.8<br>
+print(&quot;{:.2f}C&quot;.format(C))<br>
+elif TempStr[-1] in ['C', 'c']:<br>
+F = 1.8*eval(TempStr[0:-1]) + 32<br>
+print(&quot;{:.2f}F&quot;.format(F))<br>
+else:<br>
+print(&quot;输入格式错误&quot;)</p>
+<h4 id="货币转换">货币转换</h4>
+<p>money = input()<br>
+if money[0] in ['R']:  #记得加:<br>
+USD = eval(money[3:])/6.78<br>
+print(&quot;USD{:.2f}&quot;.format(USD))  #记得加引号<br>
+elif money[0] in ['U']:<br>
+RMB = eval(money[3:])*6.78<br>
+print(&quot;RMB{:.2f}&quot;.format(RMB))</p>
+<h4 id="数字一一对应替换">数字一一对应替换</h4>
+<p>table = ''.maketrans(&quot;abcdefghij&quot;,&quot;1234567890&quot;)  # 创建映射表，注意字符串的长度要一致，达到一一对应的目的<br>
+str = &quot;hello world! i love python&quot;<br>
+str.translate(table)  # 按照关系表将sting中的字符逐个进行替换</p>
 
-        <div class="current-tag-container">
-          <h2 class="title">
-            <i class="icon icon-pricetags-outline"></i> 照片儿
-          </h2> 
+          </div>
         </div>
 
         
-<section class="post-item">
-    <div class="content">
-      <a href="https://pythonangry.github.io/post/Sn37HjLo/">
-        <h2 class="post-title">摄影</h2>
-      </a>
-      <div class="post-abstract">
-        
+          <div class="next-post">
+            <a class="purple-link" href="https://pythonangry.github.io/post/G2V6RA7Z4/">
+              <h3 class="post-title">
+                下一篇：罗翔法考 | 普法教育
+              </h3>
+            </a>
+          </div>
+          
       </div>
-      <div class="post-info">
-        <span><i class="icon icon-calendar-outline"></i> 2020-03-06</span>
+
+      
         
-          <span>
-            <i class="icon icon-pricetags-outline"></i>
-            
-              <a href="https://pythonangry.github.io/tag/PznRbZefl/">
-                照片儿
-                
-              </a>
-            
-          </span>
+          <div id="gitalk-container"></div>
         
-      </div>
-    </div>
-    
-  </section>
 
-
-<div class="pagination-container">
-  
-  
-</div>
-
-
-      </div>
+        
+      
 
       <div class="site-footer">
   <div class="slogan"></div>
@@ -153,6 +170,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '84b95f2fd7b3111e76ae',
+        clientSecret: '6b90f0767647b7f65290a483c9691b7c78bb9b37',
+        repo: 'pythonangry.github.io',
+        owner: 'pythonangry',
+        admin: ['pythonangry'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
