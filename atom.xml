@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-13T09:36:43.560Z</updated>
+    <updated>2020-03-15T13:48:12.226Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -10,13 +10,17 @@
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
     <entry>
-        <title type="html"><![CDATA[0313又双叕学python]]></title>
+        <title type="html"><![CDATA[0313 | 又双叕学python]]></title>
         <id>https://pythonangry.github.io/post/1j3QsQSxV/</id>
         <link href="https://pythonangry.github.io/post/1j3QsQSxV/">
         </link>
         <updated>2020-03-13T09:23:24.000Z</updated>
-        <content type="html"><![CDATA[<p>evla可以去掉字符串或字符串变量的引号</p>
-<h4 id="温度转换">温度转换</h4>
+        <content type="html"><![CDATA[<p>evla可以去掉字符串或字符串变量的引号<br>
+print(&quot;fff:&quot;,i)  #逗号有形成空格的作用 = fff: i<br>
+range(N)产生0到N-1个数；(M,N)产生M到N-1个数<br>
+整数→浮点数→复数，123+4.0=127.0（数值的范围扩大为浮点数）<br>
+槽{}，只在字符串中有用</p>
+<h4 id="1温度转换">1.温度转换</h4>
 <p>TempStr = input()<br>
 if TempStr[-1] in ['F', 'f']:<br>
 C = (eval(TempStr[0:-1]) - 32)/1.8<br>
@@ -26,7 +30,7 @@ F = 1.8*eval(TempStr[0:-1]) + 32<br>
 print(&quot;{:.2f}F&quot;.format(F))<br>
 else:<br>
 print(&quot;输入格式错误&quot;)</p>
-<h4 id="货币转换">货币转换</h4>
+<h4 id="2货币转换">2.货币转换</h4>
 <p>money = input()<br>
 if money[0] in ['R']:  #记得加:<br>
 USD = eval(money[3:])/6.78<br>
@@ -34,10 +38,59 @@ print(&quot;USD{:.2f}&quot;.format(USD))  #记得加引号<br>
 elif money[0] in ['U']:<br>
 RMB = eval(money[3:])*6.78<br>
 print(&quot;RMB{:.2f}&quot;.format(RMB))</p>
-<h4 id="数字一一对应替换">数字一一对应替换</h4>
+<h4 id="3数字一一对应替换">3.数字一一对应替换</h4>
 <p>table = ''.maketrans(&quot;abcdefghij&quot;,&quot;1234567890&quot;)  # 创建映射表，注意字符串的长度要一致，达到一一对应的目的<br>
 str = &quot;hello world! i love python&quot;<br>
 str.translate(table)  # 按照关系表将sting中的字符逐个进行替换</p>
+<h3 id="turtle">Turtle</h3>
+<h4 id="1可恶的蟒蛇">1.可恶的蟒蛇</h4>
+<p>import turtle as t<br>
+t.setup(650,350,200,200)  #setup()设置窗体大小及位置。宽，高，x，y。<br>
+t.penup()  #t.pu()<br>
+t.fd(-250)  #海龟的正前方向运行t.fd(d)<br>
+t.pendown()  #t.pd()<br>
+t.pensize(25)  #t.width()<br>
+t.pencolor('purple')  #purple要小写<br>
+t.seth(-40)  #改变海龟行进方向，不作画，逆时针40度<br>
+for i in range(4):<br>
+t.circle(40,80)  #以海龟当前某点为圆心进行曲线运行turtle.circle(r,angle), r为半径，圆心在turtle左方r距离处，绘制弧度为angle，90则绘制90度弧线<br>
+t.circle(-40,80)<br>
+t.circle(40,80/2)<br>
+t.fd(40)<br>
+t.circle(16,180)<br>
+t.fd(40*2/3)<br>
+t.done()  #加了此行代码程序不会自动退出</p>
+<p>分绝对方向，绝对角度，和海龟方向，海龟角度<br>
+turtle.goto(x,y) #让龟龟去窗体内的任何一个位置<br>
+turtle.left(angle)  #龟龟自己的方向角度<br>
+turtle库默认采用RGB小数值表示颜色turtle.colormode(mode) mode=1.0或255<br>
+<strong>from turtle import</strong>*</p>
+<h4 id="天天向上的力量">天天向上的力量</h4>
+<p>def dayUP(df):<br>
+dayup = 1<br>
+for i in range(365):<br>
+if i % 7 in [0,6]:<br>
+dayup = dayup * (1-0.01)<br>
+else:<br>
+dayup = dayup * (1+df)<br>
+return dayup<br>
+dayfactor = 0.01<br>
+while dayUP(dayfactor) &lt; 37.78:<br>
+dayfactor += 0.001<br>
+print(&quot;工作日的努力参数是{:.3f}&quot;.format(dayfactor))</p>
+<h4 id="文本进度条">文本进度条</h4>
+<p>import time<br>
+scale = 50<br>
+print(&quot;文本开始&quot;.center(scale//2,'-'))<br>
+start = time.perf_counter()<br>
+for i in range(scale+1):<br>
+a = '*' * i<br>
+b = '.' * (scale-i)<br>
+c = (i/scale)*100<br>
+dur = time.perf_counter() - start<br>
+print(&quot;\r{:^3.0f}%[{}-&gt;{}]{:.2f}s&quot;.format(c,a,b,dur))<br>
+time.sleep(0.1)<br>
+print(&quot;\n+执行结束&quot;.center(scale//2,'-'))</p>
 ]]></content>
     </entry>
     <entry>
@@ -136,6 +189,8 @@ f1.4大于f1.8，数字越小，光圈越大</p>
 <img src="https://pythonangry.github.io/post-images/1583637844267.jpg" alt="" loading="lazy"></p>
 </li>
 </ul>
+<p>-0309<br>
+<img src="https://pythonangry.github.io/post-images/1584100504278.jpg" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
