@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1584327285121">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1584341399086">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1584327285121" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1584341399086" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -155,13 +155,13 @@ else:<br>
 dayup = dayup * (1+df)<br>
 return dayup<br>
 dayfactor = 0.01<br>
-while dayUP(dayfactor) &lt; 37.78:<br>
+while dayUP(dayfactor) &lt; 37.78: #每天努力百分之一一年下来会有37.78值<br>
 dayfactor += 0.001<br>
 print(&quot;工作日的努力参数是{:.3f}&quot;.format(dayfactor))</p>
 <h4 id="文本进度条">文本进度条</h4>
 <p>import time<br>
 scale = 50<br>
-print(&quot;文本开始&quot;.center(scale//2,'-'))<br>
+print(&quot;执行开始&quot;.center(scale//2,'-'))<br>
 start = time.perf_counter()<br>
 for i in range(scale+1):<br>
 a = '*' * i<br>
@@ -170,7 +170,7 @@ c = (i/scale)*100<br>
 dur = time.perf_counter() - start<br>
 print(&quot;\r{:^3.0f}%[{}-&gt;{}]{:.2f}s&quot;.format(c,a,b,dur))<br>
 time.sleep(0.1)<br>
-print(&quot;\n+执行结束&quot;.center(scale//2,'-'))</p>
+print(&quot;\n&quot;&quot;执行结束&quot;.center(scale//2,'-'))</p>
 
           </div>
         </div>

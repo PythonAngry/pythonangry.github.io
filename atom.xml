@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-16T03:00:06.978Z</updated>
+    <updated>2020-03-16T07:36:43.762Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -75,13 +75,13 @@ else:<br>
 dayup = dayup * (1+df)<br>
 return dayup<br>
 dayfactor = 0.01<br>
-while dayUP(dayfactor) &lt; 37.78:<br>
+while dayUP(dayfactor) &lt; 37.78: #每天努力百分之一一年下来会有37.78值<br>
 dayfactor += 0.001<br>
 print(&quot;工作日的努力参数是{:.3f}&quot;.format(dayfactor))</p>
 <h4 id="文本进度条">文本进度条</h4>
 <p>import time<br>
 scale = 50<br>
-print(&quot;文本开始&quot;.center(scale//2,'-'))<br>
+print(&quot;执行开始&quot;.center(scale//2,'-'))<br>
 start = time.perf_counter()<br>
 for i in range(scale+1):<br>
 a = '*' * i<br>
@@ -90,7 +90,7 @@ c = (i/scale)*100<br>
 dur = time.perf_counter() - start<br>
 print(&quot;\r{:^3.0f}%[{}-&gt;{}]{:.2f}s&quot;.format(c,a,b,dur))<br>
 time.sleep(0.1)<br>
-print(&quot;\n+执行结束&quot;.center(scale//2,'-'))</p>
+print(&quot;\n&quot;&quot;执行结束&quot;.center(scale//2,'-'))</p>
 ]]></content>
     </entry>
     <entry>
@@ -578,6 +578,7 @@ voice level 1</p>
 <ul>
 <li>电商网站：获取商品种类信息</li>
 <li><a href="https://www.wikihow.com/Main-Page">Wikihow</a></li>
+<li><a href="https://magi.com/">MAg[i]</a>：基于机器学习的信息抽取和检索系统</li>
 </ul>
 <h5 id="2-利用垂直搜索获取专用信息">2. 利用垂直搜索获取专用信息</h5>
 <ul>
