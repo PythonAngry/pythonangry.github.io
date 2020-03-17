@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-17T02:28:52.390Z</updated>
+    <updated>2020-03-17T06:34:56.632Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -19,7 +19,8 @@
 print(&quot;fff:&quot;,i)  #逗号有形成空格的作用 = fff: i<br>
 range(N)产生0到N-1个数；(M,N)产生M到N-1个数<br>
 整数→浮点数→复数，123+4.0=127.0（数值的范围扩大为浮点数）<br>
-槽{}，只在字符串中有用</p>
+槽{}，只在字符串中有用<br>
+能利用随机数种子生成“确定”的随机数，以便采用随机数的程序能够重演</p>
 <h4 id="1温度转换">1.温度转换</h4>
 <p>TempStr = input()<br>
 if TempStr[-1] in ['F', 'f']:<br>
@@ -91,6 +92,43 @@ dur = time.perf_counter() - start<br>
 print(&quot;\r{:^3.0f}%[{}-&gt;{}]{:.2f}s&quot;.format(c,a,b,dur))<br>
 time.sleep(0.1)<br>
 print(&quot;\n&quot;&quot;执行结束&quot;.center(scale//2,'-'))</p>
+<h4 id="bmi">BMI</h4>
+<p>height, weight = eval(input('请输入身高(米)和体重(公斤)[逗号隔开]：'))<br>
+bmi = weight / pow(height,2)<br>
+print(&quot;BMI数值为：{:.2f}&quot;.format(bmi))<br>
+who, nat = &quot;&quot;,&quot;&quot;<br>
+if bmi &lt; 18.5:<br>
+who, nat = &quot;偏瘦&quot;, &quot;偏瘦&quot;<br>
+elif 18.5 &lt;= bmi &lt;24:<br>
+who, nat = &quot;正常&quot;, &quot;正常&quot;<br>
+elif 24 &lt;= bmi &lt; 25:<br>
+who, nat = &quot;正常&quot;, &quot;偏胖&quot;<br>
+elif 25 &lt;= bmi &lt; 28:<br>
+who, nat = &quot;偏胖&quot;, &quot;偏胖&quot;<br>
+elif 28 &lt;= bmi &lt; 30:<br>
+who, nat = &quot;偏胖&quot;, &quot;肥胖&quot;<br>
+else:<br>
+who, nat = &quot;肥胖&quot;, &quot;肥胖&quot;<br>
+print(&quot;BMI指标为：国际'{}',国内'{}'&quot;.format(who,nat))</p>
+<h4 id="continue-break">continue， break</h4>
+<p>for c in &quot;PYTHON&quot; :<br>
+if c == &quot;T&quot;:<br>
+continue # 跳过当次循环，不跳过当前循环  break # 跳出循环<br>
+print(c,end=&quot;&quot;)</p>
+<h4 id="蒙特卡罗法求解派-面积撒点">蒙特卡罗法求解派 # 面积撒点</h4>
+<p>from random import random<br>
+from time import perf_counter<br>
+darts = 1000*1000<br>
+hits = 0.0<br>
+start = perf_counter()<br>
+for i in range (1,darts+1):<br>
+x, y = random(), random()<br>
+dist = pow(x<strong>2+y</strong>2, 0.5)<br>
+if dist &lt;=1.0:<br>
+hits+= 1<br>
+pi = 4 * (hits/darts)<br>
+print(&quot;圆周率值为{}&quot;.format(pi))<br>
+print('运行时间为{:.5f}s'.format(perf_counter()-start))</p>
 ]]></content>
     </entry>
     <entry>
