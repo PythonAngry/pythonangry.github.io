@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1584536228321">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1584602245991">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1584536228321" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1584602245991" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -209,6 +209,81 @@ hits+= 1<br>
 pi = 4 * (hits/darts)<br>
 print(&quot;圆周率值为{}&quot;.format(pi))<br>
 print('运行时间为{:.5f}s'.format(perf_counter()-start))</p>
+<h4 id="七段数码管绘制">七段数码管绘制</h4>
+<p>import turtle<br>
+def drawLine(draw): #绘制单段数码管<br>
+turtle.pendown() if draw else turtle.penup()<br>
+turtle.fd(40)<br>
+turtle.right(90)<br>
+def drawDigit(digit): #根据数字绘制七段数码管<br>
+drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,6,8] else drawLine(False)<br>
+turtle.left(90)<br>
+drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)<br>
+turtle.left(180)<br>
+turtle.penup() #为绘制后续数字确定位置<br>
+turtle.fd(20)<br>
+def drawDate(date): #获得要输出的数字<br>
+for i in date:<br>
+drawDigit(eval(i))<br>
+def main():<br>
+turtle.setup(800,350,200,200)<br>
+turtle.penup()<br>
+turtle.fd(-300)<br>
+turtle.pensize(5)<br>
+drawDate(&quot;20200319&quot;)<br>
+turtle.hideturtle()<br>
+turtle.done()<br>
+main()</p>
+<p>=========================================</p>
+<p>import turtle,time<br>
+def drawGap():<br>
+turtle.penup()<br>
+turtle.fd(5)<br>
+def drawLine(draw): #绘制单段数码管<br>
+drawGap()<br>
+turtle.pendown() if draw else turtle.penup()<br>
+turtle.fd(40)<br>
+drawGap()<br>
+turtle.right(90)<br>
+def drawDigit(digit): #根据数字绘制七段数码管<br>
+drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,6,8] else drawLine(False)<br>
+turtle.left(90)<br>
+drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)<br>
+turtle.left(180)<br>
+turtle.penup() #为绘制后续数字确定位置<br>
+turtle.fd(20)<br>
+def drawDate(date): #获得要输出的数字<br>
+turtle.pencolor('red')<br>
+for i in date:<br>
+if i =='-':<br>
+turtle.write('年',font=('Arial',18,'normal'))<br>
+turtle.pencolor('green')<br>
+turtle.fd(40)<br>
+elif i =='=':<br>
+turtle.write('月', font=('Arial', 18, 'normal'))<br>
+elif i =='+':<br>
+turtle.write('日', font=('Arial', 18, 'normal'))<br>
+else:<br>
+drawDigit(eval(i))<br>
+def main():<br>
+turtle.setup(800,350,200,200)<br>
+turtle.penup()<br>
+turtle.fd(-300)<br>
+turtle.pensize(5)<br>
+drawDate(time.strftime(&quot;%y-%m=%d+&quot;,time.gmtime()))<br>
+turtle.hideturtle()<br>
+turtle.done()<br>
+main()</p>
 
           </div>
         </div>

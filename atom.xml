@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-18T12:57:13.662Z</updated>
+    <updated>2020-03-19T07:17:31.422Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -129,6 +129,81 @@ hits+= 1<br>
 pi = 4 * (hits/darts)<br>
 print(&quot;圆周率值为{}&quot;.format(pi))<br>
 print('运行时间为{:.5f}s'.format(perf_counter()-start))</p>
+<h4 id="七段数码管绘制">七段数码管绘制</h4>
+<p>import turtle<br>
+def drawLine(draw): #绘制单段数码管<br>
+turtle.pendown() if draw else turtle.penup()<br>
+turtle.fd(40)<br>
+turtle.right(90)<br>
+def drawDigit(digit): #根据数字绘制七段数码管<br>
+drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,6,8] else drawLine(False)<br>
+turtle.left(90)<br>
+drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)<br>
+turtle.left(180)<br>
+turtle.penup() #为绘制后续数字确定位置<br>
+turtle.fd(20)<br>
+def drawDate(date): #获得要输出的数字<br>
+for i in date:<br>
+drawDigit(eval(i))<br>
+def main():<br>
+turtle.setup(800,350,200,200)<br>
+turtle.penup()<br>
+turtle.fd(-300)<br>
+turtle.pensize(5)<br>
+drawDate(&quot;20200319&quot;)<br>
+turtle.hideturtle()<br>
+turtle.done()<br>
+main()</p>
+<p>=========================================</p>
+<p>import turtle,time<br>
+def drawGap():<br>
+turtle.penup()<br>
+turtle.fd(5)<br>
+def drawLine(draw): #绘制单段数码管<br>
+drawGap()<br>
+turtle.pendown() if draw else turtle.penup()<br>
+turtle.fd(40)<br>
+drawGap()<br>
+turtle.right(90)<br>
+def drawDigit(digit): #根据数字绘制七段数码管<br>
+drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,6,8] else drawLine(False)<br>
+turtle.left(90)<br>
+drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)<br>
+drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)<br>
+turtle.left(180)<br>
+turtle.penup() #为绘制后续数字确定位置<br>
+turtle.fd(20)<br>
+def drawDate(date): #获得要输出的数字<br>
+turtle.pencolor('red')<br>
+for i in date:<br>
+if i =='-':<br>
+turtle.write('年',font=('Arial',18,'normal'))<br>
+turtle.pencolor('green')<br>
+turtle.fd(40)<br>
+elif i =='=':<br>
+turtle.write('月', font=('Arial', 18, 'normal'))<br>
+elif i =='+':<br>
+turtle.write('日', font=('Arial', 18, 'normal'))<br>
+else:<br>
+drawDigit(eval(i))<br>
+def main():<br>
+turtle.setup(800,350,200,200)<br>
+turtle.penup()<br>
+turtle.fd(-300)<br>
+turtle.pensize(5)<br>
+drawDate(time.strftime(&quot;%y-%m=%d+&quot;,time.gmtime()))<br>
+turtle.hideturtle()<br>
+turtle.done()<br>
+main()</p>
 ]]></content>
     </entry>
     <entry>
@@ -195,6 +270,7 @@ print('运行时间为{:.5f}s'.format(perf_counter()-start))</p>
 f1.4大于f1.8，数字越小，光圈越大</p>
 <p>20mm广角镜头，50mm标准镜头，400mm远摄镜头<br>
 焦距越短，像场越宽，焦距越长，像场越窄</p>
+<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1584602175986.jpg" alt="" loading="lazy"></figure>
 <p>0308</p>
 <ol>
 <li>景深练习 f4（D7最大光圈），快门自动1/60s，25mm镜头<br>
