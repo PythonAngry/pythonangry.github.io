@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-19T07:17:31.422Z</updated>
+    <updated>2020-03-20T22:49:01.631Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -10,200 +10,234 @@
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
     <entry>
+        <title type="html"><![CDATA[0320 | 知识创新]]></title>
+        <id>https://pythonangry.github.io/post/0doq3JXF7/</id>
+        <link href="https://pythonangry.github.io/post/0doq3JXF7/">
+        </link>
+        <updated>2020-03-20T03:11:58.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="隐性知识显性化">隐性知识显性化</h4>
+<ol>
+<li>要表达难以表达的事情，更依赖于比喻性语言和象征性手法</li>
+<li>要传播知识，个人的知识必须与他人分享 #熟手技工</li>
+<li>新知识往往诞生于模糊和<strong>冗余</strong>之中 #下达模糊指令，同一部门不同小组研究同一问题</li>
+</ol>
+<h4 id="知识转化的四种模式">知识转化的四种模式</h4>
+<ul>
+<li>社会化： 从隐性知识到隐性知识：徒弟模仿学习师傅 —— 共情知识</li>
+<li>外显化： 从隐性知识到显性知识：书写，创造概念，演绎和归纳；依次使用比喻类比和模型 —— 概念性知识<br>
+<img src="https://pythonangry.github.io/post-images/1584676264915.png" alt="" loading="lazy"></li>
+<li>组合化： 从显性知识到显性知识：重新配置现有信息，产生新的知识 —— 系统性知识</li>
+<li>内隐化： 从显性知识到隐性知识：做中学 —— 操作性知识<br>
+<img src="https://pythonangry.github.io/post-images/1584680396602.png" alt="" loading="lazy"></li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[0313 | 又双叕学python]]></title>
         <id>https://pythonangry.github.io/post/1j3QsQSxV/</id>
         <link href="https://pythonangry.github.io/post/1j3QsQSxV/">
         </link>
         <updated>2020-03-13T09:23:24.000Z</updated>
-        <content type="html"><![CDATA[<p>evla可以去掉字符串或字符串变量的引号<br>
+        <content type="html"><![CDATA[<h4 id="知识点摘录">知识点摘录</h4>
+<p>evla可以去掉字符串或字符串变量的引号<br>
 print(&quot;fff:&quot;,i)  #逗号有形成空格的作用 = fff: i<br>
 range(N)产生0到N-1个数；(M,N)产生M到N-1个数<br>
 整数→浮点数→复数，123+4.0=127.0（数值的范围扩大为浮点数）<br>
 槽{}，只在字符串中有用<br>
-能利用随机数种子生成“确定”的随机数，以便采用随机数的程序能够重演</p>
+利用随机数种子生成“确定”的随机数，以便采用随机数的程序能够重演</p>
 <h4 id="1温度转换">1.温度转换</h4>
-<p>TempStr = input()<br>
-if TempStr[-1] in ['F', 'f']:<br>
-C = (eval(TempStr[0:-1]) - 32)/1.8<br>
-print(&quot;{:.2f}C&quot;.format(C))<br>
-elif TempStr[-1] in ['C', 'c']:<br>
-F = 1.8*eval(TempStr[0:-1]) + 32<br>
-print(&quot;{:.2f}F&quot;.format(F))<br>
-else:<br>
-print(&quot;输入格式错误&quot;)</p>
+<pre><code>TempStr = input()
+if TempStr[-1] in ['F', 'f']:
+     C = (eval(TempStr[0:-1]) - 32)/1.8
+     print(&quot;{:.2f}C&quot;.format(C))
+elif TempStr[-1] in ['C', 'c']:
+     F = 1.8*eval(TempStr[0:-1]) + 32
+     print(&quot;{:.2f}F&quot;.format(F))
+else:
+     print(&quot;输入格式错误&quot;)
+</code></pre>
 <h4 id="2货币转换">2.货币转换</h4>
-<p>money = input()<br>
-if money[0] in ['R']:  #记得加:<br>
-USD = eval(money[3:])/6.78<br>
-print(&quot;USD{:.2f}&quot;.format(USD))  #记得加引号<br>
-elif money[0] in ['U']:<br>
-RMB = eval(money[3:])*6.78<br>
-print(&quot;RMB{:.2f}&quot;.format(RMB))</p>
+<pre><code>money = input()
+if money[0] in ['R']:  #记得加:
+     USD = eval(money[3:])/6.78
+     print(&quot;USD{:.2f}&quot;.format(USD))  #记得加引号
+elif money[0] in ['U']:
+     RMB = eval(money[3:])*6.78
+     print(&quot;RMB{:.2f}&quot;.format(RMB))
+</code></pre>
 <h4 id="3数字一一对应替换">3.数字一一对应替换</h4>
-<p>table = ''.maketrans(&quot;abcdefghij&quot;,&quot;1234567890&quot;)  # 创建映射表，注意字符串的长度要一致，达到一一对应的目的<br>
-str = &quot;hello world! i love python&quot;<br>
-str.translate(table)  # 按照关系表将sting中的字符逐个进行替换</p>
-<h3 id="turtle">Turtle</h3>
-<h4 id="1可恶的蟒蛇">1.可恶的蟒蛇</h4>
-<p>import turtle as t<br>
-t.setup(650,350,200,200)  #setup()设置窗体大小及位置。宽，高，x，y。<br>
-t.penup()  #t.pu()<br>
-t.fd(-250)  #海龟的正前方向运行t.fd(d)<br>
-t.pendown()  #t.pd()<br>
-t.pensize(25)  #t.width()<br>
-t.pencolor('purple')  #purple要小写<br>
-t.seth(-40)  #改变海龟行进方向，不作画，逆时针40度<br>
-for i in range(4):<br>
-t.circle(40,80)  #以海龟当前某点为圆心进行曲线运行turtle.circle(r,angle), r为半径，圆心在turtle左方r距离处，绘制弧度为angle，90则绘制90度弧线<br>
-t.circle(-40,80)<br>
-t.circle(40,80/2)<br>
-t.fd(40)<br>
-t.circle(16,180)<br>
-t.fd(40*2/3)<br>
-t.done()  #加了此行代码程序不会自动退出</p>
-<p>分绝对方向，绝对角度，和海龟方向，海龟角度<br>
+<pre><code>table = ''.maketrans(&quot;abcdefghij&quot;,&quot;1234567890&quot;)  # 创建映射表，注意字符串的长度要一致，达到一一对应的目的
+str = &quot;hello world! i love python&quot;
+str.translate(table)  # 按照关系表将sting中的字符逐个进行替换
+</code></pre>
+<h4 id="4turtle可恶的蟒蛇">4.Turtle:可恶的蟒蛇</h4>
+<pre><code>import turtle as t
+t.setup(650,350,200,200)  #setup()设置窗体大小及位置。宽，高，x，y。
+t.penup()  #t.pu()
+t.fd(-250)  #海龟的正前方向运行t.fd(d)
+t.pendown()  #t.pd()
+t.pensize(25)  #t.width()
+t.pencolor('purple')  #purple要小写
+t.seth(-40)  #改变海龟行进方向，不作画，逆时针40度
+for i in range(4):
+    t.circle(40,80)  #以海龟当前某点为圆心进行曲线运行turtle.circle(r,angle), r为半径，圆心在turtle左方r距离处，绘制弧度为angle，90则绘制90度弧线
+    t.circle(-40,80)
+t.circle(40,80/2)
+t.fd(40)
+t.circle(16,180)
+t.fd(40*2/3)
+t.done()  #加了此行代码程序不会自动退出
+</code></pre>
+<h4 id="turtle知识点">turtle知识点</h4>
+<p>turtle分绝对方向，绝对角度，和海龟方向，海龟角度<br>
 turtle.goto(x,y) #让龟龟去窗体内的任何一个位置<br>
 turtle.left(angle)  #龟龟自己的方向角度<br>
 turtle库默认采用RGB小数值表示颜色turtle.colormode(mode) mode=1.0或255<br>
 <strong>from turtle import</strong>*</p>
-<h4 id="天天向上的力量">天天向上的力量</h4>
-<p>def dayUP(df):<br>
-dayup = 1<br>
-for i in range(365):<br>
-if i % 7 in [0,6]:<br>
-dayup = dayup * (1-0.01)<br>
-else:<br>
-dayup = dayup * (1+df)<br>
-return dayup<br>
-dayfactor = 0.01<br>
-while dayUP(dayfactor) &lt; 37.78: #每天努力百分之一一年下来会有37.78值<br>
-dayfactor += 0.001<br>
-print(&quot;工作日的努力参数是{:.3f}&quot;.format(dayfactor))</p>
-<h4 id="文本进度条">文本进度条</h4>
-<p>import time<br>
-scale = 50<br>
-print(&quot;执行开始&quot;.center(scale//2,'-'))<br>
-start = time.perf_counter()<br>
-for i in range(scale+1):<br>
-a = '*' * i<br>
-b = '.' * (scale-i)<br>
-c = (i/scale)*100<br>
-dur = time.perf_counter() - start<br>
-print(&quot;\r{:^3.0f}%[{}-&gt;{}]{:.2f}s&quot;.format(c,a,b,dur))<br>
-time.sleep(0.1)<br>
-print(&quot;\n&quot;&quot;执行结束&quot;.center(scale//2,'-'))</p>
-<h4 id="bmi">BMI</h4>
-<p>height, weight = eval(input('请输入身高(米)和体重(公斤)[逗号隔开]：'))<br>
-bmi = weight / pow(height,2)<br>
-print(&quot;BMI数值为：{:.2f}&quot;.format(bmi))<br>
-who, nat = &quot;&quot;,&quot;&quot;<br>
-if bmi &lt; 18.5:<br>
-who, nat = &quot;偏瘦&quot;, &quot;偏瘦&quot;<br>
-elif 18.5 &lt;= bmi &lt;24:<br>
-who, nat = &quot;正常&quot;, &quot;正常&quot;<br>
-elif 24 &lt;= bmi &lt; 25:<br>
-who, nat = &quot;正常&quot;, &quot;偏胖&quot;<br>
-elif 25 &lt;= bmi &lt; 28:<br>
-who, nat = &quot;偏胖&quot;, &quot;偏胖&quot;<br>
-elif 28 &lt;= bmi &lt; 30:<br>
-who, nat = &quot;偏胖&quot;, &quot;肥胖&quot;<br>
-else:<br>
-who, nat = &quot;肥胖&quot;, &quot;肥胖&quot;<br>
-print(&quot;BMI指标为：国际'{}',国内'{}'&quot;.format(who,nat))</p>
+<h4 id="5天天向上的力量">5.天天向上的力量</h4>
+<pre><code>def dayUP(df):
+    dayup = 1
+    for i in range(365):
+        if i % 7 in [0,6]:
+            dayup = dayup * (1-0.01)
+        else:
+            dayup = dayup * (1+df)
+    return dayup
+dayfactor = 0.01
+while dayUP(dayfactor) &lt; 37.78: #每天努力百分之一一年下来会有37.78值
+    dayfactor += 0.001
+print(&quot;工作日的努力参数是{:.3f}&quot;.format(dayfactor))
+</code></pre>
+<h4 id="6文本进度条">6.文本进度条</h4>
+<pre><code>import time
+scale = 50
+print(&quot;执行开始&quot;.center(scale//2,'-'))
+start = time.perf_counter()
+for i in range(scale+1):
+    a = '*' * i
+    b = '.' * (scale-i)
+    c = (i/scale)*100
+    dur = time.perf_counter() - start
+    print(&quot;\r{:^3.0f}%[{}-&gt;{}]{:.2f}s&quot;.format(c,a,b,dur))
+    time.sleep(0.1)
+print(&quot;\n&quot;&quot;执行结束&quot;.center(scale//2,'-'))
+</code></pre>
+<h4 id="7bmi">7.BMI</h4>
+<pre><code>height, weight = eval(input('请输入身高(米)和体重(公斤)[逗号隔开]：'))
+bmi = weight / pow(height,2)
+print(&quot;BMI数值为：{:.2f}&quot;.format(bmi))
+who, nat = &quot;&quot;,&quot;&quot;
+if bmi &lt; 18.5:
+  who, nat = &quot;偏瘦&quot;, &quot;偏瘦&quot;
+elif 18.5 &lt;= bmi &lt;24:
+  who, nat = &quot;正常&quot;, &quot;正常&quot;
+elif 24 &lt;= bmi &lt; 25:
+  who, nat = &quot;正常&quot;, &quot;偏胖&quot;
+elif 25 &lt;= bmi &lt; 28:
+  who, nat = &quot;偏胖&quot;, &quot;偏胖&quot;
+elif 28 &lt;= bmi &lt; 30:
+  who, nat = &quot;偏胖&quot;, &quot;肥胖&quot;
+else:
+  who, nat = &quot;肥胖&quot;, &quot;肥胖&quot;
+print(&quot;BMI指标为：国际'{}',国内'{}'&quot;.format(who,nat))
+</code></pre>
 <h4 id="continue-break">continue， break</h4>
 <p>for c in &quot;PYTHON&quot; :<br>
 if c == &quot;T&quot;:<br>
 continue # 跳过当次循环，不跳过当前循环  break # 跳出循环<br>
 print(c,end=&quot;&quot;)</p>
-<h4 id="蒙特卡罗法求解派-面积撒点">蒙特卡罗法求解派 # 面积撒点</h4>
-<p>from random import random<br>
-from time import perf_counter<br>
-darts = 1000*1000<br>
-hits = 0.0<br>
-start = perf_counter()<br>
-for i in range (1,darts+1):<br>
-x, y = random(), random()<br>
-dist = pow(x<strong>2+y</strong>2, 0.5)<br>
-if dist &lt;=1.0:<br>
-hits+= 1<br>
-pi = 4 * (hits/darts)<br>
-print(&quot;圆周率值为{}&quot;.format(pi))<br>
-print('运行时间为{:.5f}s'.format(perf_counter()-start))</p>
-<h4 id="七段数码管绘制">七段数码管绘制</h4>
-<p>import turtle<br>
-def drawLine(draw): #绘制单段数码管<br>
-turtle.pendown() if draw else turtle.penup()<br>
-turtle.fd(40)<br>
-turtle.right(90)<br>
-def drawDigit(digit): #根据数字绘制七段数码管<br>
-drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,2,6,8] else drawLine(False)<br>
-turtle.left(90)<br>
-drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)<br>
-turtle.left(180)<br>
-turtle.penup() #为绘制后续数字确定位置<br>
-turtle.fd(20)<br>
-def drawDate(date): #获得要输出的数字<br>
-for i in date:<br>
-drawDigit(eval(i))<br>
-def main():<br>
-turtle.setup(800,350,200,200)<br>
-turtle.penup()<br>
-turtle.fd(-300)<br>
-turtle.pensize(5)<br>
-drawDate(&quot;20200319&quot;)<br>
-turtle.hideturtle()<br>
-turtle.done()<br>
-main()</p>
+<h4 id="8蒙特卡罗法求解派-面积撒点">8.蒙特卡罗法求解派 # 面积撒点</h4>
+<pre><code>from random import random
+from time import perf_counter
+darts = 1000*1000
+hits = 0.0
+start = perf_counter()
+for i in range (1,darts+1):
+  x, y = random(), random()
+  dist = pow(x**2+y**2, 0.5)
+  if dist &lt;=1.0:
+    hits+= 1
+pi = 4 * (hits/darts)
+print(&quot;圆周率值为{}&quot;.format(pi))
+print('运行时间为{:.5f}s'.format(perf_counter()-start))
+</code></pre>
+<h4 id="9七段数码管绘制">9.七段数码管绘制</h4>
+<pre><code>import turtle
+def drawLine(draw): #绘制单段数码管
+    turtle.pendown() if draw else turtle.penup()
+    turtle.fd(40)
+    turtle.right(90)
+def drawDigit(digit): #根据数字绘制七段数码管
+    drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,6,8] else drawLine(False)
+    turtle.left(90)
+    drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)
+    turtle.left(180)
+    turtle.penup() #为绘制后续数字确定位置
+    turtle.fd(20)
+def drawDate(date): #获得要输出的数字
+    for i in date:
+        drawDigit(eval(i))
+def main():
+    turtle.setup(800,350,200,200)
+    turtle.penup()
+    turtle.fd(-300)
+    turtle.pensize(5)
+    drawDate(&quot;20200319&quot;)
+    turtle.hideturtle()
+    turtle.done()
+main()
+</code></pre>
 <p>=========================================</p>
-<p>import turtle,time<br>
-def drawGap():<br>
-turtle.penup()<br>
-turtle.fd(5)<br>
-def drawLine(draw): #绘制单段数码管<br>
-drawGap()<br>
-turtle.pendown() if draw else turtle.penup()<br>
-turtle.fd(40)<br>
-drawGap()<br>
-turtle.right(90)<br>
-def drawDigit(digit): #根据数字绘制七段数码管<br>
-drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,2,6,8] else drawLine(False)<br>
-turtle.left(90)<br>
-drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)<br>
-drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)<br>
-turtle.left(180)<br>
-turtle.penup() #为绘制后续数字确定位置<br>
-turtle.fd(20)<br>
-def drawDate(date): #获得要输出的数字<br>
-turtle.pencolor('red')<br>
-for i in date:<br>
-if i =='-':<br>
-turtle.write('年',font=('Arial',18,'normal'))<br>
-turtle.pencolor('green')<br>
-turtle.fd(40)<br>
-elif i =='=':<br>
-turtle.write('月', font=('Arial', 18, 'normal'))<br>
-elif i =='+':<br>
-turtle.write('日', font=('Arial', 18, 'normal'))<br>
-else:<br>
-drawDigit(eval(i))<br>
-def main():<br>
-turtle.setup(800,350,200,200)<br>
-turtle.penup()<br>
-turtle.fd(-300)<br>
-turtle.pensize(5)<br>
-drawDate(time.strftime(&quot;%y-%m=%d+&quot;,time.gmtime()))<br>
-turtle.hideturtle()<br>
-turtle.done()<br>
-main()</p>
+<pre><code>import turtle,time
+def drawGap():
+    turtle.penup()
+    turtle.fd(5)
+def drawLine(draw): #绘制单段数码管
+    drawGap()
+    turtle.pendown() if draw else turtle.penup()
+    turtle.fd(40)
+    drawGap()
+    turtle.right(90)
+def drawDigit(digit): #根据数字绘制七段数码管
+    drawLine(True) if digit in [2,3,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,3,4,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,6,8] else drawLine(False)
+    turtle.left(90)
+    drawLine(True) if digit in [0,4,5,6,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,2,3,5,6,7,8,9] else drawLine(False)
+    drawLine(True) if digit in [0,1,2,3,4,7,8,9] else drawLine(False)
+    turtle.left(180)
+    turtle.penup() #为绘制后续数字确定位置
+    turtle.fd(20)
+def drawDate(date): #获得要输出的数字
+    turtle.pencolor('red')
+    for i in date:
+        if i =='-':
+            turtle.write('年',font=('Arial',18,'normal'))
+            turtle.pencolor('green')
+            turtle.fd(40)
+        elif i =='=':
+            turtle.write('月', font=('Arial', 18, 'normal'))
+        elif i =='+':
+            turtle.write('日', font=('Arial', 18, 'normal'))
+        else:
+            drawDigit(eval(i))
+def main():
+    turtle.setup(800,350,200,200)
+    turtle.penup()
+    turtle.fd(-300)
+    turtle.pensize(5)
+    drawDate(time.strftime(&quot;%y-%m=%d+&quot;,time.gmtime()))
+    turtle.hideturtle()
+    turtle.done()
+main()
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -251,6 +285,9 @@ main()</p>
 案例不是单看法条就能判下，要有证据，客观条件等。</p>
 </li>
 </ul>
+<h4 id="对象错误打击错误">对象错误/打击错误</h4>
+<p>对象与打击错误重要区分在于犯罪着手时还是着手后<br>
+例如张三想打李四，瞄准的是李四，子弹却打到王五，此为打击错误；若张三想打李四，错把王五认错为李四，则是对象错误。</p>
 ]]></content>
     </entry>
     <entry>
@@ -259,25 +296,28 @@ main()</p>
         <link href="https://pythonangry.github.io/post/Sn37HjLo/">
         </link>
         <updated>2020-03-06T13:30:23.000Z</updated>
-        <content type="html"><![CDATA[<ol>
+        <content type="html"><![CDATA[<h4 id="摄影前需要思考的问题">摄影前需要思考的问题</h4>
+<ol>
 <li>主题是什么</li>
 <li>如何突出主题</li>
 <li>画面是否简洁</li>
 </ol>
-<p>镜头速度指镜头传送光线的能力<br>
-光圈越小（f值越大），景深越大<br>
-光圈越大（f值越小），景深越小<br>
-f1.4大于f1.8，数字越小，光圈越大</p>
-<p>20mm广角镜头，50mm标准镜头，400mm远摄镜头<br>
-焦距越短，像场越宽，焦距越长，像场越窄</p>
-<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1584602175986.jpg" alt="" loading="lazy"></figure>
+<h4 id="光圈与快门镜头与焦距">光圈与快门；镜头与焦距</h4>
+<ul>
+<li>镜头速度指镜头传送光线的能力</li>
+<li>光圈越小（f值越大），景深越大；光圈越大（f值越小），景深越小</li>
+<li>20mm广角镜头，50mm标准镜头，400mm远摄镜头</li>
+<li>焦距越短，像场越宽，焦距越长，像场越窄</li>
+<li>感光度指感光器或胶片对光的敏感度，数值越高，敏感度越高，照片进行正确曝光所需光线量越少<br>
+<img src="https://pythonangry.github.io/post-images/1584602175986.jpg" alt="" loading="lazy"></li>
+</ul>
 <p>0308</p>
 <ol>
-<li>景深练习 f4（D7最大光圈），快门自动1/60s，25mm镜头<br>
+<li>景深练习 f4（D7最大光圈），快门自动1/60s，25mm<br>
 <img src="https://pythonangry.github.io/post-images/1583663618653.JPG" alt="" loading="lazy"></li>
-<li>快门练习 1/250s（D7最快门），光圈自动f4，25mm镜头<br>
+<li>快门练习 1/250s（D7最快门），光圈自动f4，25mm<br>
 <img src="https://pythonangry.github.io/post-images/1583663759419.JPG" alt="" loading="lazy"></li>
-<li>快门练习 1s，光圈自动f20，ISO自动，70mm镜头<br>
+<li>快门练习 1s，光圈自动f20，ISO自动，70mm<br>
 <img src="https://pythonangry.github.io/post-images/1583664422812.JPG" alt="" loading="lazy"></li>
 </ol>
 ]]></content>
@@ -288,11 +328,20 @@ f1.4大于f1.8，数字越小，光圈越大</p>
         <link href="https://pythonangry.github.io/post/XHsIv896B/">
         </link>
         <updated>2020-03-05T12:43:53.000Z</updated>
-        <content type="html"><![CDATA[<p>场面积用短面积的线条笔触比较有生命力哦<br>
-爱好艺术的朋友画画没有对错哦<br>
-离你最近的地方是质感最清晰的地方哦<br>
-一点透视一个面，两点透视一条线，三点透视一个点哦</p>
+        <content type="html"><![CDATA[<h4 id="墨军老师说">墨军老师说</h4>
 <ul>
+<li>
+<p>场面积用短面积的线条笔触比较有生命力哦</p>
+</li>
+<li>
+<p>爱好艺术的朋友画画没有对错哦</p>
+</li>
+<li>
+<p>离你最近的地方是质感最清晰的地方哦</p>
+</li>
+<li>
+<p>一点透视一个面，两点透视一条线，三点透视一个点哦</p>
+</li>
 <li>
 <p>0305今天的主题是一只很可爱的猫哈哈哈😼😺<br>
 <img src="https://pythonangry.github.io/post-images/1583412335222.jpg" alt="" loading="lazy"></p>
@@ -370,69 +419,6 @@ f1.4大于f1.8，数字越小，光圈越大</p>
 <p>政策学者追求政策效益最大化，选择价值中立，与政治家的决策不同，他们不考虑政治的预设前提或政策的所带来的的价值及意义。</p>
 </blockquote>
 <figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1583905963881.jpg" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[生活 | 服装自由]]></title>
-        <id>https://pythonangry.github.io/post/ZxQO_tjS2/</id>
-        <link href="https://pythonangry.github.io/post/ZxQO_tjS2/">
-        </link>
-        <updated>2020-03-04T05:36:29.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>目前存量远超所需，今年普通所需只扔不买 20200304 PA</strong><br>
-合身或宽松，舒适，增加自信<br>
-衣服质地不易皱</p>
-<ol>
-<li>内衣：2黑+2灰</li>
-<li>背心：1条纹+1黑+2黑内搭+2灰内搭</li>
-<li>上衣</li>
-</ol>
-<ul>
-<li>T-shirt：2橙+2黑+1深蓝</li>
-<li>针织长袖：2黑（冬）+1灰+1黑</li>
-<li>连帽衫：1黑灰厚+1灰绿极厚重</li>
-</ul>
-<ol start="4">
-<li>衬衫：2白+1枣红+2花色+1黑高领+1棕方格</li>
-<li>罩衫：1黑灰厚+1灰绒+2蓝黄麻+2蓝棉</li>
-<li>外套</li>
-</ol>
-<ul>
-<li>马甲：1短灰+1黑薄+1黑牛津布（冬）+1黑羽绒</li>
-<li>长外套：1黑灰连帽拉链+1黑长款薄</li>
-<li>短外套：1黑棒球+2蓝牛仔+1土黄绒+1灰刺绣棉+1蓝防风+1连帽运动</li>
-</ul>
-<ol start="7">
-<li>连衣裙：1杏黄印花</li>
-<li>吊带裙：1黑+1蓝</li>
-<li>功能性套装</li>
-</ol>
-<ul>
-<li>睡衣
-<ul>
-<li>夏天睡衣：1套短+1短袖+2长裤</li>
-<li>冬天睡衣：2套摇粒绒+2件Uniqlo保暖1薄1厚+2棉质长袖+1九分摇粒绒裤+1校服长裤+1摇粒绒外套</li>
-</ul>
-</li>
-<li>运动：1运动Bra+1连帽长袖瑜伽衫+1长紧身裤+1长裤+1短裤</li>
-<li>礼服：1立领及踝黑灰加绒礼服外套</li>
-<li>冲锋衣：1深蓝（内含摇粒绒外套）</li>
-<li>西装：1黑长款外套+1深绿薄罩衫+1高领黑白格衬衣</li>
-</ul>
-<ol>
-<li>内裤：4低腰+2中腰</li>
-<li>短裤：1黑灰+1灰蓝格裤裙+1蓝牛仔+1灰绒厚</li>
-<li>长裤</li>
-</ol>
-<ul>
-<li>棉麻：1蓝+1土黄9分+1绿+1土黄竖纹+2黑</li>
-<li>牛仔：1蓝+2黑</li>
-</ul>
-<ol>
-<li>半身裙：1绿包臀+1红排扣+1红+1黑厚+1绿</li>
-<li>皮带及绑带：1黑+1红蓝格子+5绑带+3领巾带</li>
-<li>袜子：3船+3短+2踝+6小腿肚+4长</li>
-<li>鞋子</li>
-</ol>
 ]]></content>
     </entry>
     <entry>
@@ -622,7 +608,7 @@ voice level 1</p>
         <link href="https://pythonangry.github.io/post/EuQroKpAd/">
         </link>
         <updated>2020-03-03T05:05:56.000Z</updated>
-        <content type="html"><![CDATA[<p>N. 图书馆机构，国家图书馆，公共图书馆主页列表</p>
+        <content type="html"><![CDATA[<h4 id="图书馆机构国家图书馆公共图书馆主页列表">图书馆机构，国家图书馆，公共图书馆主页列表</h4>
 <ol>
 <li><a href="https://www.ifla.org/">IFLA</a></li>
 <li><a href="http://www.ala.org/">ALA</a><br>
@@ -631,7 +617,7 @@ voice level 1</p>
 <li><a href="https://www.cilip.org.uk/">CILIP</a></li>
 <li><a href="https://www.oclc.org/en/home.html">OCLC</a></li>
 </ol>
-<p>国家图书馆</p>
+<h4 id="国家图书馆">国家图书馆</h4>
 <ol>
 <li>新加坡 <a href="https://www.nlb.gov.sg/">NPL</a></li>
 <li>美国 <a href="https://www.loc.gov/">Library of congress</a></li>
@@ -642,6 +628,7 @@ voice level 1</p>
 <li>澳大利亚<a href="https://www.nla.gov.au/">National Library of Australia</a></li>
 <li>纽约<a href="https://www.nypl.org/">New York Public Library</a></li>
 </ol>
+<h4 id="其他">其他</h4>
 <p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息</p>
 ]]></content>
     </entry>
