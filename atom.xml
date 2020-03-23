@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-23T09:22:57.682Z</updated>
+    <updated>2020-03-23T09:44:41.510Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -481,8 +481,12 @@ print(eval(&quot;cmul({})&quot;.format(input())))
 </ul>
 <p>-0309<br>
 <img src="https://pythonangry.github.io/post-images/1584100504278.jpg" alt="" loading="lazy"></p>
+<p>-0312 叠涂的时候又，把底层推开了，应该是油画棒的问题<br>
+<img src="https://pythonangry.github.io/post-images/1584956112627.jpg" alt="" loading="lazy"></p>
 <p>-0317passpartout 卖了700€ hum...<br>
 <img src="https://pythonangry.github.io/post-images/1584448496992.jpg" alt="" loading="lazy"></p>
+<p>-0320 大方婉儿面<br>
+<img src="https://pythonangry.github.io/post-images/1584956202502.jpg" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
