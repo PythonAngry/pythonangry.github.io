@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1584744438984">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1584955349319">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1584744438984" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1584955349319" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -105,13 +105,69 @@
             
           </div>
           <div class="post-content">
-            <h4 id="知识点摘录">知识点摘录</h4>
-<p>evla可以去掉字符串或字符串变量的引号<br>
-print(&quot;fff:&quot;,i)  #逗号有形成空格的作用 = fff: i<br>
-range(N)产生0到N-1个数；(M,N)产生M到N-1个数<br>
-整数→浮点数→复数，123+4.0=127.0（数值的范围扩大为浮点数）<br>
-槽{}，只在字符串中有用<br>
-利用随机数种子生成“确定”的随机数，以便采用随机数的程序能够重演</p>
+            <h3 id="待解决需求">待解决需求</h3>
+<ol>
+<li>实现多个同类网页同时搜索同一关键字</li>
+</ol>
+<h4 id="第一次尝试学习de笔记">第一次尝试学习de笔记</h4>
+<pre><code>类
+对象
+属性
+方法
+
+print(a // b)  #除完取整
+print(a % b)   #余数
+print(a ** b)  #a的b次方
+
+# %d 整数
+# %f 带小数
+
+# int()：将一个数值或字符串转换成整数，可以指定进制。
+# float()：将一个字符串转换成浮点数。
+# str()：将指定的对象转换成字符串形式，可以指定编码。
+# chr()：将整数转换成该编码对应的字符串（一个字符）。
+# ord()：将字符串（一个字符）转换成对应的编码（整数）。
+
+# print ('%.1f' % (c)) #将c保留1位小数
+
+# getpass 模块
+# random模块的randint(随机数都应是int整数)函数生成指定范围的随机数
+# 如果明确的知道循环执行的次数或者要对一个容器进行迭代（后面会讲到），那么我们推荐使用for-in循环
+
+# i=1
+# j=0
+# num = int(input())
+# while i &lt;= num-1 :
+#     print (i)
+#     i = i + j
+#     j = i + j
+
+# def fib(n):
+#     a, b = 0, 1
+#     for _ in range(n):
+#         a, b = b, a + b
+#         yield a
+
+# Python查找一个变量时会按照“局部作用域”、“嵌套作用域”、“全局作用域”和“内置作用域”的顺序进行搜索
+
+# def main():
+#     # Todo: Add your code here
+#     pass
+#
+#
+# if __name__ == '__main__':
+#     main()
+</code></pre>
+<h4 id="知识点摘录">知识点摘录</h4>
+<ul>
+<li>evla可以去掉字符串或字符串变量的引号</li>
+<li>print(&quot;fff:&quot;,i)  #逗号有形成空格的作用 = fff: i</li>
+<li>range(N)产生0到N-1个数；(M,N)产生M到N-1个数</li>
+<li>整数→浮点数→复数，123+4.0=127.0（数值的范围扩大为浮点数）</li>
+<li>槽{}，只在字符串中有用</li>
+<li>利用随机数种子生成“确定”的随机数，以便采用随机数的程序能够重演</li>
+<li>紧耦合，松耦合 ：函数内紧耦合，函数间松耦合，紧耦合代码复用较为困难，一改全改</li>
+</ul>
 <h4 id="1温度转换">1.温度转换</h4>
 <pre><code>TempStr = input()
 if TempStr[-1] in ['F', 'f']:
@@ -304,6 +360,75 @@ def main():
     turtle.hideturtle()
     turtle.done()
 main()
+</code></pre>
+<h4 id="10科赫雪花">10.科赫雪花</h4>
+<pre><code>import turtle,time
+def koch (size,n):
+    if n == 0:
+        turtle.fd(size)
+    else:
+        for angle in [0,60,-120,60]:
+            turtle.left(angle)
+            koch(size/3,n-1)
+def main():
+    turtle.setup(600,600)
+    turtle.penup()
+    turtle.goto(-200,100)
+    turtle.pendown()
+    turtle.pensize(2)
+    level = 2 # 2阶科赫雪花，阶数
+    koch(400,level)
+    turtle.right(120)
+    koch(400, level)
+    turtle.right(120)
+    koch(400, level)
+    turtle.hideturtle()
+main()
+</code></pre>
+<h4 id="11第五周练习题">11.第五周练习题</h4>
+<p><strong>a随机密码生成</strong><br>
+‪‬‪‬‪‬‪‬以整数17为随机数种子，获取用户输入整数N为长度，产生3个长度为N位的密码，密码的每位是一个数字。每个密码单独一行输出。产生密码采用random.randint()函数。</p>
+<pre><code>import random
+def genpwd(length): #输入长度3，生成3位数范围
+    x = pow(10,length-1) #1
+    y = pow(10,length)-1 #999
+    return random.randint(x,y) # x &lt;= length &lt;= y
+length = eval(input())
+random.seed(17)
+for i in range(3): #生成3个密码
+    print(genpwd(length))
+</code></pre>
+<p><strong>b连续质数计算</strong><br>
+获得用户输入数字N，计算并输出从N开始的5个质数，单行输出，质数间用逗号,分割。需要考虑用户输入的数字N可能是浮点数，应对输入取整数；最后一个输出后不用逗号。</p>
+<pre><code>def prime(m):
+    （temp=int(math.sqrt(m))
+    for i in range(2,temp+1): ）#此方法可减少计算机作不必要晕眩。
+    for i in range(2,m): #在2到m范围内运算，看是否有整除数
+        if m%i == 0:
+            return False
+        else:
+            return True
+n = eval(input())
+t = int(n)
+if t &lt; n: #只要输入带小数的数，均取整后+1才能作质数判断
+    t+=1
+count = 5
+while count&gt;0:
+    if prime(t):
+        if count &gt;1 :
+            print(t,end=&quot;,&quot;)
+        else:
+            print(t)
+        count-=1
+    t+=1
+</code></pre>
+<p><strong>c任意累积</strong></p>
+<pre><code>def cmul(n, *b): #*b为可变参数，是一个组合数据类型，包含1个或多个参数
+    s = n
+    for item in b:
+        s*=item
+    return s
+print(eval(&quot;cmul({})&quot;.format(input())))
 </code></pre>
 
           </div>
