@@ -2,13 +2,59 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-23T09:44:41.510Z</updated>
+    <updated>2020-03-25T11:30:39.331Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
     <logo>https://pythonangry.github.io/images/avatar.png</logo>
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
+    <entry>
+        <title type="html"><![CDATA[0325 | 职业素养]]></title>
+        <id>https://pythonangry.github.io/post/4MzSOvVHu/</id>
+        <link href="https://pythonangry.github.io/post/4MzSOvVHu/">
+        </link>
+        <updated>2020-03-25T02:38:15.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="管理">管理</h3>
+<p>缓和情绪——冷静期——私下了解——给予表达机会</p>
+<h3 id="回话到点子上">回话：到点子上</h3>
+<p>厉害就是跟别人的不同之处<br>
+差别的说明=A是**，B是##<br>
+传达（结论）=从主干到枝叶<br>
+不靠形容词，用数字说话<br>
+很像=共通点+相异点<br>
+变化=之前+之后<br>
+必要性=‘没有’会产生困扰<br>
+可信度=‘何时何地何人何事’等特质<br>
+意见=提案，不畏反对的提案<br>
+绝对=能做到的理由+做不到的补救<br>
+表达可惜及失望=八成优点+两成缺点<br>
+消极的理由=别的也可以<br>
+积极的理由=别的就不行<br>
+指出优缺点，事情才会改善<br>
+很难说=优点一半+缺点一半<br>
+方针=判断不要做的事=要做的事+不要做的事<br>
+分情况=若是甲就…+若是乙就…<br>
+自我介绍=与他人的不同+给对方的好处<br>
+很适合你=商品的特征X对方的需求<br>
+总结要用肯定句，别用否定句<br>
+什么意思=讲重点/讲别人听得懂的话/请补上理论跳跃的空缺<br>
+为什么=过去的原因+未来的目的<br>
+根据=理论的妥当性优先于个人的意见<br>
+原因分析=现在的状况，而非过去的原因/架构，而非心得<br>
+解决方案=大体方针+具体细节/与问题点不互相矛盾<br>
+没有交集→问对方怎样才能理解</p>
+<h3 id="服务提点">服务提点</h3>
+<ul>
+<li>面对顾客宣扬道理，并且表达这是规定，只会惹怒对方，这种情况不能劈头就要求顾客按规定做，而是<strong>请问在这方面有什么需要帮忙的。</strong></li>
+<li>想劝说跟你意见相左的人，最好不要直接提出与对方不同的意见，而是先问清楚对方基于什么理由，或者事情的原委，才得出那样的结论。</li>
+<li>接纳客人的怒气，而不是归咎于人。面对一群旅行团和一位神经紧绷商务人士，双方的愉快程度不一，此时服务人员必须公正，不能站边（面对投诉方，<strong>我去了解一下情况</strong>，面对被投诉方<strong>请问有什么需要帮忙？是否能请您稍微考虑一下其他顾客（委婉）？</strong>），只支持某方意见。因为舒适与否会随着个人的价值观而异，但感觉不快却是共同的。声音嘈杂或环境脏乱，人会对此类负面感觉产生不快。提供服务的一方应当致力于迅速消除令客人感到不快的因素。</li>
+<li>各位看起来非常开心……由于已经有点大声了……<strong>降低音量提醒对方</strong>，这点非常重要，如果声音太大传出去，会让人觉得被羞辱了。</li>
+<li>问题解决后，询问有没有其他让顾客在意的地方呢？让您感到不愉快，<strong>非常抱歉，今后我们会尽全力改善（需要确实有改善）</strong></li>
+<li></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0320 | 知识创新]]></title>
         <id>https://pythonangry.github.io/post/0doq3JXF7/</id>
@@ -41,8 +87,49 @@
         <content type="html"><![CDATA[<h3 id="待解决需求">待解决需求</h3>
 <ol>
 <li>实现多个同类网页同时搜索同一关键字</li>
+<li>实现多行书籍ISBN导入，连续在商查网页搜索柜位，并返回相应结果至对应ISBN行柜位</li>
 </ol>
-<h4 id="第一次尝试学习de笔记">第一次尝试学习de笔记</h4>
+<h3 id="dir-help">dir(); help()</h3>
+<ol>
+<li>爬虫庫</li>
+</ol>
+<ul>
+<li><a href="http://www.python-requests.org/">requests庫</a></li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc">BeautifulSoup庫</a>：一个可以从HTML或XML文件中提取数据的Python庫</li>
+<li><a href="https://docs.python.org/3.5/library/re.html">re正则表达式</a>：进行各类正则表达式处理</li>
+</ul>
+<p>爬虫协议: 网页地址/robots.txt</p>
+<h4 id="爬豆瓣短评">爬豆瓣短评</h4>
+<pre><code>import requests
+from bs4 import BeautifulSoup
+headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
+#加headers反反爬，在浏览器打上about://virsion查询，修改前无返回结果，于是print（r）
+获得[418]：The HTTP 418 I’m a teapot client error response code indicates that the server refuses to brew coffee because it is a teapot. This error is a reference to Hyper Text Coffee Pot Control Protocol which was an April Fools’ joke in 1998.
+r = requests.get('https://book.douban.com/subject/1084336/comments/',headers=headers)
+soup = BeautifulSoup(r.text,'lxml') #将之前get到的对象r.text作为一个参数传入bs函数，获得一个bs对象soup
+pattern = soup.find_all('span','short') #通过findall方法寻找评论所在的行，这个方法会返回一个列表。源代码中评论行的标签为span，属性为short。
+for item in pattern: #遍历列表中的每一个项
+    print(item.string)
+</code></pre>
+<h4 id="爬豆瓣评分显然没爬到">爬豆瓣评分（显然没爬到）</h4>
+<pre><code>import requests
+from bs4 import BeautifulSoup
+import re
+headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
+r = requests.get('https://book.douban.com/subject/1084336/comments/',headers=headers)
+soup = BeautifulSoup(r.text,'lxml') 
+pattern = soup.find_all('span','short') 
+for item in pattern: 
+    print(item.string)
+pattern_s = re.compile('&lt;span class = “user-stars allstar(.*?) rating&gt;”') #用compile把字符串编译为pattern实例,.*?利用正则表达式获取字符串当中的评分内容
+p = re.findall(pattern_s, r.text) #结果返回列表P
+s=0
+for star in p:
+    s+=int(star)
+print(s)
+
+</code></pre>
+<h4 id="2019年9月第一次尝试学习de笔记">2019年9月第一次尝试学习de笔记</h4>
 <pre><code>类
 对象
 属性
@@ -91,6 +178,7 @@ print(a ** b)  #a的b次方
 # if __name__ == '__main__':
 #     main()
 </code></pre>
+<h3 id="中国mooc北京理工大学python语言程序设计">中国MOOC北京理工大学Python语言程序设计</h3>
 <h4 id="知识点摘录">知识点摘录</h4>
 <ul>
 <li>evla可以去掉字符串或字符串变量的引号</li>
@@ -739,7 +827,9 @@ voice level 1</p>
         <link href="https://pythonangry.github.io/post/EuQroKpAd/">
         </link>
         <updated>2020-03-03T05:05:56.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="一-图书馆机构">一、图书馆机构</h4>
+        <content type="html"><![CDATA[<p>行业报告：《2018-2019中国实体书店产业报告》<br>
+http://www.chyxx.com/research/201712/597425.html</p>
+<h4 id="一-图书馆机构">一、图书馆机构</h4>
 <ol>
 <li><a href="https://www.ifla.org/">IFLA</a></li>
 <li><a href="http://www.ala.org/">ALA</a><br>
@@ -758,13 +848,33 @@ voice level 1</p>
 <li>英国<a href="https://www.bl.uk/">The British Library</a></li>
 <li>澳大利亚<a href="https://www.nla.gov.au/">National Library of Australia</a></li>
 <li>纽约<a href="https://www.nypl.org/">New York Public Library</a></li>
+<li><a href="http://www.gzlib.org.cn/">广州图书馆</a></li>
+<li><a href="https://www.szlib.org.cn/">深圳图书馆</a></li>
+<li><a href="https://www.nslib.cn/">南山图书馆</a></li>
 </ol>
 <h4 id="三-出版社">三、出版社</h4>
 <ol>
 <li><a href="https://thamesandhudson.com/">Thames&amp;hudson</a></li>
 <li><a href="https://uk.phaidon.com/agenda/">Phaidon</a></li>
 <li><a href="http://www.skira.net/">Skira</a></li>
+<li><a href="https://www.taschen.com/">TASCHEN</a></li>
 <li><a href="https://www.penguin.com/">Penguin</a></li>
+<li><a href="https://www.azothbooks.com/">漫游者书店</a></li>
+<li><a href="https://www.suncolor.com.tw/">三采网路书店</a></li>
+<li><a href="http://www.spbooks.cn/">善本图书</a></li>
+</ol>
+<h4 id="四-书店">四、书店</h4>
+<ol>
+<li><a href="http://www.sisyphe.com.cn/index.html#">西西弗书店</a></li>
+<li><a href="http://www.yanjiyou.com/col.jsp?id=106">言几又</a></li>
+<li><a href="http://www.fangsuo.com/index/index.html">方所</a></li>
+</ol>
+<h4 id="五-作家主页">五、作家主页</h4>
+<ol>
+<li><a href="http://www.oliverjeffersworld.com/">Oliver Jeffers</a></li>
+<li><a href="http://www.elishacooper.com/">Elisha Cooper</a></li>
+<li><a href="https://www.chrishaughton.com/home">Chris Haughton</a></li>
+<li><a href="http://mowillems.com/">Mo Willems</a></li>
 </ol>
 <h4 id="其他">其他</h4>
 <p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息</p>
@@ -867,19 +977,6 @@ voice level 1</p>
 <a href="https://etc.usf.edu/lit2go/">lit2go</a>:有声书</p>
 <p>让别人提参考和信息服务要求，写明白想要怎样的报告？还是自己列一些报告呈现形式供人挑选。<br>
 利用这个来提升自己？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0302 | 绘本作者主页列表]]></title>
-        <id>https://pythonangry.github.io/post/RnhnWpXXq/</id>
-        <link href="https://pythonangry.github.io/post/RnhnWpXXq/">
-        </link>
-        <updated>2020-03-02T06:20:28.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1583131732663.jpg" alt="" loading="lazy"></figure>
-<h3 id="1-oliver-jeffers">1 <a href="http://www.oliverjeffersworld.com/">Oliver Jeffers</a></h3>
-<h3 id="2-elisha-cooper">2 <a href="http://www.elishacooper.com/">Elisha Cooper</a></h3>
-<h3 id="3-chris-haughton">3 <a href="https://www.chrishaughton.com/home">Chris Haughton</a></h3>
-<h3 id="4mo-willems">4<a href="http://mowillems.com/">Mo Willems</a></h3>
 ]]></content>
     </entry>
 </feed>

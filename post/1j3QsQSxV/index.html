@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1584956236183">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1585135833873">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1584956236183" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1585135833873" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -108,8 +108,49 @@
             <h3 id="待解决需求">待解决需求</h3>
 <ol>
 <li>实现多个同类网页同时搜索同一关键字</li>
+<li>实现多行书籍ISBN导入，连续在商查网页搜索柜位，并返回相应结果至对应ISBN行柜位</li>
 </ol>
-<h4 id="第一次尝试学习de笔记">第一次尝试学习de笔记</h4>
+<h3 id="dir-help">dir(); help()</h3>
+<ol>
+<li>爬虫庫</li>
+</ol>
+<ul>
+<li><a href="http://www.python-requests.org/">requests庫</a></li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc">BeautifulSoup庫</a>：一个可以从HTML或XML文件中提取数据的Python庫</li>
+<li><a href="https://docs.python.org/3.5/library/re.html">re正则表达式</a>：进行各类正则表达式处理</li>
+</ul>
+<p>爬虫协议: 网页地址/robots.txt</p>
+<h4 id="爬豆瓣短评">爬豆瓣短评</h4>
+<pre><code>import requests
+from bs4 import BeautifulSoup
+headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
+#加headers反反爬，在浏览器打上about://virsion查询，修改前无返回结果，于是print（r）
+获得[418]：The HTTP 418 I’m a teapot client error response code indicates that the server refuses to brew coffee because it is a teapot. This error is a reference to Hyper Text Coffee Pot Control Protocol which was an April Fools’ joke in 1998.
+r = requests.get('https://book.douban.com/subject/1084336/comments/',headers=headers)
+soup = BeautifulSoup(r.text,'lxml') #将之前get到的对象r.text作为一个参数传入bs函数，获得一个bs对象soup
+pattern = soup.find_all('span','short') #通过findall方法寻找评论所在的行，这个方法会返回一个列表。源代码中评论行的标签为span，属性为short。
+for item in pattern: #遍历列表中的每一个项
+    print(item.string)
+</code></pre>
+<h4 id="爬豆瓣评分显然没爬到">爬豆瓣评分（显然没爬到）</h4>
+<pre><code>import requests
+from bs4 import BeautifulSoup
+import re
+headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36'}
+r = requests.get('https://book.douban.com/subject/1084336/comments/',headers=headers)
+soup = BeautifulSoup(r.text,'lxml') 
+pattern = soup.find_all('span','short') 
+for item in pattern: 
+    print(item.string)
+pattern_s = re.compile('&lt;span class = “user-stars allstar(.*?) rating&gt;”') #用compile把字符串编译为pattern实例,.*?利用正则表达式获取字符串当中的评分内容
+p = re.findall(pattern_s, r.text) #结果返回列表P
+s=0
+for star in p:
+    s+=int(star)
+print(s)
+
+</code></pre>
+<h4 id="2019年9月第一次尝试学习de笔记">2019年9月第一次尝试学习de笔记</h4>
 <pre><code>类
 对象
 属性
@@ -158,6 +199,7 @@ print(a ** b)  #a的b次方
 # if __name__ == '__main__':
 #     main()
 </code></pre>
+<h3 id="中国mooc北京理工大学python语言程序设计">中国MOOC北京理工大学Python语言程序设计</h3>
 <h4 id="知识点摘录">知识点摘录</h4>
 <ul>
 <li>evla可以去掉字符串或字符串变量的引号</li>
