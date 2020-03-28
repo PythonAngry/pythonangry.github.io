@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-03-26T04:21:24.097Z</updated>
+    <updated>2020-03-28T08:42:34.703Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -450,6 +450,91 @@ while count&gt;0:
         s*=item
     return s
 print(eval(&quot;cmul({})&quot;.format(input())))
+</code></pre>
+<h4 id="12基本统计值计算">12.基本统计值计算</h4>
+<pre><code>def getNum():
+    nums = []
+    iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
+    while iNumStr !=&quot;&quot;:
+        nums.append(eval(iNumStr))
+        iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
+    return nums
+
+def mean(numbers):
+    s = 0.0
+    for num in numbers:
+        s = s + num
+    return s / len(numbers)
+
+def dev(numbers, mean):
+    sdev = 0.0
+    for num in numbers:
+        sdev = sdev + (num - mean)**2
+    return pow(sdev / (len(numbers)-1), 0.5) #方差公式
+
+def median(numbers):
+    sorted(numbers)
+    size = len(numbers)
+    if size % 2 == 0:
+        med = ((numbers[size//2-1]) + numbers[size//2])/2 #从0号位开始取，[1,5]=取前不取后，取1，2，3，4。
+    else:
+        med = numbers[size//2]
+    return med
+
+n = getNum()
+m = mean(n)
+print('平均值:{},方差:{:.2},中位数:{}'.format(m,dev(n,m),median(n)))
+</code></pre>
+<h4 id="13哈姆雷特词频统计">13.哈姆雷特词频统计</h4>
+<pre><code>def getText():
+    txt = open('hamlet.txt','r').read()
+    txt = txt.lower()
+    for ch in '!&quot;$%&amp;()*+,-./;:&lt;&gt;=?@[\\]^_{|}~`':
+        txt = txt.replace(ch, &quot; &quot;)
+    return txt
+
+hamletTxt = getText()
+words = hamletTxt.split()
+counts = {}
+for word in words:
+    counts[word] = counts.get(word,0) + 1
+items = list(counts.items())
+items.sort(key=lambda x:x[1], reverse=True)
+for i in range(10):
+    word, count = items[i]
+    print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))
+
+#### 14.三国演义人物出场统计
+</code></pre>
+<p>import jieba<br>
+txt = open('sanguo.txt','r',encoding=utf-8).read()<br>
+excludes = {'将军','却说','荆州','二人','不可','不能','如此','...'}<br>
+words = jieba.lcut(txt)<br>
+counts = {}<br>
+for word in words:<br>
+if len(word) == 1:<br>
+continue<br>
+elif word == '诸葛亮' or word == '孔明曰':<br>
+rword = '孔明'<br>
+elif word == '关公' or word == '云长':<br>
+rword = '关羽'<br>
+elif word == '玄德' or word == '玄德曰':<br>
+rword = '刘备'<br>
+elif word == '孟德' or word == '丞相':<br>
+rword = '曹操'<br>
+elif word == '...' or word == '...':<br>
+rword = '..'<br>
+else:<br>
+rword = word<br>
+counts[word] = counts.get(word,0) + 1<br>
+for word in excludes:<br>
+del counts[word]<br>
+items = list(counts.items())<br>
+items.sort(key=lambda x:x[1], reverse=True)<br>
+for i in range(10):<br>
+word, count = items[i]<br>
+print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))</p>
+<pre><code>
 </code></pre>
 ]]></content>
     </entry>
