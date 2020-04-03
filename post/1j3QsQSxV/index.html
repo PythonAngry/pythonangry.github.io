@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1585656788409">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1585883900566">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1585656788409" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1585883900566" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -110,24 +110,12 @@
 <li>实现多个同类网页同时搜索同一关键字</li>
 <li>实现多行书籍ISBN导入，连续在商查网页搜索柜位，并返回相应结果至对应ISBN行柜位</li>
 </ol>
-<h3 id="用python处理数据">用python处理数据</h3>
-<h4 id="1清洗咖啡列表">1.清洗咖啡列表</h4>
-<pre><code>def cleanList(lst):
-    cleanedList = []
-    for item in lst:
-        for c in item:
-            if c.isalpha() != True:
-                item = item.replace(c,'')
-        cleanedList.append(item)
-    return cleanedList
-
-coffeeList = ['32Latte','+Americano30','/34Cappuccino','Mocha35']
-cleanedList = cleanList(coffeeList)
-for k,v in zip(range(1,len(cleanedList)+1),cleanedList):
-    print(k,v)
-</code></pre>
-<hr>
-<h3 id="dir-help">dir(); help()</h3>
+<h3 id="学习工具">学习工具</h3>
+<h4 id="算法练习">算法练习</h4>
+<ul>
+<li>https://leetcode-cn.com/</li>
+</ul>
+<h4 id="dir-help">dir(); help()</h4>
 <ol>
 <li>爬虫庫</li>
 </ol>
@@ -147,6 +135,23 @@ for k,v in zip(range(1,len(cleanedList)+1),cleanedList):
 </ul>
 <p><strong>函数式编程</strong>：map()<br>
 <strong>一一对应生成字典</strong>：zip()</p>
+<h3 id="用python处理数据">用python处理数据</h3>
+<h4 id="1清洗咖啡列表">1.清洗咖啡列表</h4>
+<pre><code>def cleanList(lst):
+    cleanedList = []
+    for item in lst:
+        for c in item:
+            if c.isalpha() != True:
+                item = item.replace(c,'')
+        cleanedList.append(item)
+    return cleanedList
+
+coffeeList = ['32Latte','+Americano30','/34Cappuccino','Mocha35']
+cleanedList = cleanList(coffeeList)
+for k,v in zip(range(1,len(cleanedList)+1),cleanedList):
+    print(k,v)
+</code></pre>
+<hr>
 <h3 id="python爬虫">python爬虫</h3>
 <h4 id="1-爬豆瓣短评">1. 爬豆瓣短评</h4>
 <pre><code>import requests
