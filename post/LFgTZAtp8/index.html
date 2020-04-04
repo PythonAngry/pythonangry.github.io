@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1585972323069">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586001450517">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1585972323069" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586001450517" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -94,6 +94,84 @@
           <div class="post-content">
             <h3 id="1算法分析">1.算法分析</h3>
 <figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1585966998751.png" alt="" loading="lazy"></figure>
+<h4 id="变位词判断问题">变位词判断问题</h4>
+<p>a. 逐字检查 O(n^2)</p>
+<ul>
+<li>两重循环，外层遍历s1每个字符，将内层循环执行n次</li>
+<li>内层循环在s2查找字符，每个字符对比次数从1-N，各不相同</li>
+</ul>
+<pre><code>def anagramSolution1(s1,s2):
+    alist = list(s2) #复制s2到列表
+    pos1 = 0
+    stillOK = True
+    while pos1 &lt; len(s1) and stillOK:
+        pos2 = 0
+        found = False
+        while pos2 &lt; len(alist) and not found: #循环s1每一个字符
+            if s1[pos1] == alist[pos2]: #与s2逐个对比
+                found = True
+            else:
+                pos2 = pos2 +1
+        if found:
+            alist[pos2] = None #找到，打勾设为空
+        else:
+            stillOK = False #没找到，失败
+        pos1 = pos1 +1
+    return stillOK
+
+print(anagramSolution1('abcd','dcba'))
+</code></pre>
+<p>b. 排序比较 O(nlogn)</p>
+<ul>
+<li>本算法主导步骤是排序步骤</li>
+</ul>
+<pre><code>def anagramSolution2(s1,s2):
+    alist1 = list(s1)
+    alist2 = list(s2)
+    
+    alist1.sort()
+    alist2.sort()
+    pos = 0
+    matches = True
+    while pos &lt; len(s1) and matches:
+        if alist1[pos] == alist2[pos]:
+                pos = pos +1
+        else:
+            matches = False
+    return matches
+
+print(anagramSolution2('abcde','edcba'))
+</code></pre>
+<p>c. 暴力法 O(n!)</p>
+<ul>
+<li>穷尽所有可能的组合</li>
+<li>将s1出现的字符进行全排列，查看s2是否出现在全排列列表中</li>
+</ul>
+<p>d. 计数比较 O(n)</p>
+<ul>
+<li>3个非嵌套循环迭代</li>
+<li>依赖26计数器列表，储存空间用量最多，问题解法需要取舍权衡时间与空间</li>
+</ul>
+<pre><code>def anagramSolution4(s1,s2):
+    c1 = [0] * 26 #26个0的列表
+    c2 = [0] * 26
+    for i in range(len(s1)): #分别计算
+        pos = ord(s1[i]) - ord('a') #ord('a')=97 b98...
+        c1[pos] = c1[pos] +1
+    for i in range(len(s2)):
+        pos = ord(s1[i]) - ord('a')
+        c2[pos] = c2[pos] +1
+    j = 0
+    stillOK = True
+    while j &lt; 26 and stillOK: #计数器比较
+        if c1[j] == c2[j]:
+            j = j + 1
+        else:
+            stillOK = False
+    return stillOK
+
+print(anagramSolution4('apple','pleap'))
+</code></pre>
 <h3 id="2python数据类型性能">2.Python数据类型性能</h3>
 <p>总方案：让最常用的操作性能最好<br>
 官方算法复杂度网站:<a href="https://wiki.python.org/moin/TimeComplexity"></a></p>
