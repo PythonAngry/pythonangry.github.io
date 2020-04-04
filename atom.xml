@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-04T01:33:56.494Z</updated>
+    <updated>2020-04-04T04:23:00.252Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -17,6 +17,19 @@
         <updated>2020-04-04T01:33:11.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://pythonangry.github.io/post-images/1585964012087.png" alt="" loading="lazy"><br>
 <img src="https://pythonangry.github.io/post-images/1585964025232.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[0403 | 数据结构与算法]]></title>
+        <id>https://pythonangry.github.io/post/LFgTZAtp8/</id>
+        <link href="https://pythonangry.github.io/post/LFgTZAtp8/">
+        </link>
+        <updated>2020-04-03T02:22:09.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="1算法分析">1.算法分析</h3>
+<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1585966998751.png" alt="" loading="lazy"></figure>
+<h3 id="2python数据类型性能">2.Python数据类型性能</h3>
+<p>总方案：让最常用的操作性能最好<br>
+官方算法复杂度网站:<a href="https://wiki.python.org/moin/TimeComplexity"></a></p>
 ]]></content>
     </entry>
     <entry>
@@ -828,105 +841,6 @@ We're passionate about publishing authors with a distinct point of view. We offe
 </ol>
 <h4 id="其他">其他</h4>
 <p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[图书馆 | 信息素养与小工具小技巧]]></title>
-        <id>https://pythonangry.github.io/post/QdMJ-rp8n/</id>
-        <link href="https://pythonangry.github.io/post/QdMJ-rp8n/">
-        </link>
-        <updated>2020-03-02T12:41:25.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="part-one-信息素养基本内容">Part one 信息素养基本内容</h3>
-<p>以下内容均出自<a href="https://www.icourse163.org/course/SICNU-1002031014">Mooc</a>《信息素养：效率提升与终身学习的新引擎》 周建芳</p>
-<blockquote>
-<h4 id="信息素养定义">信息素养定义</h4>
-<p>基于信息解决问题的综合能力和基本素质</p>
-</blockquote>
-<blockquote>
-<h4 id="六种基本能力">六种基本能力</h4>
-<blockquote>
-<ol>
-<li>信息需求识别能力：知道有哪些信息，会找攻略</li>
-<li>信息检索能力：专用SE，垂直SE，万不得已不用综合SE</li>
-<li>信息获取能力</li>
-<li>信息评价能力：对信息本身真伪优劣的评价，基于信息评价其他</li>
-<li>信息管理能力：利用程序软件客户端管理信息，<em>Total commander</em></li>
-<li>应用信息的能力</li>
-</ol>
-</blockquote>
-</blockquote>
-<p><strong>信息评价</strong>：通过多方查询减少<strong>信息不对称</strong></p>
-<ul>
-<li>医院医护人员资质 - 国家卫生和计划生育委员会</li>
-<li>医药保健品 - 国家食品药品监督管理局</li>
-<li>企业 - 国家企业信用公示系统，产权专利商标，中国庭审公开网等</li>
-<li>个人 - 学历学籍，证书资质，职业资格，信用等</li>
-</ul>
-<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1583285298339.jpg" alt="" loading="lazy"></figure>
-<blockquote>
-<h4 id="三个基础">三个基础</h4>
-<blockquote>
-<ul>
-<li>信息知识</li>
-<li>信息伦理</li>
-<li>信息意识</li>
-</ul>
-</blockquote>
-</blockquote>
-<hr>
-<h4 id="part-two-小工具与小技巧">Part two 小工具与小技巧</h4>
-<h5 id="1-解决信息需求的途径">1. 解决信息需求的途径</h5>
-<ul>
-<li>电商网站：获取商品种类信息</li>
-<li><a href="https://www.wikihow.com/Main-Page">Wikihow</a></li>
-<li><a href="https://magi.com/">MAg[i]</a>：基于机器学习的信息抽取和检索系统</li>
-</ul>
-<h5 id="2-利用垂直搜索获取专用信息">2. 利用垂直搜索获取专用信息</h5>
-<ul>
-<li>产品行业标准，专利：国家标准公开系统，中国专利公布公告网</li>
-<li>找寻相似网站：<a href="https://www.similarsitesearch.com/">Similar site search</a></li>
-</ul>
-<h5 id="3-获取统计数据途径">3. 获取统计数据途径</h5>
-<ul>
-<li>
-<p>国家统计局</p>
-</li>
-<li>
-<p><a href="https://www.pewresearch.org/">Pew research center</a></p>
-</li>
-<li>
-<p><a href="https://www.nielsen.com/cn/zh/">Nielsen</a></p>
-</li>
-<li>
-<p>百度指数，阿里指数，微指数，微信指数，爱奇艺指数，导航App实时拥堵数据</p>
-</li>
-<li>
-<p>英文用法数据 <a href="https://www.linggle.com/">Liggle10^12</a></p>
-</li>
-<li>
-<p>超级课程表App</p>
-<h5 id="删除网页脚本获取文字内容">删除网页脚本获取文字内容</h5>
-<ol>
-<li>查看网页代码</li>
-<li>复制代码，删除文本之前的代码</li>
-<li>将文件另存为文件名.html/htm, 文件类型选择所有文件</li>
-<li>打开此网页文件，文本即可复制</li>
-</ol>
-</li>
-</ul>
-<h5 id="保存网页内图片">保存网页内图片</h5>
-<p>Alt+printscreen可进行截图<br>
-多图网页保存，利用右键保存所有网页文件即可</p>
-<h5 id="网站视频下载">网站视频下载</h5>
-<ol>
-<li>利用源地址识别工具如<strong>硕鼠</strong>将网页识别，硕鼠会返回视频下载地址</li>
-<li>利用浏览器缓存文件夹识别刚刚看过的视频文件</li>
-</ol>
-<h5 id="类型书搜索下载">类型书搜索下载</h5>
-<p><a href="https://yabook.org/">雅书</a>:PDF电子书学习下载站<br>
-<a href="https://etc.usf.edu/lit2go/">lit2go</a>:有声书</p>
-<p>让别人提参考和信息服务要求，写明白想要怎样的报告？还是自己列一些报告呈现形式供人挑选。<br>
-利用这个来提升自己？</p>
 ]]></content>
     </entry>
 </feed>
