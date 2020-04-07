@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586001610522">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586238428275">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586001610522" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586238428275" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -92,10 +92,10 @@
             
           </div>
           <div class="post-content">
-            <h3 id="1算法分析">1.算法分析</h3>
+            <h3 id="1算法分析">1算法分析</h3>
 <figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1585966998751.png" alt="" loading="lazy"></figure>
-<h4 id="变位词判断问题">变位词判断问题</h4>
-<p>a. 逐字检查 O(n^2)</p>
+<h4 id="11变位词判断问题">1.1变位词判断问题</h4>
+<p>1.1.1 逐字检查 O(n^2)</p>
 <ul>
 <li>两重循环，外层遍历s1每个字符，将内层循环执行n次</li>
 <li>内层循环在s2查找字符，每个字符对比次数从1-N，各不相同</li>
@@ -121,7 +121,7 @@
 
 print(anagramSolution1('abcd','dcba'))
 </code></pre>
-<p>b. 排序比较 O(nlogn)</p>
+<p>1.1.2 排序比较 O(nlogn)</p>
 <ul>
 <li>本算法主导步骤是排序步骤</li>
 </ul>
@@ -142,12 +142,12 @@ print(anagramSolution1('abcd','dcba'))
 
 print(anagramSolution2('abcde','edcba'))
 </code></pre>
-<p>c. 暴力法 O(n!)</p>
+<p>1.1.3 暴力法 O(n!)</p>
 <ul>
 <li>穷尽所有可能的组合</li>
 <li>将s1出现的字符进行全排列，查看s2是否出现在全排列列表中</li>
 </ul>
-<p>d. 计数比较 O(n)</p>
+<p>1.1.4 计数比较 O(n)</p>
 <ul>
 <li>3个非嵌套循环迭代</li>
 <li>依赖26计数器列表，储存空间用量最多，问题解法需要取舍权衡时间与空间</li>
@@ -172,9 +172,130 @@ print(anagramSolution2('abcde','edcba'))
 
 print(anagramSolution4('apple','pleap'))
 </code></pre>
-<h3 id="2python数据类型性能">2.Python数据类型性能</h3>
+<h3 id="2python数据类型性能">2Python数据类型性能</h3>
 <p>总方案：让最常用的操作性能最好<br>
 官方算法复杂度网站:<a href="https://wiki.python.org/moin/TimeComplexity"></a></p>
+<h3 id="3线性结构">3线性结构</h3>
+<ul>
+<li>有序，除第一个与最后一个，中间数据有唯一的前驱和后继，新增数据只会加到原有某数据之前或之后</li>
+</ul>
+<h4 id="31栈">3.1栈</h4>
+<ul>
+<li>数据加入和移除都仅发生在同一端</li>
+<li>距离栈底越近的数据项，留在栈中的时间越长</li>
+<li>后进先出LIFO</li>
+<li>特性：反转次序[浏览器后退][文档撤销]</li>
+<li>通常选用list末端(index = 1-)作为栈顶<br>
+3.1.1 括号匹配<br>
+a.简单括号匹配</li>
+</ul>
+<pre><code>from pythonds import Stack
+
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+    while index &lt; len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol == '(':
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                s.pop()
+
+        index = index + 1
+
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+
+print(parChecker('((()))'))
+print(parChecker('(()'))
+</code></pre>
+<p>b.通用括号匹配</p>
+<pre><code>from pythonds import Stack
+
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+    while index &lt; len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol in '([{':
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                top = s.pop()
+                if not matches(top,symbol):
+                    balanced = False
+        index = index + 1
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+
+def matches(open,close):
+    opens = '([{'
+    closers = ')]}'
+    return opens.index(open) == closers.index(close) #查询值的位置查看是否相等
+
+print(parChecker('({}{[}})'))
+print(parChecker('{[()]()}'))
+</code></pre>
+<p>3.1.2进制转换<br>
+a.十进制转换为二进制<br>
+转换过程中余数从在栈中排列从上端到下端看为从低到高，<br>
+出栈时则需要从高到低排列，正好符合栈的特性</p>
+<pre><code>from pythonds import Stack
+
+def divideBy2(decNumber):
+    remstack = Stack()
+
+    while decNumber &gt; 0:
+        rem = decNumber % 2 #求余数
+        remstack.push(rem)
+        decNumber = decNumber // 2 #整除数
+
+    binString = ''
+    while not remstack.isEmpty():
+        binString = binString + str(remstack.pop())
+
+    return binString
+
+print(divideBy2(42))
+</code></pre>
+<p>b.十进制转换为十六以下任意进制</p>
+<pre><code>from pythonds import Stack
+
+def baseConverter(decNumber,base):
+    digits = '0123456789ABCDEF'
+
+    remstack = Stack()
+
+    while decNumber &gt; 0:
+        rem = decNumber % base #求余数
+        remstack.push(rem)
+        decNumber = decNumber // base #整除数
+
+    newString = ''
+    while not remstack.isEmpty():
+        newString = newString + digits[remstack.pop()] #索引位置返回值
+
+    return newString
+
+print(baseConverter(25,2))
+print(baseConverter(19920,16))
+</code></pre>
+<p>3.1.3中缀表达式</p>
+<ul>
+<li>全括号表达式：把运算符移到右或左括号位置替代即可变为后缀或前缀形式</li>
+<li>前缀和后缀表达式</li>
+</ul>
 
           </div>
         </div>

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586001610522">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586238428275">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586001610522" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586238428275" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -641,6 +641,38 @@ w = wordcloud.WordCloud(font_path = 'msyh.ttc', mask = mask\ #mask方法形成�
                         width = 1000, height = 700, background_color ='white', \)
 w.generate(txt)
 w.to_file('growordcloud.png')
+</code></pre>
+<h4 id="17第七周练习题">17.第七周练习题</h4>
+<h5 id="acsv格式清洗与转换">a.CSV格式清洗与转换</h5>
+<p>（1）按行进行倒序排列<br>
+（2）每行数据倒序排列<br>
+（3）使用分号（;）代替逗号（,）分割数据，无空格</p>
+<pre><code>f = open('data.csv','r')
+lines = f.readlines()
+lines.reverse()
+
+for line in lines:
+    line = line.replace('\n','')
+    line =line.replace(' ','')
+    t = line.split(&quot;,&quot;)
+    t.reverse()
+    print(&quot;;&quot;.join(t))
+</code></pre>
+<h5 id="b文本的平均列数">b.文本的平均列数</h5>
+<p>（1）有效行指包含至少一个字符的行，不计空行<br>
+（2）每行的列数为其有效数<br>
+（3）平均列数为有效行的列数平均值，采用四舍五入方式取整数进位</p>
+<pre><code>f= open('latex.log','r')
+bar = 0
+chars = 0
+for line in f.readlines():
+    if not (len(line) == 1  and line[-1]=='\n') :
+        bar +=1
+        chars += len(line)-1
+
+avg = round(chars/bar,0)
+avg = int(avg)
+print(avg)‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪
 </code></pre>
 
           </div>

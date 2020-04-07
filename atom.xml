@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-04T12:00:42.679Z</updated>
+    <updated>2020-04-07T05:47:12.573Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -16,6 +16,8 @@
         </link>
         <updated>2020-04-04T01:33:11.000Z</updated>
         <content type="html"><![CDATA[<p><img src="https://pythonangry.github.io/post-images/1585964012087.png" alt="" loading="lazy"><br>
+标准差的自由值<br>
+<img src="https://pythonangry.github.io/post-images/1586004274765.png" alt="" loading="lazy"><br>
 <img src="https://pythonangry.github.io/post-images/1585964025232.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
@@ -25,10 +27,10 @@
         <link href="https://pythonangry.github.io/post/LFgTZAtp8/">
         </link>
         <updated>2020-04-03T02:22:09.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="1算法分析">1.算法分析</h3>
+        <content type="html"><![CDATA[<h3 id="1算法分析">1算法分析</h3>
 <figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1585966998751.png" alt="" loading="lazy"></figure>
-<h4 id="变位词判断问题">变位词判断问题</h4>
-<p>a. 逐字检查 O(n^2)</p>
+<h4 id="11变位词判断问题">1.1变位词判断问题</h4>
+<p>1.1.1 逐字检查 O(n^2)</p>
 <ul>
 <li>两重循环，外层遍历s1每个字符，将内层循环执行n次</li>
 <li>内层循环在s2查找字符，每个字符对比次数从1-N，各不相同</li>
@@ -54,7 +56,7 @@
 
 print(anagramSolution1('abcd','dcba'))
 </code></pre>
-<p>b. 排序比较 O(nlogn)</p>
+<p>1.1.2 排序比较 O(nlogn)</p>
 <ul>
 <li>本算法主导步骤是排序步骤</li>
 </ul>
@@ -75,12 +77,12 @@ print(anagramSolution1('abcd','dcba'))
 
 print(anagramSolution2('abcde','edcba'))
 </code></pre>
-<p>c. 暴力法 O(n!)</p>
+<p>1.1.3 暴力法 O(n!)</p>
 <ul>
 <li>穷尽所有可能的组合</li>
 <li>将s1出现的字符进行全排列，查看s2是否出现在全排列列表中</li>
 </ul>
-<p>d. 计数比较 O(n)</p>
+<p>1.1.4 计数比较 O(n)</p>
 <ul>
 <li>3个非嵌套循环迭代</li>
 <li>依赖26计数器列表，储存空间用量最多，问题解法需要取舍权衡时间与空间</li>
@@ -105,9 +107,130 @@ print(anagramSolution2('abcde','edcba'))
 
 print(anagramSolution4('apple','pleap'))
 </code></pre>
-<h3 id="2python数据类型性能">2.Python数据类型性能</h3>
+<h3 id="2python数据类型性能">2Python数据类型性能</h3>
 <p>总方案：让最常用的操作性能最好<br>
 官方算法复杂度网站:<a href="https://wiki.python.org/moin/TimeComplexity"></a></p>
+<h3 id="3线性结构">3线性结构</h3>
+<ul>
+<li>有序，除第一个与最后一个，中间数据有唯一的前驱和后继，新增数据只会加到原有某数据之前或之后</li>
+</ul>
+<h4 id="31栈">3.1栈</h4>
+<ul>
+<li>数据加入和移除都仅发生在同一端</li>
+<li>距离栈底越近的数据项，留在栈中的时间越长</li>
+<li>后进先出LIFO</li>
+<li>特性：反转次序[浏览器后退][文档撤销]</li>
+<li>通常选用list末端(index = 1-)作为栈顶<br>
+3.1.1 括号匹配<br>
+a.简单括号匹配</li>
+</ul>
+<pre><code>from pythonds import Stack
+
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+    while index &lt; len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol == '(':
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                s.pop()
+
+        index = index + 1
+
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+
+print(parChecker('((()))'))
+print(parChecker('(()'))
+</code></pre>
+<p>b.通用括号匹配</p>
+<pre><code>from pythonds import Stack
+
+def parChecker(symbolString):
+    s = Stack()
+    balanced = True
+    index = 0
+    while index &lt; len(symbolString) and balanced:
+        symbol = symbolString[index]
+        if symbol in '([{':
+            s.push(symbol)
+        else:
+            if s.isEmpty():
+                balanced = False
+            else:
+                top = s.pop()
+                if not matches(top,symbol):
+                    balanced = False
+        index = index + 1
+    if balanced and s.isEmpty():
+        return True
+    else:
+        return False
+
+def matches(open,close):
+    opens = '([{'
+    closers = ')]}'
+    return opens.index(open) == closers.index(close) #查询值的位置查看是否相等
+
+print(parChecker('({}{[}})'))
+print(parChecker('{[()]()}'))
+</code></pre>
+<p>3.1.2进制转换<br>
+a.十进制转换为二进制<br>
+转换过程中余数从在栈中排列从上端到下端看为从低到高，<br>
+出栈时则需要从高到低排列，正好符合栈的特性</p>
+<pre><code>from pythonds import Stack
+
+def divideBy2(decNumber):
+    remstack = Stack()
+
+    while decNumber &gt; 0:
+        rem = decNumber % 2 #求余数
+        remstack.push(rem)
+        decNumber = decNumber // 2 #整除数
+
+    binString = ''
+    while not remstack.isEmpty():
+        binString = binString + str(remstack.pop())
+
+    return binString
+
+print(divideBy2(42))
+</code></pre>
+<p>b.十进制转换为十六以下任意进制</p>
+<pre><code>from pythonds import Stack
+
+def baseConverter(decNumber,base):
+    digits = '0123456789ABCDEF'
+
+    remstack = Stack()
+
+    while decNumber &gt; 0:
+        rem = decNumber % base #求余数
+        remstack.push(rem)
+        decNumber = decNumber // base #整除数
+
+    newString = ''
+    while not remstack.isEmpty():
+        newString = newString + digits[remstack.pop()] #索引位置返回值
+
+    return newString
+
+print(baseConverter(25,2))
+print(baseConverter(19920,16))
+</code></pre>
+<p>3.1.3中缀表达式</p>
+<ul>
+<li>全括号表达式：把运算符移到右或左括号位置替代即可变为后缀或前缀形式</li>
+<li>前缀和后缀表达式</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
@@ -732,6 +855,38 @@ w = wordcloud.WordCloud(font_path = 'msyh.ttc', mask = mask\ #mask方法形成�
                         width = 1000, height = 700, background_color ='white', \)
 w.generate(txt)
 w.to_file('growordcloud.png')
+</code></pre>
+<h4 id="17第七周练习题">17.第七周练习题</h4>
+<h5 id="acsv格式清洗与转换">a.CSV格式清洗与转换</h5>
+<p>（1）按行进行倒序排列<br>
+（2）每行数据倒序排列<br>
+（3）使用分号（;）代替逗号（,）分割数据，无空格</p>
+<pre><code>f = open('data.csv','r')
+lines = f.readlines()
+lines.reverse()
+
+for line in lines:
+    line = line.replace('\n','')
+    line =line.replace(' ','')
+    t = line.split(&quot;,&quot;)
+    t.reverse()
+    print(&quot;;&quot;.join(t))
+</code></pre>
+<h5 id="b文本的平均列数">b.文本的平均列数</h5>
+<p>（1）有效行指包含至少一个字符的行，不计空行<br>
+（2）每行的列数为其有效数<br>
+（3）平均列数为有效行的列数平均值，采用四舍五入方式取整数进位</p>
+<pre><code>f= open('latex.log','r')
+bar = 0
+chars = 0
+for line in f.readlines():
+    if not (len(line) == 1  and line[-1]=='\n') :
+        bar +=1
+        chars += len(line)-1
+
+avg = round(chars/bar,0)
+avg = int(avg)
+print(avg)‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪
 </code></pre>
 ]]></content>
     </entry>
