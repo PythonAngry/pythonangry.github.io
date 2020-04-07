@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-07T05:47:12.573Z</updated>
+    <updated>2020-04-07T08:47:32.064Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -226,11 +226,72 @@ def baseConverter(decNumber,base):
 print(baseConverter(25,2))
 print(baseConverter(19920,16))
 </code></pre>
-<p>3.1.3中缀表达式</p>
+<p>3.1.3表达式转换</p>
 <ul>
 <li>全括号表达式：把运算符移到右或左括号位置替代即可变为后缀或前缀形式</li>
-<li>前缀和后缀表达式</li>
+<li>中缀、前缀和后缀表达式<br>
+a.中缀表达式转换为后缀表达式</li>
 </ul>
+<pre><code>from pythonds import Stack
+
+def infixToPostfix(infixexpr):
+    prec = {}
+    prec['*'] = 3 #记录操作符优先级
+    prec['/'] = 3
+    prec['+'] = 2
+    prec['-'] = 2
+    prec['('] = 1
+    opStack = Stack()
+    postfixList = []
+    tokenList = infixexpr.split() #解析表达式到单词列表
+
+    for token in tokenList:
+        if token in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' or token in '0123456789': #操作数
+            postfixList.append(token)
+        elif token == '(':
+            opStack.push(token)
+        elif token == ')':
+            toptoken = opStack.pop()
+            while toptoken != '(':
+                postfixList.append(toptoken)
+                toptoken = opStack.pop()
+        else:                                                #操作符
+            while (not opStack.isEmpty()) and \
+                    (prec[opStack.peek()] &gt;= prec[token]):
+                        postfixList.append(opStack.pop())
+            opStack.push(token)
+
+    while not opStack.isEmpty():
+        postfixList.append(opStack.pop())    #操作符
+    return ' '.join(postfixList)   #合成后缀表达式字符串
+</code></pre>
+<p>b.后缀表达式求值</p>
+<pre><code>from pythonds import Stack
+
+def postfixEval(postfixExpr):
+    operandStack = Stack()
+    tokenList = postfixExpr.split()
+
+    for token in tokenList:
+        if token in  '0123456789': #操作数
+            operandStack.push(int(token))
+        else:
+            operand2 = operandStack.pop()
+            operand1 = operandStack.pop()
+            result = doMath(token, operand1, operand2)
+            operandStack.push(result)
+    return operandStack.pop()
+
+def doMath(op, op1, op2):
+    if op == '*':
+        return op1 * op2
+    elif op == '/':
+        return op1 / op2
+    elif op == '+':
+        return op1 + op2
+    else:
+        return op1 - op2
+</code></pre>
 ]]></content>
     </entry>
     <entry>
