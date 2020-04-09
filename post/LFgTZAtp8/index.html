@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586249247557">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586442364284">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586249247557" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586442364284" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -247,7 +247,7 @@ def matches(open,close):
 print(parChecker('({}{[}})'))
 print(parChecker('{[()]()}'))
 </code></pre>
-<p>3.1.2进制转换<br>
+<p><strong>3.1.2进制转换</strong><br>
 a.十进制转换为二进制<br>
 转换过程中余数从在栈中排列从上端到下端看为从低到高，<br>
 出栈时则需要从高到低排列，正好符合栈的特性</p>
@@ -291,7 +291,7 @@ def baseConverter(decNumber,base):
 print(baseConverter(25,2))
 print(baseConverter(19920,16))
 </code></pre>
-<p>3.1.3表达式转换</p>
+<p><strong>3.1.3表达式转换</strong></p>
 <ul>
 <li>全括号表达式：把运算符移到右或左括号位置替代即可变为后缀或前缀形式</li>
 <li>中缀、前缀和后缀表达式<br>
@@ -356,6 +356,37 @@ def doMath(op, op1, op2):
         return op1 + op2
     else:
         return op1 - op2
+</code></pre>
+<p><strong>3.1.4一维消消乐</strong></p>
+<pre><code>from pythonds import Stack
+
+def remover(symbolString):
+    s = Stack()
+    index = 0
+    str = []
+    while index &lt; len(symbolString):
+        symbol = symbolString[index]
+        if s.isEmpty():
+            s.push(symbol)
+        elif not s.isEmpty():
+            if symbol == s.peek():
+                s.pop()
+            else:
+                s.push(symbol)
+        index +=1
+    if s.isEmpty():
+        str = ''.join(&quot;None&quot;)
+        return str
+    else:
+        while not s.isEmpty():
+            str.append(s.pop())
+        return ''.join(str[::-1])
+
+print(remover('abba'))
+print(remover('abbacd'))
+
+- 并不需要判断空返回None，python直接会返回
+- 另可以直接join stack中的元素（''.join(s.items)），不需要pop出来倒叙，stack本质上的定义仍为一个列表
 </code></pre>
 
           </div>
