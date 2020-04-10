@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586442364284">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586519712737">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586442364284" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586519712737" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -95,7 +95,7 @@
             <h3 id="1算法分析">1算法分析</h3>
 <figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1585966998751.png" alt="" loading="lazy"></figure>
 <h4 id="11变位词判断问题">1.1变位词判断问题</h4>
-<p>1.1.1 逐字检查 O(n^2)</p>
+<p><strong>1.1.1 逐字检查 O(n^2)</strong></p>
 <ul>
 <li>两重循环，外层遍历s1每个字符，将内层循环执行n次</li>
 <li>内层循环在s2查找字符，每个字符对比次数从1-N，各不相同</li>
@@ -121,7 +121,7 @@
 
 print(anagramSolution1('abcd','dcba'))
 </code></pre>
-<p>1.1.2 排序比较 O(nlogn)</p>
+<p><strong>1.1.2 排序比较 O(nlogn)</strong></p>
 <ul>
 <li>本算法主导步骤是排序步骤</li>
 </ul>
@@ -142,12 +142,12 @@ print(anagramSolution1('abcd','dcba'))
 
 print(anagramSolution2('abcde','edcba'))
 </code></pre>
-<p>1.1.3 暴力法 O(n!)</p>
+<p><strong>1.1.3 暴力法 O(n!)</strong></p>
 <ul>
 <li>穷尽所有可能的组合</li>
 <li>将s1出现的字符进行全排列，查看s2是否出现在全排列列表中</li>
 </ul>
-<p>1.1.4 计数比较 O(n)</p>
+<p><strong>1.1.4 计数比较 O(n)</strong></p>
 <ul>
 <li>3个非嵌套循环迭代</li>
 <li>依赖26计数器列表，储存空间用量最多，问题解法需要取舍权衡时间与空间</li>
@@ -186,7 +186,7 @@ print(anagramSolution4('apple','pleap'))
 <li>后进先出LIFO</li>
 <li>特性：反转次序[浏览器后退][文档撤销]</li>
 <li>通常选用list末端(index = 1-)作为栈顶<br>
-3.1.1 括号匹配<br>
+<strong>3.1.1 括号匹配</strong><br>
 a.简单括号匹配</li>
 </ul>
 <pre><code>from pythonds import Stack
@@ -357,7 +357,7 @@ def doMath(op, op1, op2):
     else:
         return op1 - op2
 </code></pre>
-<p><strong>3.1.4一维消消乐</strong></p>
+<p><strong>3.1.4 一维消消乐</strong></p>
 <pre><code>from pythonds import Stack
 
 def remover(symbolString):
@@ -384,9 +384,160 @@ def remover(symbolString):
 
 print(remover('abba'))
 print(remover('abbacd'))
+</code></pre>
+<ul>
+<li>可以直接join stack中的元素（''.join(s.items)），不需要pop出来倒叙，stack本质上的定义仍为一个列表</li>
+</ul>
+<pre><code>from pythonds import Stack
 
-- 并不需要判断空返回None，python直接会返回
-- 另可以直接join stack中的元素（''.join(s.items)），不需要pop出来倒叙，stack本质上的定义仍为一个列表
+s = Stack()
+def remover(symbolString):
+    index = 0
+    while index &lt; len(symbolString):
+        symbol = symbolString[index]
+        if s.isEmpty():
+            s.push(symbol)
+        elif not s.isEmpty():
+            if symbol == s.peek():
+                s.pop()
+            else:
+                s.push(symbol)
+        index +=1
+    return ''.join(s.items)
+
+if not s.isEmpty:
+    print(s)
+else:
+    print('None',end='')
+
+print(remover('abba'))
+print(remover('accbcf'))
+</code></pre>
+<h4 id="32-队列">3.2 队列</h4>
+<p><strong>3.2.1 热土豆</strong></p>
+<pre><code>def hotpotato(namelist, num):
+    simqueue = Queue()
+    for name in namelist:
+        simqueue.enqueue(name)
+
+    while simqueue.size() &gt; 1:
+        for i in range(num):
+            simqueue.enqueue(simqueue.dequeue()) #一次传递
+
+        simqueue.dequeue()
+
+    return simqueue.dequeue()
+
+print(hotpotato(['bill','david','susan','jane','kent','bard'],7))
+</code></pre>
+<p><strong>3.2.2 打印任务</strong><br>
+复习！自己重新输出思路！</p>
+<p><strong>3.2.1 回文词</strong></p>
+<pre><code>from pythonds import Deque #双端队列
+
+def palchecker(aString):
+    chardeque = Deque()
+
+    for ch in aString:
+        chardeque.addRear(ch) # asdf → rear · fdsa · front
+
+    stillEqual = True
+
+    while chardeque.size() &gt; 1 and stillEqual:
+        first = chardeque.removeFront()
+        last = chardeque.removeRear()
+        if first != last:
+            stillEqual = False
+
+    return stillEqual
+
+print(palchecker('sfderrd'))
+print(palchecker('radar'))
+</code></pre>
+<h4 id="33链表">3.3链表</h4>
+<p><strong>3.3.1 无序表</strong></p>
+<pre><code>class Node:
+    def __init__(self,initdata):
+        self.data = initdata
+        self.next = None
+
+    def getData(self):
+        return self.data
+
+    def getNext(self):
+        return self.next
+
+    def setData(self,newdata):
+        self.data = newdata
+
+    def setNext(self,newnext):
+        self.next = newnext
+
+class UnorderList:
+
+    def __init__(self):
+        self.head = None
+
+def add(self,item): #add方法实现
+    temp = Node(item)
+    temp.setNext(self.head) #链接次序不能反
+    self.head = temp
+
+def size(self): #size的实现
+    current = self.head
+    count = 0
+    while current != None:
+        count = count + 1
+        current = current.getNext()
+
+    return count
+
+def search(self,item): #seatch的实现
+    current = self.head
+    found = False
+    while current != None and not found:
+        if current.getData() == item:
+            fount = True
+        else:
+            current = current.getNext()
+
+    return found
+
+def remove(self,item): #remove（item）方法
+    current = self.head
+    previous = None
+    found = False
+    while not found:
+        if current.getData() == item:
+            found = True
+        else:
+            previous = current
+            current = current.getNext()
+
+    if previous == None: #第一个就找到，要remove
+        self.head = current.getNext()
+    else:
+        previous.setNext(current.getNext())
+</code></pre>
+<p><strong>3.3.2 有序表</strong></p>
+<pre><code>def add(self,item): #找到第一个比他大的就可以加入
+    current = self.head
+    previous = None
+    stop = False
+    while current != None and not stop:
+        if current.getData() &gt; item: #发现插入位置
+            stop = True
+        else:
+            previous = current
+            current = current.getNext
+
+    temp = Node(item)
+    if previous == None: #插在表头
+        temp.setNext(self.head)
+        self.head = temp
+    else:                  #插在表中
+        temp.setNext(current)
+        previous.setNext(temp)
 </code></pre>
 
           </div>
