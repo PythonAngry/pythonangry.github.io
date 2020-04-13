@@ -2,13 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-10T12:22:11.772Z</updated>
+    <updated>2020-04-13T03:33:21.901Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
     <logo>https://pythonangry.github.io/images/avatar.png</logo>
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
+    <entry>
+        <title type="html"><![CDATA[0313 | 又双叕学python（2）]]></title>
+        <id>https://pythonangry.github.io/post/DjCAaxOU_/</id>
+        <link href="https://pythonangry.github.io/post/DjCAaxOU_/">
+        </link>
+        <updated>2020-04-13T03:32:20.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="第八周">第八周</h4>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0404 | 统计学]]></title>
         <id>https://pythonangry.github.io/post/HoJsDOlnB/</id>
@@ -557,7 +566,7 @@ def remove(self,item): #remove（item）方法
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[0313 | 又双叕学python]]></title>
+        <title type="html"><![CDATA[0313 | 又双叕学python（1）]]></title>
         <id>https://pythonangry.github.io/post/1j3QsQSxV/</id>
         <link href="https://pythonangry.github.io/post/1j3QsQSxV/">
         </link>
@@ -1131,6 +1140,12 @@ avg = round(chars/bar,0)
 avg = int(avg)
 print(avg)‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪
 </code></pre>
+<h5 id="c第七周选做习题">c.第七周选做习题</h5>
+<p><img src="https://pythonangry.github.io/post-images/1586747620320.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748303359.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748612258.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748669253.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748723905.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
@@ -1255,68 +1270,6 @@ print(avg)‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬�
 <img src="https://pythonangry.github.io/post-images/1584448496992.jpg" alt="" loading="lazy"></p>
 <p>-0320 大方婉儿面<br>
 <img src="https://pythonangry.github.io/post-images/1584956202502.jpg" alt="" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0303 | Al la bout book]]></title>
-        <id>https://pythonangry.github.io/post/EuQroKpAd/</id>
-        <link href="https://pythonangry.github.io/post/EuQroKpAd/">
-        </link>
-        <updated>2020-03-03T05:05:56.000Z</updated>
-        <content type="html"><![CDATA[<p>行业报告：《2018-2019中国实体书店产业报告》<br>
-http://www.chyxx.com/research/201712/597425.html</p>
-<h4 id="一-图书馆机构">一、图书馆机构</h4>
-<ol>
-<li><a href="https://www.ifla.org/">IFLA</a></li>
-<li><a href="http://www.ala.org/">ALA</a><br>
-<a href="http://www.ala.org/pla/">PLA</a> 公共图书馆<br>
-<a href="http://www.ala.org/aasl/">AASL</a> 学校图书馆</li>
-<li><a href="https://www.cilip.org.uk/">CILIP</a></li>
-<li><a href="https://www.oclc.org/en/home.html">OCLC</a></li>
-</ol>
-<h4 id="二-国家公共大学图书馆">二、国家/公共/大学图书馆</h4>
-<ol>
-<li>新加坡 <a href="https://www.nlb.gov.sg/">NPL</a></li>
-<li>美国 <a href="https://www.loc.gov/">Library of congress</a></li>
-<li>中国<a href="http://www.nlc.cn/">中国国家图书馆</a></li>
-<li>香港<a href="https://sc.lcsd.gov.hk/TuniS/www.hkpl.gov.hk/tc/index.html">香港公共图书馆</a></li>
-<li>台湾<a href="https://www.ncl.edu.tw/">国家图书馆</a><a href="https://319readingtw.fandom.com/zh/wiki/%E9%A6%96%E9%A1%B5">台湾图书馆列表</a></li>
-<li>英国<a href="https://www.bl.uk/">The British Library</a></li>
-<li>澳大利亚<a href="https://www.nla.gov.au/">National Library of Australia</a></li>
-<li>纽约<a href="https://www.nypl.org/">New York Public Library</a></li>
-<li><a href="http://www.gzlib.org.cn/">广州图书馆</a></li>
-<li><a href="https://www.szlib.org.cn/">深圳图书馆</a></li>
-<li><a href="https://www.nslib.cn/">南山图书馆</a></li>
-</ol>
-<h4 id="三-出版社">三、出版社</h4>
-<ol>
-<li><a href="https://thamesandhudson.com/">Thames&amp;hudson</a></li>
-<li><a href="https://uk.phaidon.com/agenda/">Phaidon</a></li>
-<li><a href="http://www.skira.net/">Skira</a></li>
-<li><a href="https://www.taschen.com/">TASCHEN</a></li>
-<li><a href="https://www.penguin.com/">Penguin</a></li>
-<li><a href="https://www.azothbooks.com/">漫游者书店</a></li>
-<li><a href="https://www.suncolor.com.tw/">三采网路书店</a></li>
-<li><a href="http://www.spbooks.cn/">善本图书</a></li>
-<li><a href="https://publishing.andrewsmcmeel.com/">Andrews Mcmeel</a><br>
-TALENT, RECOGNIZED<br>
-We're passionate about publishing authors with a distinct point of view. We offer an individualized, flexible approach to publishing success by respecting the author's vision as the primary source of inspiration at every stage of the editorial, marketing and distribution process.</li>
-</ol>
-<h4 id="四-书店">四、书店</h4>
-<ol>
-<li><a href="http://www.sisyphe.com.cn/index.html#">西西弗书店</a></li>
-<li><a href="http://www.yanjiyou.com/col.jsp?id=106">言几又</a></li>
-<li><a href="http://www.fangsuo.com/index/index.html">方所</a></li>
-</ol>
-<h4 id="五-作家主页">五、作家主页</h4>
-<ol>
-<li><a href="http://www.oliverjeffersworld.com/">Oliver Jeffers</a></li>
-<li><a href="http://www.elishacooper.com/">Elisha Cooper</a></li>
-<li><a href="https://www.chrishaughton.com/home">Chris Haughton</a></li>
-<li><a href="http://mowillems.com/">Mo Willems</a></li>
-</ol>
-<h4 id="其他">其他</h4>
-<p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息</p>
 ]]></content>
     </entry>
 </feed>
