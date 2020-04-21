@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-21T09:40:19.639Z</updated>
+    <updated>2020-04-21T12:04:20.395Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -848,7 +848,30 @@ def moveDisk(disk, fromPole, toPole):
 
 moveTower(3, '#1', '#2', '#3')
 </code></pre>
-<p>d.探索迷宫（表示投降）</p>
+<p>e.探索迷宫（表示投降）</p>
+<h4 id="42递归策略">4.2递归策略</h4>
+<p><strong>4.2.1 分治策略</strong></p>
+<ul>
+<li>解决问题的典型策略：分而治之</li>
+</ul>
+<p><strong>4.2.2 贪心策略</strong></p>
+<ul>
+<li>每次选择尽量大的部分一次解决<br>
+a.找零兑换问题</li>
+</ul>
+<pre><code>def recMC(coinValueList, change):
+    minCoins = change
+    if change in coinValueList:
+        return 1 #最小规模，直接返回
+    else:
+        for i in [c for c in coinValueList if c &lt;= change]:
+            numCoins = 1 + recMC(coinValueList, change-i) #调用自身，减少规模：每次减去一种硬币面值，挑选最小数量
+            if numCoins &lt; minCoins:
+                minCoins = numCoins
+    return minCoins
+
+print(recMC([1,5,10,25], 63))
+</code></pre>
 ]]></content>
     </entry>
     <entry>

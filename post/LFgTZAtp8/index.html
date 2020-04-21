@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587462015324">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587470652267">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587462015324" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587470652267" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -658,7 +658,30 @@ def moveDisk(disk, fromPole, toPole):
 
 moveTower(3, '#1', '#2', '#3')
 </code></pre>
-<p>d.探索迷宫（表示投降）</p>
+<p>e.探索迷宫（表示投降）</p>
+<h4 id="42递归策略">4.2递归策略</h4>
+<p><strong>4.2.1 分治策略</strong></p>
+<ul>
+<li>解决问题的典型策略：分而治之</li>
+</ul>
+<p><strong>4.2.2 贪心策略</strong></p>
+<ul>
+<li>每次选择尽量大的部分一次解决<br>
+a.找零兑换问题</li>
+</ul>
+<pre><code>def recMC(coinValueList, change):
+    minCoins = change
+    if change in coinValueList:
+        return 1 #最小规模，直接返回
+    else:
+        for i in [c for c in coinValueList if c &lt;= change]:
+            numCoins = 1 + recMC(coinValueList, change-i) #调用自身，减少规模：每次减去一种硬币面值，挑选最小数量
+            if numCoins &lt; minCoins:
+                minCoins = numCoins
+    return minCoins
+
+print(recMC([1,5,10,25], 63))
+</code></pre>
 
           </div>
         </div>
