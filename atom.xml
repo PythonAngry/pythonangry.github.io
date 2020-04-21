@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-19T07:13:20.657Z</updated>
+    <updated>2020-04-21T09:40:19.639Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -15,7 +15,253 @@
         <link href="https://pythonangry.github.io/post/DjCAaxOU_/">
         </link>
         <updated>2020-04-13T03:32:20.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="第八周">第八周</h4>
+        <content type="html"><![CDATA[<h4 id="12基本统计值计算">12.基本统计值计算</h4>
+<pre><code>def getNum():
+    nums = []
+    iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
+    while iNumStr !=&quot;&quot;:
+        nums.append(eval(iNumStr))
+        iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
+    return nums
+
+def mean(numbers):
+    s = 0.0
+    for num in numbers:
+        s = s + num
+    return s / len(numbers)
+
+def dev(numbers, mean):
+    sdev = 0.0
+    for num in numbers:
+        sdev = sdev + (num - mean)**2
+    return pow(sdev / (len(numbers)-1), 0.5) #方差公式
+
+def median(numbers):
+    sorted(numbers)
+    size = len(numbers)
+    if size % 2 == 0:
+        med = ((numbers[size//2-1]) + numbers[size//2])/2 #从0号位开始取，[1,5]=取前不取后，取1，2，3，4。
+    else:
+        med = numbers[size//2]
+    return med
+
+n = getNum()
+m = mean(n)
+print('平均值:{},方差:{:.2},中位数:{}'.format(m,dev(n,m),median(n)))
+</code></pre>
+<h4 id="13哈姆雷特词频统计">13.哈姆雷特词频统计</h4>
+<pre><code>def getText():
+    txt = open('hamlet.txt','r').read()
+    txt = txt.lower()
+    for ch in '!&quot;$%&amp;()*+,-./;:&lt;&gt;=?@[\\]^_{|}~`':
+        txt = txt.replace(ch, &quot; &quot;)
+    return txt
+
+hamletTxt = getText()
+words = hamletTxt.split()
+counts = {}
+for word in words:
+    counts[word] = counts.get(word,0) + 1
+items = list(counts.items())
+items.sort(key=lambda x:x[1], reverse=True)
+for i in range(10):
+    word, count = items[i]
+    print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))
+</code></pre>
+<h4 id="14三国演义人物出场统计">14.三国演义人物出场统计</h4>
+<pre><code>import jieba
+txt = open('sanguo.txt','r',encoding=utf-8).read()
+excludes = {'将军','却说','荆州','二人','不可','不能','如此','...'}
+words = jieba.lcut(txt)
+counts = {}
+for word in words:
+    if len(word) == 1:
+        continue
+    elif word == '诸葛亮' or word == '孔明曰':
+        rword = '孔明'
+    elif word == '关公' or word == '云长':
+        rword = '关羽'
+    elif word == '玄德' or word == '玄德曰':
+        rword = '刘备'
+    elif word == '孟德' or word == '丞相':
+        rword = '曹操'
+    elif word == '...' or word == '...':
+        rword = '..'
+    else:
+        rword = word
+    counts[word] = counts.get(word,0) + 1
+for word in excludes:
+    del counts[word]
+items = list(counts.items())
+items.sort(key=lambda x:x[1], reverse=True)
+for i in range(10):
+    word, count = items[i]
+    print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))
+</code></pre>
+<h4 id="15自动轨迹绘制">15.自动轨迹绘制</h4>
+<p><strong>基本思路</strong></p>
+<ol>
+<li>定义数据文件格式（接口）</li>
+<li>编写程序，根据文件接口解析参数绘制图形</li>
+<li>编制数据文件<br>
+<strong>理解方法思维</strong></li>
+</ol>
+<ul>
+<li>自动化思维：数据和功能分离，数据驱动自动运行</li>
+<li>接口化设计：格式化设计接口，清晰明了</li>
+<li>二维数据应用：应用维度组织数据</li>
+</ul>
+<pre><code>import turtle as t
+t.title('自动轨迹绘制')
+t.setup(800,600,0,0)
+t.pencolor('red')
+t.pensize(5)
+# 数据读取
+datals = []
+f = open('data.txt') #打开数据文件
+for line in f:
+    line = line.replace('\n','') #将每一行的回车去除
+    datals.append(list(map(eval,line.split(',')))) #map函数将eval方法运用到每一个元素当中
+f.close() #正确及时关闭文件，若忘记，程序正确运行后也会关闭
+# 自动绘制
+for i in range(len(datals)): #此时，列表datals由一个个列表元素组成，即二维数据
+    #数据接口形式如：300,1,144,0,1,0 分别为行进距离，转向判断（0左转，1右转），转向角度，及RGB三个通道颜色（0-1之间的浮点数）
+    t.pencolor(datals[i][3],datals[i][4],datals[i][5])
+    t.fd(datals[i][0])
+    if datals[i][1]:
+        t.right(datals[i][2])
+    else:
+        t.left(datals[i][2])
+</code></pre>
+<h4 id="16政府工作报告词云">16.政府工作报告词云</h4>
+<pre><code>import jieba
+import wordcloud
+from imageio import imread
+mask = imread('fivestar.png') #运用imread将词云形状进行设定，也可以不设定，默认长方形
+f = open('f.txt','r',encoding='utf-8')
+t = f.read()
+f.close()
+ls = jieba.lcut(t) #中文文本需要分词
+txt = ' '.join(ls) #把分出来的中文词列表用空格连接形成长字符串
+w = wordcloud.WordCloud(font_path = 'msyh.ttc', mask = mask\ #mask方法形成不规则词云
+                        width = 1000, height = 700, background_color ='white', \)
+w.generate(txt)
+w.to_file('growordcloud.png')
+</code></pre>
+<h4 id="17第七周练习题">17.第七周练习题</h4>
+<h5 id="acsv格式清洗与转换">a.CSV格式清洗与转换</h5>
+<p>（1）按行进行倒序排列<br>
+（2）每行数据倒序排列<br>
+（3）使用分号（;）代替逗号（,）分割数据，无空格</p>
+<pre><code>f = open('data.csv','r')
+lines = f.readlines()
+lines.reverse()
+
+for line in lines:
+    line = line.replace('\n','')
+    line =line.replace(' ','')
+    t = line.split(&quot;,&quot;)
+    t.reverse()
+    print(&quot;;&quot;.join(t))
+</code></pre>
+<h5 id="b文本的平均列数">b.文本的平均列数</h5>
+<p>（1）有效行指包含至少一个字符的行，不计空行<br>
+（2）每行的列数为其有效数<br>
+（3）平均列数为有效行的列数平均值，采用四舍五入方式取整数进位</p>
+<pre><code>f= open('latex.log','r')
+bar = 0
+chars = 0
+for line in f.readlines():
+    if not (len(line) == 1  and line[-1]=='\n') :
+        bar +=1
+        chars += len(line)-1
+
+avg = round(chars/bar,0)
+avg = int(avg)
+print(avg)‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪
+</code></pre>
+<h5 id="c第七周选做习题">c.第七周选做习题</h5>
+<p><img src="https://pythonangry.github.io/post-images/1586747620320.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748303359.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748612258.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748669253.png" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1586748723905.png" alt="" loading="lazy"></p>
+<h4 id="18体育竞技分析">18.体育竞技分析</h4>
+<ul>
+<li>计算思维：抽象+自动化</li>
+<li>模拟：抽象比赛过程+自动化执行N场比赛</li>
+<li>当N越大，比赛结果分析越科学<br>
+<strong>（1）自顶向下（设计）</strong></li>
+<li>将一个总问题表达为若干小问题组成的形式</li>
+<li>使用同样方法进一步分析小问题<br>
+<strong>（2）自底向上（执行）</strong></li>
+<li>分单元测试，逐步组装</li>
+<li>按自顶向下相反的路径操作</li>
+<li>直至系统各部分以组装的思路都经过测试和验证</li>
+</ul>
+<hr>
+<p><strong>程序总体框架及步骤</strong></p>
+<ul>
+<li>步骤1：打印程序介绍信息 ——printInfo()</li>
+<li>步骤2：获得程序运行参数：proA，proB，n ——getInputs()</li>
+<li>步骤3：利用球员A和B的能力值，模拟n局比赛 ——simNGames()</li>
+<li>步骤4：输出球员A和B获胜比赛的场次及概率 ——printSummary()</li>
+</ul>
+<pre><code>from random import random
+
+def main():
+    printIntro()
+    proA, proB, n = getInputs()
+    winsA, winsB = simNGames(n, proA, proB)
+    printSummary(winsA, winsB)
+
+def printIntro():
+    print('this game is between A and B')
+    print('the value of A and B are needed')
+
+def getInputs():
+    a = eval(input('please input value A:'))
+    b = eval(input('please input value B:'))
+    n = eval(input('game would be run:'))
+    return a, b, n
+
+def printSummary(winsA, winsB):
+    n = winsA + winsB
+    print('game run {}'.format(n))
+    print('A wins {}, as{:0.1%}'.format(winsA, winsA/n))
+    print('B wins {}, as{:0.1%}'.format(winsB, winsB/n))
+
+def simNGames(n, proA, proB):
+    winsA, winsB = 0, 0
+    for i in range(n):
+        scoreA, scoreB = simOneGame(proA, proB) #模拟一局比赛
+        if scoreA &gt; scoreB:
+            winsA += 1
+        else:
+            winsB += 1
+    return winsA, winsB
+
+def simOneGame(proA, proB):
+    scoreA, scoreB = 0, 0
+    serving = 'A'
+    while not gameOver(scoreA, scoreB):
+        if serving == 'A':
+            if random() &lt; proA:
+                scoreA +=1
+            else:
+                serving ='B'
+        else:
+            if random() &lt; proB:
+                scoreB +=1
+            else:
+                serving = 'A'
+    return scoreA, scoreB
+
+def gameOver(a,b):
+    return a==15 or b==15
+
+main()
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -483,6 +729,126 @@ def remove(self,item): #remove（item）方法
         temp.setNext(current)
         previous.setNext(temp)
 </code></pre>
+<h3 id="4-递归">4 递归</h3>
+<p><strong>递归三定律</strong></p>
+<ul>
+<li>基本结束条件，解决最小规模问题</li>
+<li>缩小规模，向基本结束条件演进</li>
+<li>调用自身来解决已缩小规模的相同问题</li>
+</ul>
+<h4 id="41-递归的应用">4.1 递归的应用</h4>
+<p><strong>4.1.1 任意进制转换</strong></p>
+<ul>
+<li>基本结束条件：余数小于进制基base</li>
+<li>更小规模问题：整数商</li>
+</ul>
+<pre><code>def toStr(n, base):
+    converString = '0123456789ABCDEF'
+    if n &lt; base:
+        return converString[n] #最小规模
+    else:
+        return toStr(n//base, base) + converString[n%base] #调用自身
+print(toStr(1453, 16))
+</code></pre>
+<p><strong>4.1.2 海龟作图</strong><br>
+a. 螺旋</p>
+<pre><code>import turtle
+
+t = turtle.Turtle()
+
+def drawSpiral(t, lineLen):
+    if lineLen &gt; 0: #最小规模，0直接退出
+        t.forward(lineLen)
+        t.right(90)
+        drawSpiral(t, lineLen - 5) #减少规模调用自身，边长减5
+
+drawSpiral(t, 100)
+
+turtle.done()
+</code></pre>
+<p>b. 分形树</p>
+<pre><code>import turtle
+
+def tree(branch_len):
+    if branch_len &gt; 5: #树干太短不画，基本结束条件
+        t.forward(branch_len) #画树干
+        t.right(20) #右倾斜20度
+        tree(branch_len - 15) #递归调用，画右边小树，树干减15
+        t.left(40) #向左回40度
+        tree(branch_len - 15) #递归调用，画左边小树，树干减15
+        t.right(20) #向左回20度，即回正
+        t.backward(branch_len) #海龟退回原位置
+
+t = turtle.Turtle()
+t.left(90)
+t.penup()
+t.backward(100)
+t.pendown()
+t.pencolor('green')
+t.pensize(2)
+tree(100) #画树干长度75的二叉树
+t.hideturtle()
+turtle.done()
+</code></pre>
+<p>c.谢尔宾斯基Sierpinski三角形</p>
+<pre><code>import turtle
+
+def sierpinski(degree, points):
+    colormap = ['blue','red','green','white','yellow','orange','gray','pink']
+    drawTriangle(points, colormap[degree]) #等边三角形
+    if degree &gt;  0: #基本结束条件
+        sierpinski(degree - 1,
+                   {'left': points['left'],
+                    'top':getMid(points['left'], points['top']), #减小规模：getMid边长减半，调用自身，左上右次序
+                    'right':getMid(points['left'], points['right'])})
+        sierpinski(degree - 1,
+                   {'left': getMid(points['left'], points['top']),
+                    'top': points['top'],
+                    'right': getMid(points['top'], points['right'])})
+        sierpinski(degree - 1,
+                   {'left': getMid(points['left'], points['right']),
+                    'top': getMid(points['top'], points['right']),
+                    'right': points['right']})
+
+def drawTriangle(points, color): #绘制等边三角形
+    t.fillcolor(color)
+    t.penup()
+    t.goto(points['top'])
+    t.pendown()
+    t.begin_fill()
+    t.goto(points['left'])
+    t.goto(points['right'])
+    t.goto(points['top'])
+    t.end_fill()
+
+def getMid(p1, p2): #取两个点的中点
+    return ((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2 )
+
+t = turtle.Turtle()
+
+points = {'left':(-200, -100), #外轮廓三个顶点
+          'top':(0, 200),
+          'right':(200, -100)}
+sierpinski(7, points) #7阶Sierpinski triangle
+</code></pre>
+<p>d.汉诺塔</p>
+<ul>
+<li>将最上层N-1个盘片从开始柱，经由目标柱，移动到中间柱</li>
+<li>将第N个（最大的）盘片，从开始柱，移动到目标柱</li>
+<li>将放在中间柱的N-1个盘片，经由开始柱，移动到目标柱</li>
+</ul>
+<pre><code>def moveTower(height, fromPole, withPole, toPole):
+    if height &gt;= 1:
+        moveTower(height - 1, fromPole, toPole, withPole)
+        moveDisk(height, fromPole, toPole)
+        moveTower(height - 1, withPole, fromPole, toPole)
+
+def moveDisk(disk, fromPole, toPole):
+    print(f'Moving disk[{disk}] from {fromPole} to {toPole}')
+
+moveTower(3, '#1', '#2', '#3')
+</code></pre>
+<p>d.探索迷宫（表示投降）</p>
 ]]></content>
     </entry>
     <entry>
@@ -571,12 +937,16 @@ def remove(self,item): #remove（item）方法
         <link href="https://pythonangry.github.io/post/1j3QsQSxV/">
         </link>
         <updated>2020-03-13T09:23:24.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="待解决需求">待解决需求</h3>
+        <content type="html"><![CDATA[<h3 id="需求解决">需求解决</h3>
 <ol>
 <li>实现多个同类网页同时搜索同一关键字</li>
-<li>实现多行书籍ISBN导入，连续在商查网页搜索柜位，并返回相应结果至对应ISBN行柜位</li>
+<li>实现多行书籍ISBN导入，连续在商查网页搜索柜位，并返回相应结果至对应ISBN行柜位 *已解决4.17</li>
 </ol>
 <h3 id="学习工具">学习工具</h3>
+<h4 id="相关网站">相关网站</h4>
+<ul>
+<li>Python社区：http://pypi.org/</li>
+</ul>
 <h4 id="算法练习">算法练习</h4>
 <ul>
 <li>https://leetcode-cn.com/</li>
@@ -975,177 +1345,6 @@ while count&gt;0:
     return s
 print(eval(&quot;cmul({})&quot;.format(input())))
 </code></pre>
-<h4 id="12基本统计值计算">12.基本统计值计算</h4>
-<pre><code>def getNum():
-    nums = []
-    iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
-    while iNumStr !=&quot;&quot;:
-        nums.append(eval(iNumStr))
-        iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
-    return nums
-
-def mean(numbers):
-    s = 0.0
-    for num in numbers:
-        s = s + num
-    return s / len(numbers)
-
-def dev(numbers, mean):
-    sdev = 0.0
-    for num in numbers:
-        sdev = sdev + (num - mean)**2
-    return pow(sdev / (len(numbers)-1), 0.5) #方差公式
-
-def median(numbers):
-    sorted(numbers)
-    size = len(numbers)
-    if size % 2 == 0:
-        med = ((numbers[size//2-1]) + numbers[size//2])/2 #从0号位开始取，[1,5]=取前不取后，取1，2，3，4。
-    else:
-        med = numbers[size//2]
-    return med
-
-n = getNum()
-m = mean(n)
-print('平均值:{},方差:{:.2},中位数:{}'.format(m,dev(n,m),median(n)))
-</code></pre>
-<h4 id="13哈姆雷特词频统计">13.哈姆雷特词频统计</h4>
-<pre><code>def getText():
-    txt = open('hamlet.txt','r').read()
-    txt = txt.lower()
-    for ch in '!&quot;$%&amp;()*+,-./;:&lt;&gt;=?@[\\]^_{|}~`':
-        txt = txt.replace(ch, &quot; &quot;)
-    return txt
-
-hamletTxt = getText()
-words = hamletTxt.split()
-counts = {}
-for word in words:
-    counts[word] = counts.get(word,0) + 1
-items = list(counts.items())
-items.sort(key=lambda x:x[1], reverse=True)
-for i in range(10):
-    word, count = items[i]
-    print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))
-</code></pre>
-<h4 id="14三国演义人物出场统计">14.三国演义人物出场统计</h4>
-<pre><code>import jieba
-txt = open('sanguo.txt','r',encoding=utf-8).read()
-excludes = {'将军','却说','荆州','二人','不可','不能','如此','...'}
-words = jieba.lcut(txt)
-counts = {}
-for word in words:
-    if len(word) == 1:
-        continue
-    elif word == '诸葛亮' or word == '孔明曰':
-        rword = '孔明'
-    elif word == '关公' or word == '云长':
-        rword = '关羽'
-    elif word == '玄德' or word == '玄德曰':
-        rword = '刘备'
-    elif word == '孟德' or word == '丞相':
-        rword = '曹操'
-    elif word == '...' or word == '...':
-        rword = '..'
-    else:
-        rword = word
-    counts[word] = counts.get(word,0) + 1
-for word in excludes:
-    del counts[word]
-items = list(counts.items())
-items.sort(key=lambda x:x[1], reverse=True)
-for i in range(10):
-    word, count = items[i]
-    print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))
-</code></pre>
-<h4 id="15自动轨迹绘制">15.自动轨迹绘制</h4>
-<p><strong>基本思路</strong></p>
-<ol>
-<li>定义数据文件格式（接口）</li>
-<li>编写程序，根据文件接口解析参数绘制图形</li>
-<li>编制数据文件<br>
-<strong>理解方法思维</strong></li>
-</ol>
-<ul>
-<li>自动化思维：数据和功能分离，数据驱动自动运行</li>
-<li>接口化设计：格式化设计接口，清晰明了</li>
-<li>二维数据应用：应用维度组织数据</li>
-</ul>
-<pre><code>import turtle as t
-t.title('自动轨迹绘制')
-t.setup(800,600,0,0)
-t.pencolor('red')
-t.pensize(5)
-# 数据读取
-datals = []
-f = open('data.txt') #打开数据文件
-for line in f:
-    line = line.replace('\n','') #将每一行的回车去除
-    datals.append(list(map(eval,line.split(',')))) #map函数将eval方法运用到每一个元素当中
-f.close() #正确及时关闭文件，若忘记，程序正确运行后也会关闭
-# 自动绘制
-for i in range(len(datals)): #此时，列表datals由一个个列表元素组成，即二维数据
-    #数据接口形式如：300,1,144,0,1,0 分别为行进距离，转向判断（0左转，1右转），转向角度，及RGB三个通道颜色（0-1之间的浮点数）
-    t.pencolor(datals[i][3],datals[i][4],datals[i][5])
-    t.fd(datals[i][0])
-    if datals[i][1]:
-        t.right(datals[i][2])
-    else:
-        t.left(datals[i][2])
-</code></pre>
-<h4 id="16政府工作报告词云">16.政府工作报告词云</h4>
-<pre><code>import jieba
-import wordcloud
-from imageio import imread
-mask = imread('fivestar.png') #运用imread将词云形状进行设定，也可以不设定，默认长方形
-f = open('f.txt','r',encoding='utf-8')
-t = f.read()
-f.close()
-ls = jieba.lcut(t) #中文文本需要分词
-txt = ' '.join(ls) #把分出来的中文词列表用空格连接形成长字符串
-w = wordcloud.WordCloud(font_path = 'msyh.ttc', mask = mask\ #mask方法形成不规则词云
-                        width = 1000, height = 700, background_color ='white', \)
-w.generate(txt)
-w.to_file('growordcloud.png')
-</code></pre>
-<h4 id="17第七周练习题">17.第七周练习题</h4>
-<h5 id="acsv格式清洗与转换">a.CSV格式清洗与转换</h5>
-<p>（1）按行进行倒序排列<br>
-（2）每行数据倒序排列<br>
-（3）使用分号（;）代替逗号（,）分割数据，无空格</p>
-<pre><code>f = open('data.csv','r')
-lines = f.readlines()
-lines.reverse()
-
-for line in lines:
-    line = line.replace('\n','')
-    line =line.replace(' ','')
-    t = line.split(&quot;,&quot;)
-    t.reverse()
-    print(&quot;;&quot;.join(t))
-</code></pre>
-<h5 id="b文本的平均列数">b.文本的平均列数</h5>
-<p>（1）有效行指包含至少一个字符的行，不计空行<br>
-（2）每行的列数为其有效数<br>
-（3）平均列数为有效行的列数平均值，采用四舍五入方式取整数进位</p>
-<pre><code>f= open('latex.log','r')
-bar = 0
-chars = 0
-for line in f.readlines():
-    if not (len(line) == 1  and line[-1]=='\n') :
-        bar +=1
-        chars += len(line)-1
-
-avg = round(chars/bar,0)
-avg = int(avg)
-print(avg)‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪
-</code></pre>
-<h5 id="c第七周选做习题">c.第七周选做习题</h5>
-<p><img src="https://pythonangry.github.io/post-images/1586747620320.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748303359.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748612258.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748669253.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748723905.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>

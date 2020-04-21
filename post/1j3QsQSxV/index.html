@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586748763282">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587462015324">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586748763282" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587462015324" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -105,12 +105,16 @@
             
           </div>
           <div class="post-content">
-            <h3 id="待解决需求">待解决需求</h3>
+            <h3 id="需求解决">需求解决</h3>
 <ol>
 <li>实现多个同类网页同时搜索同一关键字</li>
-<li>实现多行书籍ISBN导入，连续在商查网页搜索柜位，并返回相应结果至对应ISBN行柜位</li>
+<li>实现多行书籍ISBN导入，连续在商查网页搜索柜位，并返回相应结果至对应ISBN行柜位 *已解决4.17</li>
 </ol>
 <h3 id="学习工具">学习工具</h3>
+<h4 id="相关网站">相关网站</h4>
+<ul>
+<li>Python社区：http://pypi.org/</li>
+</ul>
 <h4 id="算法练习">算法练习</h4>
 <ul>
 <li>https://leetcode-cn.com/</li>
@@ -509,177 +513,6 @@ while count&gt;0:
     return s
 print(eval(&quot;cmul({})&quot;.format(input())))
 </code></pre>
-<h4 id="12基本统计值计算">12.基本统计值计算</h4>
-<pre><code>def getNum():
-    nums = []
-    iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
-    while iNumStr !=&quot;&quot;:
-        nums.append(eval(iNumStr))
-        iNumStr = input(&quot;请输入数字（回车退出）：&quot;)
-    return nums
-
-def mean(numbers):
-    s = 0.0
-    for num in numbers:
-        s = s + num
-    return s / len(numbers)
-
-def dev(numbers, mean):
-    sdev = 0.0
-    for num in numbers:
-        sdev = sdev + (num - mean)**2
-    return pow(sdev / (len(numbers)-1), 0.5) #方差公式
-
-def median(numbers):
-    sorted(numbers)
-    size = len(numbers)
-    if size % 2 == 0:
-        med = ((numbers[size//2-1]) + numbers[size//2])/2 #从0号位开始取，[1,5]=取前不取后，取1，2，3，4。
-    else:
-        med = numbers[size//2]
-    return med
-
-n = getNum()
-m = mean(n)
-print('平均值:{},方差:{:.2},中位数:{}'.format(m,dev(n,m),median(n)))
-</code></pre>
-<h4 id="13哈姆雷特词频统计">13.哈姆雷特词频统计</h4>
-<pre><code>def getText():
-    txt = open('hamlet.txt','r').read()
-    txt = txt.lower()
-    for ch in '!&quot;$%&amp;()*+,-./;:&lt;&gt;=?@[\\]^_{|}~`':
-        txt = txt.replace(ch, &quot; &quot;)
-    return txt
-
-hamletTxt = getText()
-words = hamletTxt.split()
-counts = {}
-for word in words:
-    counts[word] = counts.get(word,0) + 1
-items = list(counts.items())
-items.sort(key=lambda x:x[1], reverse=True)
-for i in range(10):
-    word, count = items[i]
-    print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))
-</code></pre>
-<h4 id="14三国演义人物出场统计">14.三国演义人物出场统计</h4>
-<pre><code>import jieba
-txt = open('sanguo.txt','r',encoding=utf-8).read()
-excludes = {'将军','却说','荆州','二人','不可','不能','如此','...'}
-words = jieba.lcut(txt)
-counts = {}
-for word in words:
-    if len(word) == 1:
-        continue
-    elif word == '诸葛亮' or word == '孔明曰':
-        rword = '孔明'
-    elif word == '关公' or word == '云长':
-        rword = '关羽'
-    elif word == '玄德' or word == '玄德曰':
-        rword = '刘备'
-    elif word == '孟德' or word == '丞相':
-        rword = '曹操'
-    elif word == '...' or word == '...':
-        rword = '..'
-    else:
-        rword = word
-    counts[word] = counts.get(word,0) + 1
-for word in excludes:
-    del counts[word]
-items = list(counts.items())
-items.sort(key=lambda x:x[1], reverse=True)
-for i in range(10):
-    word, count = items[i]
-    print(&quot;{0:&lt;10}{1:&gt;5}&quot;.format(word, count))
-</code></pre>
-<h4 id="15自动轨迹绘制">15.自动轨迹绘制</h4>
-<p><strong>基本思路</strong></p>
-<ol>
-<li>定义数据文件格式（接口）</li>
-<li>编写程序，根据文件接口解析参数绘制图形</li>
-<li>编制数据文件<br>
-<strong>理解方法思维</strong></li>
-</ol>
-<ul>
-<li>自动化思维：数据和功能分离，数据驱动自动运行</li>
-<li>接口化设计：格式化设计接口，清晰明了</li>
-<li>二维数据应用：应用维度组织数据</li>
-</ul>
-<pre><code>import turtle as t
-t.title('自动轨迹绘制')
-t.setup(800,600,0,0)
-t.pencolor('red')
-t.pensize(5)
-# 数据读取
-datals = []
-f = open('data.txt') #打开数据文件
-for line in f:
-    line = line.replace('\n','') #将每一行的回车去除
-    datals.append(list(map(eval,line.split(',')))) #map函数将eval方法运用到每一个元素当中
-f.close() #正确及时关闭文件，若忘记，程序正确运行后也会关闭
-# 自动绘制
-for i in range(len(datals)): #此时，列表datals由一个个列表元素组成，即二维数据
-    #数据接口形式如：300,1,144,0,1,0 分别为行进距离，转向判断（0左转，1右转），转向角度，及RGB三个通道颜色（0-1之间的浮点数）
-    t.pencolor(datals[i][3],datals[i][4],datals[i][5])
-    t.fd(datals[i][0])
-    if datals[i][1]:
-        t.right(datals[i][2])
-    else:
-        t.left(datals[i][2])
-</code></pre>
-<h4 id="16政府工作报告词云">16.政府工作报告词云</h4>
-<pre><code>import jieba
-import wordcloud
-from imageio import imread
-mask = imread('fivestar.png') #运用imread将词云形状进行设定，也可以不设定，默认长方形
-f = open('f.txt','r',encoding='utf-8')
-t = f.read()
-f.close()
-ls = jieba.lcut(t) #中文文本需要分词
-txt = ' '.join(ls) #把分出来的中文词列表用空格连接形成长字符串
-w = wordcloud.WordCloud(font_path = 'msyh.ttc', mask = mask\ #mask方法形成不规则词云
-                        width = 1000, height = 700, background_color ='white', \)
-w.generate(txt)
-w.to_file('growordcloud.png')
-</code></pre>
-<h4 id="17第七周练习题">17.第七周练习题</h4>
-<h5 id="acsv格式清洗与转换">a.CSV格式清洗与转换</h5>
-<p>（1）按行进行倒序排列<br>
-（2）每行数据倒序排列<br>
-（3）使用分号（;）代替逗号（,）分割数据，无空格</p>
-<pre><code>f = open('data.csv','r')
-lines = f.readlines()
-lines.reverse()
-
-for line in lines:
-    line = line.replace('\n','')
-    line =line.replace(' ','')
-    t = line.split(&quot;,&quot;)
-    t.reverse()
-    print(&quot;;&quot;.join(t))
-</code></pre>
-<h5 id="b文本的平均列数">b.文本的平均列数</h5>
-<p>（1）有效行指包含至少一个字符的行，不计空行<br>
-（2）每行的列数为其有效数<br>
-（3）平均列数为有效行的列数平均值，采用四舍五入方式取整数进位</p>
-<pre><code>f= open('latex.log','r')
-bar = 0
-chars = 0
-for line in f.readlines():
-    if not (len(line) == 1  and line[-1]=='\n') :
-        bar +=1
-        chars += len(line)-1
-
-avg = round(chars/bar,0)
-avg = int(avg)
-print(avg)‬‪‬‮‬‪‬‮‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‪‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪‬‪‬‪‬‪‬‪‬‮‬‭‬‫‬‪
-</code></pre>
-<h5 id="c第七周选做习题">c.第七周选做习题</h5>
-<p><img src="https://pythonangry.github.io/post-images/1586747620320.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748303359.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748612258.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748669253.png" alt="" loading="lazy"><br>
-<img src="https://pythonangry.github.io/post-images/1586748723905.png" alt="" loading="lazy"></p>
 
           </div>
         </div>

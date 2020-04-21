@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1586748763282">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587462015324">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1586748763282" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587462015324" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -539,6 +539,126 @@ def remove(self,item): #remove（item）方法
         temp.setNext(current)
         previous.setNext(temp)
 </code></pre>
+<h3 id="4-递归">4 递归</h3>
+<p><strong>递归三定律</strong></p>
+<ul>
+<li>基本结束条件，解决最小规模问题</li>
+<li>缩小规模，向基本结束条件演进</li>
+<li>调用自身来解决已缩小规模的相同问题</li>
+</ul>
+<h4 id="41-递归的应用">4.1 递归的应用</h4>
+<p><strong>4.1.1 任意进制转换</strong></p>
+<ul>
+<li>基本结束条件：余数小于进制基base</li>
+<li>更小规模问题：整数商</li>
+</ul>
+<pre><code>def toStr(n, base):
+    converString = '0123456789ABCDEF'
+    if n &lt; base:
+        return converString[n] #最小规模
+    else:
+        return toStr(n//base, base) + converString[n%base] #调用自身
+print(toStr(1453, 16))
+</code></pre>
+<p><strong>4.1.2 海龟作图</strong><br>
+a. 螺旋</p>
+<pre><code>import turtle
+
+t = turtle.Turtle()
+
+def drawSpiral(t, lineLen):
+    if lineLen &gt; 0: #最小规模，0直接退出
+        t.forward(lineLen)
+        t.right(90)
+        drawSpiral(t, lineLen - 5) #减少规模调用自身，边长减5
+
+drawSpiral(t, 100)
+
+turtle.done()
+</code></pre>
+<p>b. 分形树</p>
+<pre><code>import turtle
+
+def tree(branch_len):
+    if branch_len &gt; 5: #树干太短不画，基本结束条件
+        t.forward(branch_len) #画树干
+        t.right(20) #右倾斜20度
+        tree(branch_len - 15) #递归调用，画右边小树，树干减15
+        t.left(40) #向左回40度
+        tree(branch_len - 15) #递归调用，画左边小树，树干减15
+        t.right(20) #向左回20度，即回正
+        t.backward(branch_len) #海龟退回原位置
+
+t = turtle.Turtle()
+t.left(90)
+t.penup()
+t.backward(100)
+t.pendown()
+t.pencolor('green')
+t.pensize(2)
+tree(100) #画树干长度75的二叉树
+t.hideturtle()
+turtle.done()
+</code></pre>
+<p>c.谢尔宾斯基Sierpinski三角形</p>
+<pre><code>import turtle
+
+def sierpinski(degree, points):
+    colormap = ['blue','red','green','white','yellow','orange','gray','pink']
+    drawTriangle(points, colormap[degree]) #等边三角形
+    if degree &gt;  0: #基本结束条件
+        sierpinski(degree - 1,
+                   {'left': points['left'],
+                    'top':getMid(points['left'], points['top']), #减小规模：getMid边长减半，调用自身，左上右次序
+                    'right':getMid(points['left'], points['right'])})
+        sierpinski(degree - 1,
+                   {'left': getMid(points['left'], points['top']),
+                    'top': points['top'],
+                    'right': getMid(points['top'], points['right'])})
+        sierpinski(degree - 1,
+                   {'left': getMid(points['left'], points['right']),
+                    'top': getMid(points['top'], points['right']),
+                    'right': points['right']})
+
+def drawTriangle(points, color): #绘制等边三角形
+    t.fillcolor(color)
+    t.penup()
+    t.goto(points['top'])
+    t.pendown()
+    t.begin_fill()
+    t.goto(points['left'])
+    t.goto(points['right'])
+    t.goto(points['top'])
+    t.end_fill()
+
+def getMid(p1, p2): #取两个点的中点
+    return ((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2 )
+
+t = turtle.Turtle()
+
+points = {'left':(-200, -100), #外轮廓三个顶点
+          'top':(0, 200),
+          'right':(200, -100)}
+sierpinski(7, points) #7阶Sierpinski triangle
+</code></pre>
+<p>d.汉诺塔</p>
+<ul>
+<li>将最上层N-1个盘片从开始柱，经由目标柱，移动到中间柱</li>
+<li>将第N个（最大的）盘片，从开始柱，移动到目标柱</li>
+<li>将放在中间柱的N-1个盘片，经由开始柱，移动到目标柱</li>
+</ul>
+<pre><code>def moveTower(height, fromPole, withPole, toPole):
+    if height &gt;= 1:
+        moveTower(height - 1, fromPole, toPole, withPole)
+        moveDisk(height, fromPole, toPole)
+        moveTower(height - 1, withPole, fromPole, toPole)
+
+def moveDisk(disk, fromPole, toPole):
+    print(f'Moving disk[{disk}] from {fromPole} to {toPole}')
+
+moveTower(3, '#1', '#2', '#3')
+</code></pre>
+<p>d.探索迷宫（表示投降）</p>
 
           </div>
         </div>
