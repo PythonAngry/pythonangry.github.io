@@ -2,13 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-22T02:22:21.028Z</updated>
+    <updated>2020-04-22T02:26:48.910Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
     <logo>https://pythonangry.github.io/images/avatar.png</logo>
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
+    <entry>
+        <title type="html"><![CDATA[0422 | 数据结构与算法（2）]]></title>
+        <id>https://pythonangry.github.io/post/X3rieogCq/</id>
+        <link href="https://pythonangry.github.io/post/X3rieogCq/">
+        </link>
+        <updated>2020-04-22T02:23:42.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="5排序与查找">5.排序与查找</h3>
+<h4 id="51顺序查找">5.1顺序查找</h4>
+<p><strong>无序表顺序查找</strong></p>
+<pre><code>
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0413 | 又双叕学python（2）]]></title>
         <id>https://pythonangry.github.io/post/DjCAaxOU_/</id>
@@ -277,7 +290,7 @@ main()
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[0403 | 数据结构与算法]]></title>
+        <title type="html"><![CDATA[0403 | 数据结构与算法（1）]]></title>
         <id>https://pythonangry.github.io/post/LFgTZAtp8/</id>
         <link href="https://pythonangry.github.io/post/LFgTZAtp8/">
         </link>
@@ -933,75 +946,6 @@ a.选择不相邻数字使和最大</li>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[0325 | 职业素养]]></title>
-        <id>https://pythonangry.github.io/post/4MzSOvVHu/</id>
-        <link href="https://pythonangry.github.io/post/4MzSOvVHu/">
-        </link>
-        <updated>2020-03-25T02:38:15.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="管理">管理</h3>
-<p>缓和情绪——冷静期——私下了解——给予表达机会</p>
-<h3 id="回话到点子上">回话：到点子上</h3>
-<p>厉害就是跟别人的不同之处<br>
-差别的说明=A是**，B是##<br>
-传达（结论）=从主干到枝叶<br>
-不靠形容词，用数字说话<br>
-很像=共通点+相异点<br>
-变化=之前+之后<br>
-必要性=‘没有’会产生困扰<br>
-可信度=‘何时何地何人何事’等特质<br>
-意见=提案，不畏反对的提案<br>
-绝对=能做到的理由+做不到的补救<br>
-表达可惜及失望=八成优点+两成缺点<br>
-消极的理由=别的也可以<br>
-积极的理由=别的就不行<br>
-指出优缺点，事情才会改善<br>
-很难说=优点一半+缺点一半<br>
-方针=判断不要做的事=要做的事+不要做的事<br>
-分情况=若是甲就…+若是乙就…<br>
-自我介绍=与他人的不同+给对方的好处<br>
-很适合你=商品的特征X对方的需求<br>
-总结要用肯定句，别用否定句<br>
-什么意思=讲重点/讲别人听得懂的话/请补上理论跳跃的空缺<br>
-为什么=过去的原因+未来的目的<br>
-根据=理论的妥当性优先于个人的意见<br>
-原因分析=现在的状况，而非过去的原因/架构，而非心得<br>
-解决方案=大体方针+具体细节/与问题点不互相矛盾<br>
-没有交集→问对方怎样才能理解</p>
-<h3 id="服务提点">服务提点</h3>
-<ul>
-<li>面对顾客宣扬道理，并且表达这是规定，只会惹怒对方，这种情况不能劈头就要求顾客按规定做，而是<strong>请问在这方面有什么需要帮忙的。</strong></li>
-<li>想劝说跟你意见相左的人，最好不要直接提出与对方不同的意见，而是先问清楚对方基于什么理由，或者事情的原委，才得出那样的结论。</li>
-<li>接纳客人的怒气，而不是归咎于人。面对一群旅行团和一位神经紧绷商务人士，双方的愉快程度不一，此时服务人员必须公正，不能站边（面对投诉方，<strong>我去了解一下情况</strong>，面对被投诉方<strong>请问有什么需要帮忙？是否能请您稍微考虑一下其他顾客（委婉）？</strong>），只支持某方意见。因为舒适与否会随着个人的价值观而异，但感觉不快却是共同的。声音嘈杂或环境脏乱，人会对此类负面感觉产生不快。提供服务的一方应当致力于迅速消除令客人感到不快的因素。</li>
-<li>各位看起来非常开心……由于已经有点大声了……<strong>降低音量提醒对方</strong>，这点非常重要，如果声音太大传出去，会让人觉得被羞辱了。</li>
-<li>问题解决后，询问有没有其他让顾客在意的地方呢？让您感到不愉快，<strong>非常抱歉，今后我们会尽全力改善（需要确实有改善）</strong></li>
-<li></li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0320 | 野中郁次郎 - 知识创新]]></title>
-        <id>https://pythonangry.github.io/post/0doq3JXF7/</id>
-        <link href="https://pythonangry.github.io/post/0doq3JXF7/">
-        </link>
-        <updated>2020-03-20T03:11:58.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="隐性知识显性化">隐性知识显性化</h4>
-<ol>
-<li>要表达难以表达的事情，更依赖于比喻性语言和象征性手法</li>
-<li>要传播知识，个人的知识必须与他人分享 #熟手技工</li>
-<li>新知识往往诞生于模糊和<strong>冗余</strong>之中 #下达模糊指令，同一部门不同小组研究同一问题</li>
-</ol>
-<h4 id="知识转化的四种模式">知识转化的四种模式</h4>
-<ul>
-<li>社会化： 从隐性知识到隐性知识：徒弟模仿学习师傅 —— 共情知识</li>
-<li>外显化： 从隐性知识到显性知识：书写，创造概念，演绎和归纳；依次使用比喻类比和模型 —— 概念性知识<br>
-<img src="https://pythonangry.github.io/post-images/1584676264915.png" alt="" loading="lazy"></li>
-<li>组合化： 从显性知识到显性知识：重新配置现有信息，产生新的知识 —— 系统性知识</li>
-<li>内隐化： 从显性知识到隐性知识：做中学 —— 操作性知识<br>
-<img src="https://pythonangry.github.io/post-images/1584680396602.png" alt="" loading="lazy"></li>
-</ul>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[0313 | 又双叕学python（1）]]></title>
         <id>https://pythonangry.github.io/post/1j3QsQSxV/</id>
         <link href="https://pythonangry.github.io/post/1j3QsQSxV/">
@@ -1418,127 +1362,164 @@ print(eval(&quot;cmul({})&quot;.format(input())))
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[罗翔法考 | 普法教育]]></title>
-        <id>https://pythonangry.github.io/post/G2V6RA7Z4/</id>
-        <link href="https://pythonangry.github.io/post/G2V6RA7Z4/">
+        <title type="html"><![CDATA[0303 | Al la bout book]]></title>
+        <id>https://pythonangry.github.io/post/EuQroKpAd/</id>
+        <link href="https://pythonangry.github.io/post/EuQroKpAd/">
         </link>
-        <updated>2020-03-08T02:39:31.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>法益作为入罪的基础</strong><br>
-<strong>伦理作为出罪的依据</strong></p>
-<p><strong><strong>罗老师语录：</strong></strong></p>
+        <updated>2020-03-03T05:05:56.000Z</updated>
+        <content type="html"><![CDATA[<p>行业报告：《2018-2019中国实体书店产业报告》<br>
+http://www.chyxx.com/research/201712/597425.html</p>
+<h4 id="一-图书馆机构">一、图书馆机构</h4>
 <ol>
-<li>判罚需要考虑此案对于长远的社会伦理影响。</li>
-<li>刑法是双刃剑，一刃对犯罪，一刃对刑法机关.</li>
-<li>没有绝对的公平和正义，绝对的对错，这句话本身就是绝对的。公平和正义是绝对的，客观的，是相对不完美的，虽不能至，心向往之。</li>
+<li><a href="https://www.ifla.org/">IFLA</a></li>
+<li><a href="http://www.ala.org/">ALA</a><br>
+<a href="http://www.ala.org/pla/">PLA</a> 公共图书馆<br>
+<a href="http://www.ala.org/aasl/">AASL</a> 学校图书馆</li>
+<li><a href="https://www.cilip.org.uk/">CILIP</a></li>
+<li><a href="https://www.oclc.org/en/home.html">OCLC</a></li>
 </ol>
-<p><em><strong>解释</strong></em><br>
-<strong><strong>类推解释</strong></strong>：创造规则<br>
-<strong><strong>扩大解释</strong></strong>：适用规则<br>
-：立法和司法均不可类推，否则立法没有存在的必要，创造新规则就行喇</p>
-<p>表演——没超越表演的极限——还叫表演：拍裸照<br>
-冒充警察抢劫——真警察抢劫——不算冒充：先形式上解释，再实质性解释</p>
-<ul>
-<li>文理解释：故意杀人，自杀也是杀人</li>
-<li>伦理解释：自杀不算故意杀人，本人以外的他人</li>
-<li>体系解释：分则要符合总则</li>
-<li>当然解释：入罪型解释 <em>严格</em> 入轻以明重 轻的都能入罪，重的更该入了<br>
-出罪，举重以明轻，重的都能出罪，轻的更加能出罪，要于行为人有利</li>
-<li>同类解释：xxx xxx 或其他，法律的生命是经验而非逻辑</li>
-<li>目的解释：符合伦理道德就不是犯罪，解释要朝善的方向去解释</li>
-</ul>
-<p><em><strong>法律与案例</strong></em></p>
-<ul>
-<li>
-<p>数罪并罚：因侵犯不同法益<br>
-例如_买妇女最高判3年_，行为人买妇女后，依据强迫行为如：劳动/强奸/饿死/囚禁，累计叠加相应刑罚。<br>
-但法律仍需要考虑不同情况的购买行为，例如有人把妇女买了，立即放了，这也是买，要判高罚吗？<br>
-因此，<strong><strong>法律不能只看到严惩，凡事有例外。立法要向善。</strong></strong></p>
-</li>
-<li>
-<p>如果判刑判强奸犯无期，杀死犯也无期，那强奸犯有可能直接杀人灭口，减少被举报的危险。这反倒成为了受害者生命权的危害因素。</p>
-</li>
-<li>
-<p>14-16岁他人与幼女偶尔发生性关系，也是与幼女发生性关系一律判强奸法条的例外。<br>
-案例不是单看法条就能判下，要有证据，客观条件等。</p>
-</li>
-</ul>
-<h4 id="对象错误打击错误">对象错误/打击错误</h4>
-<p>对象与打击错误重要区分在于犯罪着手时还是着手后<br>
-例如张三想打李四，瞄准的是李四，子弹却打到王五，此为打击错误；若张三想打李四，错把王五认错为李四，则是对象错误。</p>
-<h4 id="主客观相统一原则慎防主观归罪">主客观相统一原则，慎防主观归罪</h4>
-<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1584954015883.png" alt="" loading="lazy"></figure>
+<h4 id="二-国家公共大学图书馆">二、国家/公共/大学图书馆</h4>
+<ol>
+<li>新加坡 <a href="https://www.nlb.gov.sg/">NPL</a></li>
+<li>美国 <a href="https://www.loc.gov/">Library of congress</a></li>
+<li>中国<a href="http://www.nlc.cn/">中国国家图书馆</a></li>
+<li>香港<a href="https://sc.lcsd.gov.hk/TuniS/www.hkpl.gov.hk/tc/index.html">香港公共图书馆</a></li>
+<li>台湾<a href="https://www.ncl.edu.tw/">国家图书馆</a><a href="https://319readingtw.fandom.com/zh/wiki/%E9%A6%96%E9%A1%B5">台湾图书馆列表</a></li>
+<li>英国<a href="https://www.bl.uk/">The British Library</a></li>
+<li>澳大利亚<a href="https://www.nla.gov.au/">National Library of Australia</a></li>
+<li>纽约<a href="https://www.nypl.org/">New York Public Library</a></li>
+<li><a href="http://www.gzlib.org.cn/">广州图书馆</a></li>
+<li><a href="https://www.szlib.org.cn/">深圳图书馆</a></li>
+<li><a href="https://www.nslib.cn/">南山图书馆</a></li>
+</ol>
+<h4 id="三-出版社">三、出版社</h4>
+<ol>
+<li><a href="https://thamesandhudson.com/">Thames&amp;hudson</a></li>
+<li><a href="https://uk.phaidon.com/agenda/">Phaidon</a></li>
+<li><a href="http://www.skira.net/">Skira</a></li>
+<li><a href="https://www.taschen.com/">TASCHEN</a></li>
+<li><a href="https://www.penguin.com/">Penguin</a></li>
+<li><a href="https://www.azothbooks.com/">漫游者书店</a></li>
+<li><a href="https://www.suncolor.com.tw/">三采网路书店</a></li>
+<li><a href="http://www.spbooks.cn/">善本图书</a></li>
+<li><a href="https://publishing.andrewsmcmeel.com/">Andrews Mcmeel</a><br>
+TALENT, RECOGNIZED<br>
+We're passionate about publishing authors with a distinct point of view. We offer an individualized, flexible approach to publishing success by respecting the author's vision as the primary source of inspiration at every stage of the editorial, marketing and distribution process.</li>
+</ol>
+<h4 id="四-书店">四、书店</h4>
+<ol>
+<li><a href="http://www.sisyphe.com.cn/index.html#">西西弗书店</a></li>
+<li><a href="http://www.yanjiyou.com/col.jsp?id=106">言几又</a></li>
+<li><a href="http://www.fangsuo.com/index/index.html">方所</a></li>
+</ol>
+<h4 id="五-作家主页">五、作家主页</h4>
+<ol>
+<li><a href="http://www.oliverjeffersworld.com/">Oliver Jeffers</a></li>
+<li><a href="http://www.elishacooper.com/">Elisha Cooper</a></li>
+<li><a href="https://www.chrishaughton.com/home">Chris Haughton</a></li>
+<li><a href="http://mowillems.com/">Mo Willems</a></li>
+</ol>
+<h4 id="其他">其他</h4>
+<p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[摄影]]></title>
-        <id>https://pythonangry.github.io/post/Sn37HjLo/</id>
-        <link href="https://pythonangry.github.io/post/Sn37HjLo/">
+        <title type="html"><![CDATA[图书馆 | 信息素养与小工具小技巧]]></title>
+        <id>https://pythonangry.github.io/post/QdMJ-rp8n/</id>
+        <link href="https://pythonangry.github.io/post/QdMJ-rp8n/">
         </link>
-        <updated>2020-03-06T13:30:23.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="摄影前需要思考的问题">摄影前需要思考的问题</h4>
+        <updated>2020-03-02T12:41:25.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="part-one-信息素养基本内容">Part one 信息素养基本内容</h3>
+<p>以下内容均出自<a href="https://www.icourse163.org/course/SICNU-1002031014">Mooc</a>《信息素养：效率提升与终身学习的新引擎》 周建芳</p>
+<blockquote>
+<h4 id="信息素养定义">信息素养定义</h4>
+<p>基于信息解决问题的综合能力和基本素质</p>
+</blockquote>
+<blockquote>
+<h4 id="六种基本能力">六种基本能力</h4>
+<blockquote>
 <ol>
-<li>主题是什么</li>
-<li>如何突出主题</li>
-<li>画面是否简洁</li>
+<li>信息需求识别能力：知道有哪些信息，会找攻略</li>
+<li>信息检索能力：专用SE，垂直SE，万不得已不用综合SE</li>
+<li>信息获取能力</li>
+<li>信息评价能力：对信息本身真伪优劣的评价，基于信息评价其他</li>
+<li>信息管理能力：利用程序软件客户端管理信息，<em>Total commander</em></li>
+<li>应用信息的能力</li>
 </ol>
-<h4 id="光圈与快门镜头与焦距">光圈与快门；镜头与焦距</h4>
+</blockquote>
+</blockquote>
+<p><strong>信息评价</strong>：通过多方查询减少<strong>信息不对称</strong></p>
 <ul>
-<li>镜头速度指镜头传送光线的能力</li>
-<li>光圈越小（f值越大），景深越大；光圈越大（f值越小），景深越小</li>
-<li>20mm广角镜头，50mm标准镜头，400mm远摄镜头</li>
-<li>焦距越短，像场越宽，焦距越长，像场越窄</li>
-<li>感光度指感光器或胶片对光的敏感度，数值越高，敏感度越高，照片进行正确曝光所需光线量越少<br>
-<img src="https://pythonangry.github.io/post-images/1584602175986.jpg" alt="" loading="lazy"></li>
+<li>医院医护人员资质 - 国家卫生和计划生育委员会</li>
+<li>医药保健品 - 国家食品药品监督管理局</li>
+<li>企业 - 国家企业信用公示系统，产权专利商标，中国庭审公开网等</li>
+<li>个人 - 学历学籍，证书资质，职业资格，信用等</li>
 </ul>
-<p>0308</p>
+<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1583285298339.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<h4 id="三个基础">三个基础</h4>
+<blockquote>
+<ul>
+<li>信息知识</li>
+<li>信息伦理</li>
+<li>信息意识</li>
+</ul>
+</blockquote>
+</blockquote>
+<hr>
+<h4 id="part-two-小工具与小技巧">Part two 小工具与小技巧</h4>
+<h5 id="1-解决信息需求的途径">1. 解决信息需求的途径</h5>
+<ul>
+<li>电商网站：获取商品种类信息</li>
+<li><a href="https://www.wikihow.com/Main-Page">Wikihow</a></li>
+<li><a href="https://magi.com/">MAg[i]</a>：基于机器学习的信息抽取和检索系统</li>
+</ul>
+<h5 id="2-利用垂直搜索获取专用信息">2. 利用垂直搜索获取专用信息</h5>
+<ul>
+<li>产品行业标准，专利：国家标准公开系统，中国专利公布公告网</li>
+<li>找寻相似网站：<a href="https://www.similarsitesearch.com/">Similar site search</a></li>
+</ul>
+<h5 id="3-获取统计数据途径">3. 获取统计数据途径</h5>
+<ul>
+<li>
+<p>国家统计局</p>
+</li>
+<li>
+<p><a href="https://www.pewresearch.org/">Pew research center</a></p>
+</li>
+<li>
+<p><a href="https://www.nielsen.com/cn/zh/">Nielsen</a></p>
+</li>
+<li>
+<p>百度指数，阿里指数，微指数，微信指数，爱奇艺指数，导航App实时拥堵数据</p>
+</li>
+<li>
+<p>英文用法数据 <a href="https://www.linggle.com/">Liggle10^12</a></p>
+</li>
+<li>
+<p>超级课程表App</p>
+<h5 id="删除网页脚本获取文字内容">删除网页脚本获取文字内容</h5>
 <ol>
-<li>景深练习 f4（D7最大光圈），快门自动1/60s，25mm<br>
-<img src="https://pythonangry.github.io/post-images/1583663618653.JPG" alt="" loading="lazy"></li>
-<li>快门练习 1/250s（D7最快门），光圈自动f4，25mm<br>
-<img src="https://pythonangry.github.io/post-images/1583663759419.JPG" alt="" loading="lazy"></li>
-<li>快门练习 1s，光圈自动f20，ISO自动，70mm<br>
-<img src="https://pythonangry.github.io/post-images/1583664422812.JPG" alt="" loading="lazy"></li>
+<li>查看网页代码</li>
+<li>复制代码，删除文本之前的代码</li>
+<li>将文件另存为文件名.html/htm, 文件类型选择所有文件</li>
+<li>打开此网页文件，文本即可复制</li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3月画画儿~]]></title>
-        <id>https://pythonangry.github.io/post/XHsIv896B/</id>
-        <link href="https://pythonangry.github.io/post/XHsIv896B/">
-        </link>
-        <updated>2020-03-05T12:43:53.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="墨军老师说">墨军老师说</h4>
-<ul>
-<li>
-<p>场面积用短面积的线条笔触比较有生命力哦</p>
-</li>
-<li>
-<p>爱好艺术的朋友画画没有对错哦</p>
-</li>
-<li>
-<p>离你最近的地方是质感最清晰的地方哦</p>
-</li>
-<li>
-<p>一点透视一个面，两点透视一条线，三点透视一个点哦</p>
-</li>
-<li>
-<p>0305今天的主题是一只很可爱的猫哈哈哈😼😺<br>
-<img src="https://pythonangry.github.io/post-images/1583412335222.jpg" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>0307闹钟响起后很爱做梦，脸上鼻子错位了，可惜画不出来，以后有机会吧<br>
-耳朵是 <em>痒</em> 痒的长出了豆芽<br>
-<img src="https://pythonangry.github.io/post-images/1583637844267.jpg" alt="" loading="lazy"></p>
 </li>
 </ul>
-<p>-0309<br>
-<img src="https://pythonangry.github.io/post-images/1584100504278.jpg" alt="" loading="lazy"></p>
-<p>-0312 叠涂的时候又，把底层推开了，应该是油画棒的问题<br>
-<img src="https://pythonangry.github.io/post-images/1584956112627.jpg" alt="" loading="lazy"></p>
-<p>-0317passpartout 卖了700€ hum...<br>
-<img src="https://pythonangry.github.io/post-images/1584448496992.jpg" alt="" loading="lazy"></p>
-<p>-0320 大方婉儿面<br>
-<img src="https://pythonangry.github.io/post-images/1584956202502.jpg" alt="" loading="lazy"></p>
+<h5 id="保存网页内图片">保存网页内图片</h5>
+<p>Alt+printscreen可进行截图<br>
+多图网页保存，利用右键保存所有网页文件即可</p>
+<h5 id="网站视频下载">网站视频下载</h5>
+<ol>
+<li>利用源地址识别工具如<strong>硕鼠</strong>将网页识别，硕鼠会返回视频下载地址</li>
+<li>利用浏览器缓存文件夹识别刚刚看过的视频文件</li>
+</ol>
+<h5 id="类型书搜索下载">类型书搜索下载</h5>
+<p><a href="https://yabook.org/">雅书</a>:PDF电子书学习下载站<br>
+<a href="https://etc.usf.edu/lit2go/">lit2go</a>:有声书</p>
+<p>让别人提参考和信息服务要求，写明白想要怎样的报告？还是自己列一些报告呈现形式供人挑选。<br>
+利用这个来提升自己？</p>
 ]]></content>
     </entry>
 </feed>
