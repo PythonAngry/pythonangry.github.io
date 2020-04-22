@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587522402344">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587524766101">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587522402344" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587524766101" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -94,8 +94,90 @@
           <div class="post-content">
             <h3 id="5排序与查找">5.排序与查找</h3>
 <h4 id="51顺序查找">5.1顺序查找</h4>
-<p><strong>无序表顺序查找</strong></p>
-<pre><code>
+<p><strong>5.1.1 无序表顺序查找</strong> O(n)</p>
+<pre><code>def sequentialSrarch(alist, item):
+    pos = 0
+    found = False
+
+    while pos &lt; len(alist) and not found:
+        if alist[pos] == item:
+            found = True
+        else:
+            pos = pos + 1
+
+    return found
+
+testlist = [1,2,32,8,17,19,42,13,0]
+print(sequentialSrarch(testlist, 3))
+print(sequentialSrarch(testlist, 13))
+</code></pre>
+<p><strong>5.1.2 有序表顺序查找</strong> O(n)</p>
+<ul>
+<li>遇见大于目标数字项即可退出执行</li>
+</ul>
+<pre><code>def orderSequentialSrarch(alist, item):
+    pos = 0
+    found = False
+    stop = False
+
+    while pos &lt; len(alist) and not found and not stop:
+        if alist[pos] == item:
+            found = True
+        else:
+            if alist[pos] &gt; item:
+                stop = True
+            else:
+                pos = pos + 1
+
+    return found
+
+testlist = [0,1,2,8,13,17,19,32,42]
+print(orderSequentialSrarch(testlist, 3))
+print(orderSequentialSrarch(testlist, 13))
+</code></pre>
+<h4 id="52-二分查找-olog-n">5.2 二分查找 O(log n)</h4>
+<ul>
+<li>有序表</li>
+<li>分而治之</li>
+</ul>
+<pre><code>def binarySrarch(alist, item):
+    first = 0
+    last = len(alist) - 1
+    found = False
+
+    while first &lt;= last and not found:
+        midpoint = (first + last) // 2
+        if alist[midpoint] == item:
+            found = True
+        else:
+            if item &lt; alist[midpoint]: #缩小比对范围
+                last = midpoint - 1
+            else:
+                first = midpoint + 1
+
+    return found
+
+testlist = [0,1,2,8,13,17,19,32,42]
+print(binarySrarch(testlist, 3))
+print(binarySrarch(testlist, 13))
+</code></pre>
+<p><strong>5.2.1 二分查找的递归写法</strong></p>
+<pre><code>def binarySrarch(alist, item):
+    if len(alist) == 0:
+        return False
+    else:
+        midpoint = len(alist) // 2
+        if alist[midpoint] == item:
+            return True
+        else:
+            if item &lt; alist[midpoint]:
+                return binarySrarch(alist[:midpoint], item)
+            else:
+                return binarySrarch(alist[midpoint+1:], item)
+
+alist = [0,1,2,8,13,17,19,32,42]
+print(binarySrarch(alist, 3))
+print(binarySrarch(alist, 13))
 </code></pre>
 
           </div>
