@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587470652267">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1587522136078">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://pythonangry.github.io">
-        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587470652267" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1587522136078" alt="" width="32px" height="32px">
       </a>
       <a href="https://pythonangry.github.io">
         <h1 class="site-title">PythonAngry</h1>
@@ -659,7 +659,7 @@ def moveDisk(disk, fromPole, toPole):
 moveTower(3, '#1', '#2', '#3')
 </code></pre>
 <p>e.探索迷宫（表示投降）</p>
-<h4 id="42递归策略">4.2递归策略</h4>
+<h4 id="42优化递归策略">4.2优化递归策略</h4>
 <p><strong>4.2.1 分治策略</strong></p>
 <ul>
 <li>解决问题的典型策略：分而治之</li>
@@ -667,7 +667,7 @@ moveTower(3, '#1', '#2', '#3')
 <p><strong>4.2.2 贪心策略</strong></p>
 <ul>
 <li>每次选择尽量大的部分一次解决<br>
-a.找零兑换问题</li>
+a.找零兑换递归解法</li>
 </ul>
 <pre><code>def recMC(coinValueList, change):
     minCoins = change
@@ -682,6 +682,53 @@ a.找零兑换问题</li>
 
 print(recMC([1,5,10,25], 63))
 </code></pre>
+<p>a`.找零兑换贪心解法</p>
+<ul>
+<li>求优化问题的一类算法</li>
+<li>遍历备选元素</li>
+<li>贪心策略确定选择一个元素<br>
+B站<a href="https://www.bilibili.com/video/BV18Q4y1K7px?from=search&amp;seid=11522479327303874531">Ch8.1_贪心算法（硬币找零）_算法设计与分析Python</a></li>
+</ul>
+<pre><code>def getMinCoins(change):
+    coins = [1, 5, 10 ,25]
+    solution = []
+
+    s_coins = sorted(coins, reverse=True)
+    for c in s_coins:
+        num_coin = int (change/c)
+        solution +=[c, ]*num_coin
+
+        change = change - c*num_coin
+        if change &lt;= 0:
+            break
+
+    return solution
+
+print(getMinCoins(63))
+</code></pre>
+<p><strong>4.2.3 动态规划</strong><br>
+B站<a href="https://www.bilibili.com/video/BV18x411V7fm?from=search&amp;seid=5220760526841036340">动态规划 (第1讲)</a>;<a href="https://www.bilibili.com/video/BV12W411v7rd/?spm_id_from=333.788.videocard.0">动态规划 (第2讲)</a></p>
+<ul>
+<li>选与不选<br>
+a.选择不相邻数字使和最大</li>
+<li>递归分析<br>
+<img src="https://pythonangry.github.io/post-images/1587521626140.jpg" alt="" loading="lazy"></li>
+<li>递归解法<br>
+<img src="https://pythonangry.github.io/post-images/1587521690387.jpg" alt="" loading="lazy"></li>
+<li>动态规划<br>
+<img src="https://pythonangry.github.io/post-images/1587521703716.jpg" alt="" loading="lazy"></li>
+</ul>
+<p>b.选择数组元素，和等于给定数字</p>
+<ul>
+<li>递归分析<br>
+<img src="https://pythonangry.github.io/post-images/1587521842847.jpg" alt="" loading="lazy"></li>
+<li>递归解法<br>
+<img src="https://pythonangry.github.io/post-images/1587521853538.jpg" alt="" loading="lazy"></li>
+<li>动态规划<br>
+<img src="https://pythonangry.github.io/post-images/1587521908802.jpg" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1587521920417.jpg" alt="" loading="lazy"><br>
+<img src="https://pythonangry.github.io/post-images/1587522064726.jpg" alt="" loading="lazy"></li>
+</ul>
 
           </div>
         </div>
