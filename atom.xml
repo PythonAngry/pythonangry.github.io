@@ -2,13 +2,52 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-25T09:10:52.348Z</updated>
+    <updated>2020-04-25T09:43:41.072Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
     <logo>https://pythonangry.github.io/images/avatar.png</logo>
     <icon>https://pythonangry.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, PythonAngry</rights>
+    <entry>
+        <title type="html"><![CDATA[0425 | 图书馆培训]]></title>
+        <id>https://pythonangry.github.io/post/FgB7Eg-7s/</id>
+        <link href="https://pythonangry.github.io/post/FgB7Eg-7s/">
+        </link>
+        <updated>2020-04-25T09:24:41.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="一-中小学图书馆图书审查清理专项行动在线培训">一、中小学图书馆图书审查清理专项行动在线培训</h3>
+<h4 id="11-培训观点摘录">1.1 培训观点摘录</h4>
+<ul>
+<li>图书馆教辅书籍存量较大，书籍质量差，副本存量大，含有非中小学生适读内容，书籍出版时期久远</li>
+<li>图书馆馆员素质参差不齐，缺乏电脑、移动终端及其软件使用技能</li>
+<li>培训演讲内容空洞，非常具有中国社会主义特色（除剔旧教学部分）</li>
+</ul>
+<h4 id="12-审查依据">1.2 审查依据</h4>
+<ul>
+<li>《关于加强新时期中小学图书建设与应用工作的意见》<br>
+教基一 [2015] 2号 教育部 文化部 国家新闻出版广电总局</li>
+<li>《关于印发《中小学图书馆（室）教程》的通知》<br>
+教基 [2018] 5号</li>
+<li>《关于开展全国中小学图书馆图书审查清理专项行动的通知》<br>
+教基司函 [2019] 55号</li>
+<li>《关于印发《2019年全国中小学图书馆（室）推荐书目》的通知》<br>
+教基司函 [2019] 47号</li>
+<li>书籍需具备【中央宣传部出版物数据中心】核发书号</li>
+</ul>
+<h4 id="13-审查工具">1.3 审查工具</h4>
+<ul>
+<li>中小学图书馆复选与剔旧程序
+<ul>
+<li>手机端（微信小程序）</li>
+<li>电脑端（www.areader.com）</li>
+</ul>
+</li>
+</ul>
+<h4 id="14-审查流程">1.4 审查流程</h4>
+<figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1587807626607.png" alt="" loading="lazy"></figure>
+<h3 id="二-中小学图书馆环境建设讲座">二、中小学图书馆环境建设讲座</h3>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0422 | 数据结构与算法（2）]]></title>
         <id>https://pythonangry.github.io/post/X3rieogCq/</id>
