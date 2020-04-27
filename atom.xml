@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-04-27T05:16:55.817Z</updated>
+    <updated>2020-04-27T15:35:38.373Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -46,6 +46,73 @@
 <h4 id="14-审查流程">1.4 审查流程</h4>
 <figure data-type="image" tabindex="1"><img src="https://pythonangry.github.io/post-images/1587807626607.png" alt="" loading="lazy"></figure>
 <h3 id="二-中小学图书馆环境建设讲座">二、中小学图书馆环境建设讲座</h3>
+<h4 id="1-图书馆生态建设">1 图书馆生态建设</h4>
+<ul>
+<li>生态体验理论：三者圆融互摄
+<ul>
+<li>元生态：人和大自然的关系</li>
+<li>类生态：人和人，人和族群，人之间的关系</li>
+<li>内生态：人的心理</li>
+</ul>
+</li>
+<li>场景设计：风光温湿气味植物家私</li>
+<li>内生态：年龄层，音乐美术作品布置，独自群集区间</li>
+<li>休闲态，兴趣激发度，沉浸度，体验度，健康阅读</li>
+</ul>
+<h4 id="2-图书馆人声扩音设计">2 图书馆人声扩音设计</h4>
+<p>——__江苏中苏__产品推广培训：定向扩音，朗读屏<br>
+<strong>2.1 考虑因素</strong></p>
+<ul>
+<li>拾音距离：距离太近，喷麦，脖子累</li>
+<li>语言清晰度：降噪</li>
+<li>多场景过渡使用：麦克风可任意切换多个扬声器<br>
+<strong>2.2 丰富的有声资源</strong></li>
+<li>14-17岁听书率28.4%</li>
+<li>听与看并重的阅读方式</li>
+<li>更容易激发共情</li>
+<li>更适合中小学生</li>
+<li>社会有声资源无筛选</li>
+<li>学校朗读比赛的训练资源及比赛音频资源丰富</li>
+<li>有声导读，降低阅读识字门槛<br>
+<strong>2.3 朗读空间</strong></li>
+<li>开放的朗读空间</li>
+<li>朗读亭：缺乏运维管理理念</li>
+<li>多用户同步朗读矩阵：共同完成作品</li>
+</ul>
+<h4 id="3-背景音乐在图书馆的影响">3 背景音乐在图书馆的影响</h4>
+<p><strong>3.1 背景音乐相关技术支持</strong></p>
+<ul>
+<li>背景音乐数字化管理软件</li>
+<li>噪声监测：自动调整背景音乐声量</li>
+<li>共振发声：附加于玻璃书柜，使音乐充满空间</li>
+<li>学校数字网络完备<br>
+<strong>3.2 语音应用</strong></li>
+<li>语音导览
+<ul>
+<li>提示性语音</li>
+<li>引导性语音</li>
+<li>展示性语音<br>
+应用联想：</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>对图书馆各种物体进行知识解读——最终指引至相关知识，纪录片等资源</li>
+<li>区域录得噪声分贝过高，定向语音提醒，或提高背景音乐音量</li>
+<li>特定区域触发播放，提示使用须知，注意事项</li>
+<li>图书馆使用导览全程伴随出发点语音讲解</li>
+</ol>
+<h4 id="4-阅读空间建设与创新服务">4 阅读空间建设与创新服务</h4>
+<ul>
+<li>阅读与发声、校勘、抄录、思考、实践、视听、体验、分享的关系<br>
+<strong>4.1 空间建设：创新服务</strong></li>
+<li>扩大共享空间</li>
+<li>特色馆藏空间：所在地，教师校友，学校课程主导特色馆藏</li>
+<li>专题展示空间：笔记展示，学生作品展示</li>
+<li>分众阅读空间</li>
+<li>自助学习空间</li>
+<li>阅读活动空间：workshop</li>
+</ul>
 ]]></content>
     </entry>
     <entry>
