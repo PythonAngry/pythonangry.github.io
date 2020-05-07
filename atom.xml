@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-05-02T04:03:06.187Z</updated>
+    <updated>2020-05-07T06:26:19.859Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -1943,6 +1943,7 @@ http://www.chyxx.com/research/201712/597425.html</p>
 <li><a href="https://publishing.andrewsmcmeel.com/">Andrews Mcmeel</a><br>
 TALENT, RECOGNIZED<br>
 We're passionate about publishing authors with a distinct point of view. We offer an individualized, flexible approach to publishing success by respecting the author's vision as the primary source of inspiration at every stage of the editorial, marketing and distribution process.</li>
+<li><a href="https://www.raz-kids.com/">Raz-kids</a></li>
 </ol>
 <h4 id="四-书店">四、书店</h4>
 <ol>
@@ -1958,7 +1959,8 @@ We're passionate about publishing authors with a distinct point of view. We offe
 <li><a href="http://mowillems.com/">Mo Willems</a></li>
 </ol>
 <h4 id="其他">其他</h4>
-<p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息</p>
+<p>在<a href="https://www.npr.org/">NPR</a>等媒体网站搜索library获取最新信息<br>
+<a href="https://www.renaissance.com/">RENAISSANCE</a>：美国大数据在线教育软件公司</p>
 ]]></content>
     </entry>
     <entry>
@@ -2036,6 +2038,15 @@ We're passionate about publishing authors with a distinct point of view. We offe
 </li>
 <li>
 <p>超级课程表App</p>
+</li>
+<li>
+<p><a href="https://tophub.today/">今日热榜</a></p>
+</li>
+<li>
+<p><a href="http://hao.199it.com/">大数据导航网站</a></p>
+</li>
+<li>
+<p><a href="http://guozhivip.com/rank/">各类排行榜</a></p>
 <h5 id="删除网页脚本获取文字内容">删除网页脚本获取文字内容</h5>
 <ol>
 <li>查看网页代码</li>
@@ -2045,17 +2056,30 @@ We're passionate about publishing authors with a distinct point of view. We offe
 </ol>
 </li>
 </ul>
-<h5 id="保存网页内图片">保存网页内图片</h5>
-<p>Alt+printscreen可进行截图<br>
-多图网页保存，利用右键保存所有网页文件即可</p>
+<h5 id="开发者工具">开发者工具</h5>
+<ul>
+<li>F12进入，刷新页面，选取需要的音频，视频，图片等类型进行路径复制，下载操作</li>
+</ul>
+<h5 id="图片相关">图片相关</h5>
+<ol>
+<li>Alt+printscreen可进行截图</li>
+<li>多图网页保存，利用右键保存所有网页文件即可</li>
+<li><a href="https://bigjpg.com/">人工智能图片放大工具</a></li>
+</ol>
 <h5 id="网站视频下载">网站视频下载</h5>
 <ol>
 <li>利用源地址识别工具如<strong>硕鼠</strong>将网页识别，硕鼠会返回视频下载地址</li>
 <li>利用浏览器缓存文件夹识别刚刚看过的视频文件</li>
+<li><a href="http://www.findyoutube.com/">Youtube视频识别下载</a></li>
 </ol>
 <h5 id="类型书搜索下载">类型书搜索下载</h5>
 <p><a href="https://yabook.org/">雅书</a>:PDF电子书学习下载站<br>
 <a href="https://etc.usf.edu/lit2go/">lit2go</a>:有声书</p>
+<h5 id="语言学习相关网站">语言学习相关网站</h5>
+<ol>
+<li><a href="https://www.deepl.com/home">DeepL</a></li>
+<li><a href="https://aimwriting.mtutor.engkoo.com/#more">微软小英文法检测工具</a></li>
+</ol>
 <p>让别人提参考和信息服务要求，写明白想要怎样的报告？还是自己列一些报告呈现形式供人挑选。<br>
 利用这个来提升自己？</p>
 ]]></content>
