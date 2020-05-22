@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pythonangry.github.io</id>
     <title>PythonAngry</title>
-    <updated>2020-05-22T02:55:10.417Z</updated>
+    <updated>2020-05-22T03:28:19.824Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pythonangry.github.io"/>
     <link rel="self" href="https://pythonangry.github.io/atom.xml"/>
@@ -131,6 +131,7 @@
 <li>温州，陈建淼（云图）</li>
 </ul>
 <h3 id="三-2020年高校图书馆知识服务与创新应用高级研修班">三、2020年高校图书馆知识服务与创新应用高级研修班</h3>
+<p>网址：k.cnki.net</p>
 <h4 id="1-图书馆之未来">1 图书馆之未来</h4>
 <p><strong>1.1 王才新 信息素养</strong></p>
 <ul>
@@ -186,7 +187,7 @@
 <li>思维训练
 <ul>
 <li>培育，了解需求的思路</li>
-<li>外行转内行的思路</li>
+<li>外行转内行的思路 <strong>知网研学平台</strong></li>
 <li>立项的思路</li>
 <li>制定信息获取计划的思路</li>
 <li>检索的思路</li>
@@ -197,6 +198,30 @@
 </ul>
 </li>
 <li>胜任力潜力提升</li>
+</ul>
+<p><strong>1.6 徐鸿 询证实践</strong></p>
+<ul>
+<li>图书馆与信息询证实践EBLIP
+<ul>
+<li>EBLIP证据层级与实施流程</li>
+<li><img src="https://pythonangry.github.io/post-images/1590116953900.jpg" alt="" loading="lazy"></li>
+<li><img src="https://pythonangry.github.io/post-images/1590116962532.jpg" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>实例援引ACRL &amp; LA journal</li>
+<li><img src="https://pythonangry.github.io/post-images/1590117003722.jpg" alt="" loading="lazy"></li>
+<li><img src="https://pythonangry.github.io/post-images/1590117017193.jpg" alt="" loading="lazy"></li>
+</ul>
+<p><strong>1.7 王峰 知网研学平台</strong></p>
+<ul>
+<li>专题化学习</li>
+<li>专题知识汇编，精准知识服务</li>
+<li>学术数据统计分析</li>
+<li><img src="https://pythonangry.github.io/post-images/1590117784276.jpg" alt="" loading="lazy"></li>
+<li><img src="https://pythonangry.github.io/post-images/1590117791906.jpg" alt="" loading="lazy"></li>
+<li><img src="https://pythonangry.github.io/post-images/1590117801142.jpg" alt="" loading="lazy"></li>
+<li><img src="https://pythonangry.github.io/post-images/1590117809180.jpg" alt="" loading="lazy"></li>
+<li><img src="https://pythonangry.github.io/post-images/1590117817759.jpg" alt="" loading="lazy"></li>
 </ul>
 ]]></content>
     </entry>
