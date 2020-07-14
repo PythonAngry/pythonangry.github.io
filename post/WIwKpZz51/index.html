@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>0713 | Word培训 | PythonAngry</title>
+<meta name="description" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://pythonangry.github.io/favicon.ico?v=1594726526165">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://pythonangry.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://pythonangry.github.io">
+        <img class="avatar" src="https://pythonangry.github.io/images/avatar.png?v=1594726526165" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://pythonangry.github.io">
+        <h1 class="site-title">PythonAngry</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="https://pythonangry.github.io" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">0713 | Word培训</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-07-14</span>
+            
+          </div>
+          <div class="post-content">
+            <p>不会吧不会吧都过了三个月了！！！<br>
+这是新工作提供的培训课程，感觉挺好。</p>
+<ol>
+<li>
+<p>最上一排叫选项卡（文件为菜单）</p>
+</li>
+<li>
+<p>死机：自动保存恢复界面不出来，手动找回</p>
+<ul>
+<li>文件菜单 - 选项 - 保存</li>
+</ul>
+</li>
+<li>
+<p>字体嵌入：别人电脑也可以看见特殊安装字体</p>
+<ul>
+<li>文件菜单 - 选项 - 保存 - 将字体嵌入文件</li>
+</ul>
+</li>
+<li>
+<p>制表符与制表位</p>
+<ul>
+<li>开始 - 段落 - 显示/隐藏编辑标记</li>
+<li>左右侧缩进，首行缩进，悬挂缩进（除了第一行）</li>
+<li>段前段后间距，都设置，只有第一行及最后一行显现差别，中间仍为一行间距（PPT除外）</li>
+<li>视图 - 标尺：从上到下，首行缩进，悬挂缩进（除第一行），左缩进（全文本）</li>
+<li>全选想要改变格式的文章，标尺左上角改变制表符不同模式，在标尺点击所需位置，在文本所需位置点击Tab（格式刷仅刷格式，还是需要对所刷文本按Tab）</li>
+<li>去除制表符（只能替换删除）：ctrl+H - 替换 - 更多 - 特殊符号 - 制表符</li>
+</ul>
+</li>
+<li>
+<p>shift+回车：软回车</p>
+</li>
+<li>
+<p>先文字后表格</p>
+<ul>
+<li>单独调整一个单元格：选中单元格（斜小黑箭头，选中为灰色）再拉动单元格边线</li>
+<li>表格斜下框线：选中单元格 - 表格工具 - 设计 - 边框 - 斜下框线</li>
+<li>文字转表格：选中需要转换的文本 - 插入 - 表格 - 文字转换成表格 - 选择分隔位置（全角符号直接复制粘贴至其他字符即可）</li>
+<li>表格转文本：表格工具 - 布局 - 文本转换为表格（文本内容调整，符号替换，格式清除）</li>
+<li>自定义表格样式：需要勾选基于该模板的新文档</li>
+<li>表格样式套用：保存新样式word文件为word模板格式 - 右键选项卡 - 自定义功能区 - 勾选开发工具 - 文档模板 - 管理器 - 选择所需样式模板文件 - 复制自定义模板到当前文件</li>
+<li>长表格重复标题行：选中重复标题行（可选多行） - 表格工具 - 布局 - 重复标题行</li>
+<li>表格跨页应用：选中跨页表格 - 段落 - 换行和分页 - 与下段同页 &amp; 段中不分页</li>
+</ul>
+</li>
+<li>
+<p>长文档排版</p>
+<ul>
+<li>显示隐藏样式：样式设置小符号 - 管理样式 - 推荐 - 选中标题4 - 显示</li>
+<li>修改同一样式：右键样式 - 全选（选择所有实例） - 修改（最好只对单一文档修改）</li>
+<li>若想对多个文档改样式：新建word模板，对所需样式进行修改 保存 - 到所需改样式的文档 - 开发工具 - 文档模板选用 - 勾选自动更新文档样式</li>
+<li>多级列表：段落 - 多级列表 - 定义新多级列表 - 更多 - 将各级别链接到样式 - 输入编号的格式 - 输入所需编号文字 - 选择此级别的编号样式 - 勾选正规形式编号（若删除了编号格式，下拉包含的级别编号来自，进行层及继承即可）</li>
+<li>插入目录：页面布局 - 分隔符 - 分节符 - 下一页 // 引用 - 目录 - 自定义目录 - 选项 - 选择要制作目录的级别 - 选择所需制表符前导符 - 如有更新 - 右键更新目录即可</li>
+<li>封面目录去除页码页眉页脚 - 双击正文页码 - 页眉和页脚工具 - 取消链接到前一条页眉 - 删去封面目录页码等 - 回到正文页 - 页眉和页脚工具 - 页码 - 设置页码格式 - 起始页码设为1（不再续前节，所以前面添加分节符比较好，只有分节符才能断开页码页眉页脚）</li>
+<li>新增页眉（页脚）样式：先编辑好所需页眉 - 全选页眉 - 页眉和页脚工具 - 文档部件 - 将所选内容保存到文档部件库 - 选择所需保存的部件库</li>
+<li>添加水印：设计 - 水印 // 双击页眉 - 插入图片 - 修改位置颜色 - 另存为PDF再发送出去~</li>
+</ul>
+</li>
+<li>
+<p>邮件合并</p>
+<ul>
+<li>批量邮件生成：开始邮件合并 - 选择样式 - 选择收件人 - 使用现有列 - 插入合并域 - 完成并合并 - 编辑单个文档确认生成无误 - 发送电子邮件 - 收件人~邮箱 - 输入主题</li>
+<li>标签生成：选择excel文本前两行选择性粘贴，行列对调 - 新建word - 邮件 - 选择合适尺寸标签 - 粘贴文本 - 选择收件人 - 使用现有列 - 插入合并域 - 更新标签 - 完成并合并 - 编辑单个文档确认生成无误 - 打印</li>
+</ul>
+</li>
+<li>
+<p>文档加密</p>
+<ul>
+<li>常用方法：文件另存为 - 工具 - 常规选项 - 选择文件加密选项（打开密码；修改密码）</li>
+<li>节保护：保护某一节 - 页面布局 - 添加连续分节符 - 审阅 - 限制编辑 - 仅允许在文档中进行此类型的编辑 - 选择填写窗体 - 选择所需要保护的节</li>
+<li>特殊的安全技术：仅允许在文档中进行此类型的编辑 - 只读 - 选择可编辑的内容 - 例外项勾选每个人 - 查找可编辑区域</li>
+</ul>
+</li>
+<li>
+<p>文档修订</p>
+<ul>
+<li>比较文档：如果别人不知道有审阅修订功能，直接在文档修改 - 审阅 - 比较文档</li>
+</ul>
+</li>
+</ol>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://pythonangry.github.io/post/FgB7Eg-7s/">
+              <h3 class="post-title">
+                下一篇：0425 | 图书馆培训
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan"></div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://pythonangry.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '84b95f2fd7b3111e76ae',
+        clientSecret: '6b90f0767647b7f65290a483c9691b7c78bb9b37',
+        repo: 'pythonangry.github.io',
+        owner: 'pythonangry',
+        admin: ['pythonangry'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
